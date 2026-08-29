@@ -13,42 +13,46 @@
 
 <div class="site-wrapper">
 
-  <!-- Utility bar -->
+  <!-- Utility Bar -->
   <div class="utility-bar">
-    <span>100% Tested Equipment</span>
-    <span style="color:var(--border-main);">•</span>
-    <span>Pan-India Shipping</span>
-    <span style="color:var(--border-main);">•</span>
-    <span>Secure Packaging</span>
-    <span style="color:var(--border-main);">•</span>
-    <span>Bandra West Studio, Mumbai</span>
+    <div class="section-inner utility-bar-inner">
+      <span>100% Tested Equipment</span>
+      <span style="color:var(--border-main);">•</span>
+      <span>Pan-India Shipping</span>
+      <span style="color:var(--border-main);">•</span>
+      <span>Secure Packaging</span>
+      <span style="color:var(--border-main);">•</span>
+      <span>Bandra West Studio, Mumbai</span>
+    </div>
   </div>
 
-  <!-- Main Nav -->
+  <!-- Main Nav Header -->
   <header class="main-nav">
-    <a href="index.html" class="brand-logo">
-      <svg width="24" height="24" viewBox="0 0 128 128"><circle cx="64" cy="64" r="58" fill="none" stroke="currentColor" stroke-width="6"></circle><circle cx="64" cy="64" r="46" fill="none" stroke="currentColor" stroke-width="3"></circle><text x="64" y="74" text-anchor="middle" font-family="Big Shoulders Display" font-weight="800" font-size="42" fill="currentColor">H</text></svg>
-      <span>THE HIFI ROOM</span>
-    </a>
-
-    <nav class="nav-links">
-      <a class="nav-link active" href="index.html">Home</a>
-      <a class="nav-link" href="shop.html">Shop</a>
-      <a class="nav-link" href="sell.html">Sell your HiFi</a>
-      <a class="nav-link" href="find.html">Find equipment</a>
-      <a class="nav-link" href="grading.html">Grading standard</a>
-      <a class="nav-link" href="sold.html">Recently sold</a>
-      <a class="nav-link" href="about.html">About us</a>
-    </nav>
-
-    <div class="nav-actions">
-      <a href="admin.html" class="nav-console-pill">
-        <span style="width:6px; height:6px; background:var(--accent-green); border-radius:50%;"></span>
-        <span>Console</span>
+    <div class="section-inner main-nav-inner">
+      <a href="index.html" class="brand-logo">
+        <svg width="24" height="24" viewBox="0 0 128 128"><circle cx="64" cy="64" r="58" fill="none" stroke="currentColor" stroke-width="6"></circle><circle cx="64" cy="64" r="46" fill="none" stroke="currentColor" stroke-width="3"></circle><text x="64" y="74" text-anchor="middle" font-family="Big Shoulders Display" font-weight="800" font-size="42" fill="currentColor">H</text></svg>
+        <span>THE HIFI ROOM</span>
       </a>
-      <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Toggle Menu">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-      </button>
+
+      <nav class="nav-links">
+        <a class="nav-link active" href="index.html">Home</a>
+        <a class="nav-link" href="shop.html">Shop</a>
+        <a class="nav-link" href="sell.html">Sell your HiFi</a>
+        <a class="nav-link" href="find.html">Find equipment</a>
+        <a class="nav-link" href="grading.html">Grading standard</a>
+        <a class="nav-link" href="sold.html">Recently sold</a>
+        <a class="nav-link" href="about.html">About us</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="admin.html" class="nav-console-pill">
+          <span style="width:6px; height:6px; background:var(--accent-green); border-radius:50%;"></span>
+          <span>Console</span>
+        </a>
+        <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Toggle Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -73,422 +77,494 @@
   </div>
 
   <!-- Hero Section -->
-  <div style="position:relative; display:flex; align-items:flex-start; gap:40px; padding:88px 56px 64px 56px; overflow:visible;">
+  <section class="hero-section-wrap">
+    <div class="section-inner hero-grid">
+      
+      <!-- Left Hero Content -->
+      <div class="hero-content">
+        <div class="hero-tag">Pre-owned hi-fi, documented</div>
+        <h1 class="hero-headline">Every unit,<br>bench-tested<br>and on the record.</h1>
+        <p class="hero-desc">
+          Browse graded turntables, amplifiers and speakers, make an offer on your own terms, sell what you no longer play, or tell us what to find for you. One record, kept in the open.
+        </p>
+        <div class="hero-cta-row">
+          <a href="shop.html" class="btn btn-primary">Shop available stock</a>
+          <a href="sell.html" class="btn btn-outline">Sell your HiFi</a>
+          <a href="find.html" style="display:flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:13px; font-weight:500; color:var(--ink-primary); height:50px;">Find something specific <span style="font-size:15px;">→</span></a>
+        </div>
+      </div>
 
-    <div style="flex:1.25; display:flex; flex-direction:column; gap:26px; z-index:1;">
-      <div style="font-family:var(--font-mono); font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--accent-cobalt);">Pre-owned hi-fi, documented</div>
-      <h1 style="margin:0; font-family:var(--font-display); font-weight:700; font-size:82px; line-height:0.98; letter-spacing:-0.025em; max-width:760px;">Every unit,<br>bench-tested<br>and on the record.</h1>
-      <p style="margin:8px 0 0 0; font-size:17px; line-height:1.6; color:var(--ink-secondary); max-width:520px;">Browse graded turntables, amplifiers and speakers, make an offer on your own terms, sell what you no longer play, or tell us what to find for you. One record, kept in the open.</p>
-      <div style="display:flex; align-items:center; gap:22px; margin-top:10px; flex-wrap:wrap;">
-        <a href="shop.html" class="btn btn-primary">Shop available stock</a>
-        <a href="sell.html" class="btn btn-outline">Sell your HiFi</a>
-        <a href="find.html" style="display:flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:13px; font-weight:500; color:var(--ink-primary); height:50px;">Find something specific <span style="font-size:15px;">→</span></a>
+      <!-- Right Hero Visual Exhibit -->
+      <div class="hero-visual">
+        <div class="tape" style="top:-16px; left:32px; width:96px; height:28px; transform:rotate(-9deg); z-index:3;"></div>
+        <div class="exhibit-frame paper">
+          <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+          
+          <div style="align-self:flex-start; font-family:var(--font-mono); font-size:11px; letter-spacing:0.1em; color:var(--ink-muted);">EXHIBIT 01 — MCINTOSH MC275</div>
+          
+          <div style="width:100%; height:230px; overflow:hidden; background:#080A0F; position:relative; border:1px solid var(--border-main);">
+            <img src="assets/images/08-tube-amplifiers-hero-cinematic.png" alt="Vintage McIntosh MC275 tube power amplifier" style="width:100%; height:100%; object-fit:cover; object-position:center 35%; display:block;">
+          </div>
+          
+          <!-- Stamp Seal -->
+          <div style="position:absolute; bottom:-32px; right:-24px; z-index:4;">
+            <svg width="104" height="104" viewBox="0 0 128 128" style="transform:rotate(-9deg);">
+              <defs><path id="ringHeroStamp" d="M 64,64 m -50,0 a 50,50 0 1,1 100,0 a 50,50 0 1,1 -100,0"></path></defs>
+              <circle cx="64" cy="64" r="58" fill="#FBF9F3" stroke="#1B1812" stroke-width="1.2"></circle>
+              <circle cx="64" cy="64" r="49" fill="none" stroke="#1B1812" stroke-width="1"></circle>
+              <text font-family="IBM Plex Mono" font-size="7" letter-spacing="2" fill="#1B1812">
+                <textPath href="#ringHeroStamp" startOffset="2%">BENCH TESTED • THE HIFI ROOM • GRADE VERIFIED •</textPath>
+              </text>
+              <text x="64" y="62" text-anchor="middle" font-family="Big Shoulders Display" font-weight="700" font-size="26" fill="#1B1812">A</text>
+              <text x="64" y="78" text-anchor="middle" font-family="IBM Plex Mono" font-size="6.5" letter-spacing="1" fill="#2E6FA3">GRADE</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Watermark Background Letter -->
+      <div class="watermark" style="top:20px; right:40px; font-size:560px; z-index:0;">A</div>
+    </div>
+  </section>
+
+  <!-- Metric Ruler Strip -->
+  <div class="ruler-strip">
+    <div class="section-inner ruler-labels">
+      <span>0</span>
+      <span>100</span>
+      <span>200</span>
+      <span>300</span>
+      <span>400</span>
+      <span>500 mm</span>
+    </div>
+  </div>
+
+  <!-- Trust Bar -->
+  <section class="trust-bar-wrap">
+    <div class="section-inner">
+      <div class="trust-grid">
+        <div class="trust-col">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E6FA3" stroke-width="1.8"><circle cx="10" cy="10" r="6"></circle><line x1="14.5" y1="14.5" x2="20" y2="20"></line></svg>
+            <span class="trust-title">Bench-tested</span>
+          </div>
+          <p class="trust-desc" style="padding-left:32px;">Every unit measured and verified before it's listed.</p>
+        </div>
+
+        <div class="trust-col">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E6FA3" stroke-width="1.8"><rect x="5" y="3" width="14" height="18" rx="1"></rect><line x1="8" y1="8" x2="16" y2="8"></line><line x1="8" y1="12" x2="16" y2="12"></line><line x1="8" y1="16" x2="12" y2="16"></line></svg>
+            <span class="trust-title">Condition disclosed</span>
+          </div>
+          <p class="trust-desc" style="padding-left:32px;">Known faults are documented, never buried in fine print.</p>
+        </div>
+
+        <div class="trust-col">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E6FA3" stroke-width="1.8"><rect x="4" y="6" width="16" height="14" rx="1"></rect><path d="M4 10h16"></path><path d="M8 3v4M16 3v4"></path></svg>
+            <span class="trust-title">Secure packaging</span>
+          </div>
+          <p class="trust-desc" style="padding-left:32px;">Custom-crated for pan-India shipping, tracked door to door.</p>
+        </div>
+
+        <div class="trust-col">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E6FA3" stroke-width="1.8"><path d="M4 18a8 8 0 0 1 16 0"></path><line x1="12" y1="18" x2="15" y2="12"></line><circle cx="12" cy="18" r="1.4" fill="#2E6FA3" stroke="none"></circle></svg>
+            <span class="trust-title">Dedicated support</span>
+          </div>
+          <p class="trust-desc" style="padding-left:32px;">A concierge for questions before, during and after the sale.</p>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div style="flex:0.95; position:relative; margin-top:12px; z-index:1;">
-      <div class="tape" style="top:-16px; left:52px; width:96px; height:28px; transform:rotate(-9deg);"></div>
-      <div class="paper" style="position:relative; border:1px solid var(--border-main); padding:30px 30px 46px 30px; display:flex; flex-direction:column; align-items:center; gap:12px; transform:rotate(-2.5deg);">
-        <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
-        <div style="align-self:flex-start; font-family:var(--font-mono); font-size:11px; letter-spacing:0.1em; color:var(--ink-muted);">EXHIBIT 01 — MCINTOSH MC275</div>
-        <div style="width:100%; max-width:320px; height:248px; overflow:hidden; margin:-8px -14px -18px 0;">
-          <img src="assets/images/08-tube-amplifiers-hero-cinematic.png" alt="Vintage McIntosh MC275 tube power amplifier" style="width:100%; height:100%; object-fit:cover; object-position:center 35%; display:block;">
+  <!-- Shop by Category Section -->
+  <section class="category-section-wrap">
+    <div class="section-inner" style="display:flex; flex-direction:column; gap:32px;">
+      <h2 style="margin:0; font-family:var(--font-display); font-weight:700; font-size:28px;">Shop by category</h2>
+      
+      <div class="category-grid">
+        <a href="shop.html?category=Amplifiers" class="card-hover paper cat-card-wide" style="border:1px solid var(--border-main); display:flex; align-items:center; gap:20px; padding:24px 28px; color:var(--ink-primary);">
+          <svg width="70" height="52" viewBox="0 0 90 70" fill="none" stroke="#1B1812" stroke-width="1.5" style="flex-shrink:0;"><rect x="6" y="12" width="78" height="46" rx="2"></rect><circle cx="30" cy="35" r="13" stroke="#2E6FA3"></circle><circle cx="60" cy="35" r="13" stroke="#2E6FA3"></circle></svg>
+          <div>
+            <div style="font-family:var(--font-display); font-weight:600; font-size:18px;">Amplifiers</div>
+            <div style="font-family:var(--font-mono); font-size:12px; color:var(--ink-muted); margin-top:4px;">48 items</div>
+          </div>
+        </a>
+
+        <a href="shop.html?category=Speakers" class="card-hover paper" style="border:1px solid var(--border-main); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; padding:24px; color:var(--ink-primary);">
+          <svg width="58" height="60" viewBox="0 0 70 90" fill="none" stroke="#1B1812" stroke-width="1.6"><rect x="6" y="6" width="26" height="78" rx="2"></rect><circle cx="19" cy="26" r="8" stroke="#D8952F"></circle><circle cx="19" cy="54" r="5" stroke="#D8952F"></circle><rect x="38" y="6" width="26" height="78" rx="2"></rect><circle cx="51" cy="26" r="8" stroke="#D8952F"></circle><circle cx="51" cy="54" r="5" stroke="#D8952F"></circle></svg>
+          <div style="text-align:center;">
+            <div style="font-family:var(--font-display); font-weight:600; font-size:16px;">Speakers</div>
+            <div style="font-family:var(--font-mono); font-size:12px; color:var(--ink-muted); margin-top:4px;">24 items</div>
+          </div>
+        </a>
+
+        <a href="shop.html?category=Turntables" class="card-hover paper" style="border:1px solid var(--border-main); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; padding:24px; color:var(--ink-primary);">
+          <svg width="66" height="58" viewBox="0 0 90 78" fill="none" stroke="#1B1812" stroke-width="1.6"><rect x="6" y="8" width="78" height="62" rx="2"></rect><circle cx="45" cy="40" r="24" stroke="#2E6FA3"></circle><line x1="45" y1="40" x2="62" y2="24"></line><circle cx="64" cy="22" r="3"></circle></svg>
+          <div style="text-align:center;">
+            <div style="font-family:var(--font-display); font-weight:600; font-size:16px;">Turntables</div>
+            <div style="font-family:var(--font-mono); font-size:12px; color:var(--ink-muted); margin-top:4px;">31 items</div>
+          </div>
+        </a>
+
+        <a href="shop.html?category=Receivers" class="card-hover paper" style="border:1px solid var(--border-main); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; padding:24px; color:var(--ink-primary);">
+          <svg width="66" height="46" viewBox="0 0 90 62" fill="none" stroke="#1B1812" stroke-width="1.6"><rect x="6" y="6" width="78" height="50" rx="2"></rect><circle cx="26" cy="31" r="11" stroke="#4B7A51"></circle><rect x="50" y="16" width="26" height="10"></rect><rect x="50" y="32" width="26" height="8"></rect></svg>
+          <div style="text-align:center;">
+            <div style="font-family:var(--font-display); font-weight:600; font-size:16px;">Receivers</div>
+            <div style="font-family:var(--font-mono); font-size:12px; color:var(--ink-muted); margin-top:4px;">18 items</div>
+          </div>
+        </a>
+
+        <a href="shop.html?category=Cassette+decks" class="card-hover paper" style="border:1px solid var(--border-main); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; padding:24px; color:var(--ink-primary);">
+          <svg width="66" height="42" viewBox="0 0 90 56" fill="none" stroke="#1B1812" stroke-width="1.6"><rect x="6" y="6" width="78" height="44" rx="2"></rect><circle cx="30" cy="28" r="12" stroke="#B4472F"></circle><circle cx="60" cy="28" r="12" stroke="#B4472F"></circle><rect x="40" y="24" width="10" height="8"></rect></svg>
+          <div style="text-align:center;">
+            <div style="font-family:var(--font-display); font-weight:600; font-size:16px;">Cassette decks</div>
+            <div style="font-family:var(--font-mono); font-size:12px; color:var(--ink-muted); margin-top:4px;">9 items</div>
+          </div>
+        </a>
+
+        <a href="shop.html?category=Reel-to-Reel" class="card-hover paper cat-card-wide" style="border:1px solid var(--border-main); display:flex; align-items:center; gap:20px; padding:24px 28px; color:var(--ink-primary);">
+          <svg width="56" height="56" viewBox="0 0 64 64" fill="none" stroke="#1B1812" stroke-width="1.6" style="flex-shrink:0;"><circle cx="32" cy="32" r="24"></circle><path d="M32 16v6M32 42v6M16 32h6M42 32h6M20.5 20.5l4.2 4.2M39.3 39.3l4.2 4.2M20.5 43.5l4.2-4.2M39.3 24.7l4.2-4.2" stroke="#D8952F"></path></svg>
+          <div>
+            <div style="font-family:var(--font-display); font-weight:600; font-size:18px;">Reel-to-Reel Decks</div>
+            <div style="font-family:var(--font-mono); font-size:12px; color:var(--ink-muted); margin-top:4px;">12 items</div>
+          </div>
+        </a>
+      </div>
+
+      <a href="shop.html" class="btn btn-outline" style="align-self:center; font-weight:600; font-size:14px; padding:0 28px; height:46px; margin-top:8px;">View all categories</a>
+    </div>
+  </section>
+
+  <!-- Recently Added Bento Grid -->
+  <section class="bento-section-wrap">
+    <div class="watermark" style="top:-40px; right:40px; font-size:420px;">A–E</div>
+    
+    <div class="section-inner" style="position:relative; z-index:2; display:flex; flex-direction:column; gap:32px;">
+      <div style="display:flex; align-items:baseline; justify-content:space-between;">
+        <h2 style="margin:0; font-family:var(--font-display); font-weight:700; font-size:28px;">Recently added</h2>
+        <a href="shop.html" style="font-family:var(--font-mono); font-size:13px;">View all stock →</a>
+      </div>
+
+      <div class="bento-grid">
+        
+        <!-- Featured Big Bento Item (Wollensak 1580) -->
+        <div class="card-hover paper bento-card-featured" style="border:1px solid var(--border-main); display:flex; flex-direction:column; position:relative;">
+          <div style="position:absolute; top:14px; left:14px; font-family:var(--font-mono); font-size:10px; letter-spacing:0.1em; color:var(--ink-muted); z-index:2;">FEATURED THIS WEEK</div>
+          <button class="heart-btn" aria-label="Save" style="position:absolute; top:14px; right:14px; background:none; border:none; z-index:2;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1B1812" stroke-width="1.6"><path d="M12 20.5s-7.5-4.7-9.8-9.4C.8 7.7 2.6 4 6.3 4c2 0 3.6 1.1 4.5 2.7C11.7 5.1 13.3 4 15.3 4c3.7 0 5.5 3.7 4.1 7.1C17.1 15.8 12 20.5 12 20.5z"></path></svg>
+          </button>
+          <div style="height:240px; overflow:hidden; position:relative; background:#080A0F; border-bottom:1px solid var(--border-main);">
+            <img src="assets/images/03-wollensak-reel-to-reel-cinematic.png" alt="Wollensak 1580 Stereo Tape Recorder" style="width:100%; height:100%; object-fit:cover; display:block;">
+          </div>
+          <div style="padding:22px; display:flex; flex-direction:column; gap:10px; flex:1; justify-content:space-between;">
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <a href="product.html?id=HFR-0192" style="font-weight:600; font-size:20px; font-family:var(--font-display); color:var(--ink-primary);">Wollensak 1580 Stereo Deck</a>
+                <span class="grade-badge grade-ap">GRADE A+</span>
+              </div>
+              <p style="margin:6px 0 0 0; font-size:13.5px; color:var(--ink-secondary); line-height:1.5;">Tube-hybrid tape transport, pinch roller conditioned, playback tested on both channels.</p>
+            </div>
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-top:12px; padding-top:10px; border-top:1px dashed var(--border-light); flex-wrap:wrap; gap:8px;">
+              <div style="display:flex; flex-direction:column; gap:4px;">
+                <div class="ticket" style="border:1px solid var(--ink-primary); padding:6px 14px 6px 18px; background:var(--bg-paper);">
+                  <div class="ticket-notch"></div><div class="ticket-cut"></div>
+                  <span style="font-family:var(--font-mono); font-size:17px; font-weight:600;">₹68,000</span>
+                </div>
+                <span style="display:flex; align-items:center; gap:4px; font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); padding-left:18px;">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"></path><circle cx="12" cy="9" r="2.4"></circle></svg>
+                  Bangalore
+                </span>
+              </div>
+              <a href="product.html?id=HFR-0192" class="btn btn-outline btn-sm">Inspect Report</a>
+            </div>
+          </div>
         </div>
-        <div style="position:absolute; bottom:-34px; right:-30px;">
-          <svg width="112" height="112" viewBox="0 0 128 128" style="transform:rotate(-9deg);">
-            <defs><path id="ringA" d="M 64,64 m -50,0 a 50,50 0 1,1 100,0 a 50,50 0 1,1 -100,0"></path></defs>
+
+        <!-- Bento 2: Pioneer SA-8800 -->
+        <div class="card-hover paper" style="border:1px solid var(--border-main); display:flex; flex-direction:column; position:relative;">
+          <button class="heart-btn" aria-label="Save" style="position:absolute; top:10px; right:10px; background:none; border:none; z-index:2;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B1812" stroke-width="1.8"><path d="M12 20.5s-7.5-4.7-9.8-9.4C.8 7.7 2.6 4 6.3 4c2 0 3.6 1.1 4.5 2.7C11.7 5.1 13.3 4 15.3 4c3.7 0 5.5 3.7 4.1 7.1C17.1 15.8 12 20.5 12 20.5z"></path></svg>
+          </button>
+          <div style="height:150px; overflow:hidden; position:relative; background:#080A0F; border-bottom:1px solid var(--border-main);">
+            <img src="assets/images/01-tube-amplifiers-cinematic.png" alt="Pioneer SA-8800" style="width:100%; height:100%; object-fit:cover; display:block;">
+          </div>
+          <div style="padding:16px; display:flex; flex-direction:column; gap:6px;">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <a href="product.html?id=HFR-0130" style="font-weight:600; font-size:15px; color:var(--ink-primary);">Pioneer SA-8800</a>
+              <span class="grade-badge grade-b">B</span>
+            </div>
+            <span style="font-family:var(--font-mono); font-size:14px; font-weight:600;">₹38,500</span>
+            <span style="display:flex; align-items:center; gap:4px; font-family:var(--font-mono); font-size:10.5px; color:var(--ink-muted);">
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"></path><circle cx="12" cy="9" r="2.4"></circle></svg>
+              Delhi
+            </span>
+          </div>
+        </div>
+
+        <!-- Bento 3: Technics SL-1200MK2 -->
+        <div class="card-hover paper" style="border:1px solid var(--border-main); display:flex; flex-direction:column; position:relative;">
+          <button class="heart-btn" aria-label="Save" style="position:absolute; top:10px; right:10px; background:none; border:none; z-index:2;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B1812" stroke-width="1.8"><path d="M12 20.5s-7.5-4.7-9.8-9.4C.8 7.7 2.6 4 6.3 4c2 0 3.6 1.1 4.5 2.7C11.7 5.1 13.3 4 15.3 4c3.7 0 5.5 3.7 4.1 7.1C17.1 15.8 12 20.5 12 20.5z"></path></svg>
+          </button>
+          <div style="height:150px; overflow:hidden; position:relative; background:#080A0F; border-bottom:1px solid var(--border-main);">
+            <img src="assets/images/05-akai-1710w-cinematic.png" alt="Technics SL-1200MK2" style="width:100%; height:100%; object-fit:cover; display:block;">
+          </div>
+          <div style="padding:16px; display:flex; flex-direction:column; gap:6px;">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <a href="product.html?id=HFR-0152" style="font-weight:600; font-size:15px; color:var(--ink-primary);">Technics SL-1200</a>
+              <span class="grade-badge grade-b">B</span>
+            </div>
+            <span style="font-family:var(--font-mono); font-size:14px; font-weight:600;">₹48,000</span>
+            <span style="display:flex; align-items:center; gap:4px; font-family:var(--font-mono); font-size:10.5px; color:var(--ink-muted);">
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"></path><circle cx="12" cy="9" r="2.4"></circle></svg>
+              Mumbai
+            </span>
+          </div>
+        </div>
+
+        <!-- Bento 4: Marantz 2270 -->
+        <div class="card-hover paper" style="border:1px solid var(--border-main); display:flex; flex-direction:column; position:relative;">
+          <button class="heart-btn" aria-label="Save" style="position:absolute; top:10px; right:10px; background:none; border:none; z-index:2;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B1812" stroke-width="1.8"><path d="M12 20.5s-7.5-4.7-9.8-9.4C.8 7.7 2.6 4 6.3 4c2 0 3.6 1.1 4.5 2.7C11.7 5.1 13.3 4 15.3 4c3.7 0 5.5 3.7 4.1 7.1C17.1 15.8 12 20.5 12 20.5z"></path></svg>
+          </button>
+          <div style="height:150px; overflow:hidden; position:relative; background:#080A0F; border-bottom:1px solid var(--border-main);">
+            <img src="assets/images/02-rear-panel-cinematic.png" alt="Marantz 2270" style="width:100%; height:100%; object-fit:cover; display:block;">
+          </div>
+          <div style="padding:16px; display:flex; flex-direction:column; gap:6px;">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <a href="product.html?id=HFR-0175" style="font-weight:600; font-size:15px; color:var(--ink-primary);">Marantz 2270</a>
+              <span class="grade-badge grade-a">A</span>
+            </div>
+            <span style="font-family:var(--font-mono); font-size:14px; font-weight:600;">₹1,45,000</span>
+            <span style="display:flex; align-items:center; gap:4px; font-family:var(--font-mono); font-size:10.5px; color:var(--ink-muted);">
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"></path><circle cx="12" cy="9" r="2.4"></circle></svg>
+              Pune
+            </span>
+          </div>
+        </div>
+
+        <!-- Bento 5: TEAC V-6030S -->
+        <div class="card-hover paper" style="border:1px solid var(--border-main); display:flex; flex-direction:column; position:relative;">
+          <button class="heart-btn" aria-label="Save" style="position:absolute; top:10px; right:10px; background:none; border:none; z-index:2;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B1812" stroke-width="1.8"><path d="M12 20.5s-7.5-4.7-9.8-9.4C.8 7.7 2.6 4 6.3 4c2 0 3.6 1.1 4.5 2.7C11.7 5.1 13.3 4 15.3 4c3.7 0 5.5 3.7 4.1 7.1C17.1 15.8 12 20.5 12 20.5z"></path></svg>
+          </button>
+          <div style="height:150px; overflow:hidden; position:relative; background:#080A0F; border-bottom:1px solid var(--border-main);">
+            <img src="assets/images/06-wollensak-right-reel-detail-cinematic.png" alt="TEAC V-6030S" style="width:100%; height:100%; object-fit:cover; display:block;">
+          </div>
+          <div style="padding:16px; display:flex; flex-direction:column; gap:6px;">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <a href="product.html?id=HFR-0125" style="font-weight:600; font-size:15px; color:var(--ink-primary);">TEAC V-6030S</a>
+              <span class="grade-badge grade-a">A</span>
+            </div>
+            <span style="font-family:var(--font-mono); font-size:14px; font-weight:600;">₹26,000</span>
+            <span style="display:flex; align-items:center; gap:4px; font-family:var(--font-mono); font-size:10.5px; color:var(--ink-muted);">
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"></path><circle cx="12" cy="9" r="2.4"></circle></svg>
+              Kolkata
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Two Column CTA Band (Sell & Source) -->
+  <section class="cta-band-wrap">
+    <div class="section-inner">
+      <div class="cta-grid">
+        
+        <!-- Sell Box -->
+        <div class="paper" style="border:1px solid var(--border-main); padding:clamp(24px, 4vw, 36px); display:flex; flex-direction:column; gap:20px;">
+          <div>
+            <div style="font-family:var(--font-mono); font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent-cobalt);">Sell</div>
+            <h3 style="margin:6px 0 0 0; font-family:var(--font-display); font-weight:700; font-size:24px;">Have HiFi equipment to sell?</h3>
+            <p style="margin:8px 0 0 0; font-size:14px; color:var(--ink-secondary); max-width:440px;">We buy outright. Fill in the details below and get a fair cash buyout offer within 24 hours.</p>
+          </div>
+          <form onsubmit="handleQuickSell(event)" style="display:flex; flex-direction:column; gap:14px;">
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+              <div class="field-group"><label class="field-label">NAME</label><input type="text" name="name" class="field-input" placeholder="Your name" required></div>
+              <div class="field-group"><label class="field-label">PHONE / WHATSAPP</label><input type="tel" name="phone" class="field-input" placeholder="+91" required></div>
+            </div>
+            <div class="field-group"><label class="field-label">WHAT ARE YOU SELLING?</label><input type="text" name="gear" class="field-input" placeholder="e.g. Sansui AU-717 amplifier" required></div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; align-items:end;">
+              <div class="field-group"><label class="field-label">CITY</label><input type="text" name="city" class="field-input" placeholder="e.g. Mumbai" required></div>
+              <button type="submit" class="btn btn-primary" style="height:44px;">Submit for review</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Source Box -->
+        <div class="paper" style="border:1px solid var(--border-main); padding:clamp(24px, 4vw, 36px); display:flex; flex-direction:column; gap:20px;">
+          <div>
+            <div style="font-family:var(--font-mono); font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent-amber);">Source</div>
+            <h3 style="margin:6px 0 0 0; font-family:var(--font-display); font-weight:700; font-size:24px;">Looking for something specific?</h3>
+            <p style="margin:8px 0 0 0; font-size:14px; color:var(--ink-secondary); max-width:440px;">Tell us what you're after and your budget. We track open requests against everything coming into our workshop.</p>
+          </div>
+          <form onsubmit="handleQuickSource(event)" style="display:flex; flex-direction:column; gap:14px;">
+            <div class="field-group"><label class="field-label">WHAT ARE YOU LOOKING FOR?</label><input type="text" name="wanted" class="field-input" placeholder="e.g. Thorens TD-160 turntable" required></div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+              <div class="field-group"><label class="field-label">BUDGET RANGE</label><input type="text" name="budget" class="field-input" placeholder="e.g. ₹40k - ₹55k" required></div>
+              <div class="field-group"><label class="field-label">PHONE / WHATSAPP</label><input type="tel" name="phone" class="field-input" placeholder="+91" required></div>
+            </div>
+            <button type="submit" class="btn btn-outline" style="align-self:flex-start; padding:0 24px; height:44px; margin-top:2px;">Submit request</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Recently Sold Ledger Section -->
+  <section class="ledger-section-wrap">
+    <div class="section-inner">
+      <div class="paper" style="border:1px solid var(--border-main); position:relative;">
+        <div style="padding:16px 24px; border-bottom:1px solid var(--border-main); display:flex; align-items:center; justify-content:space-between;">
+          <span style="font-family:var(--font-mono); font-size:12px; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-muted);">Recently sold — a public log, not a highlight reel</span>
+        </div>
+        
+        <!-- Sold Stamp -->
+        <div style="position:absolute; top:-26px; right:20px; z-index:3;">
+          <svg width="64" height="64" viewBox="0 0 128 128">
+            <defs><path id="ringSoldHome" d="M 64,64 m -50,0 a 50,50 0 1,1 100,0 a 50,50 0 1,1 -100,0"></path></defs>
             <circle cx="64" cy="64" r="58" fill="#FBF9F3" stroke="#1B1812" stroke-width="1.2"></circle>
             <circle cx="64" cy="64" r="49" fill="none" stroke="#1B1812" stroke-width="1"></circle>
-            <text font-family="IBM Plex Mono" font-size="7" letter-spacing="2" fill="#1B1812">
-              <textPath href="#ringA" startOffset="2%">BENCH TESTED • THE HIFI ROOM • GRADE VERIFIED •</textPath>
+            <text font-family="IBM Plex Mono" font-size="6.5" letter-spacing="1.6" fill="#1B1812">
+              <textPath href="#ringSoldHome" startOffset="2%">THE HIFI ROOM • VERIFIED SALE •</textPath>
             </text>
-            <text x="64" y="62" text-anchor="middle" font-family="Big Shoulders Display" font-weight="700" font-size="26" fill="#1B1812">A</text>
-            <text x="64" y="78" text-anchor="middle" font-family="IBM Plex Mono" font-size="6.5" letter-spacing="1" fill="#2E6FA3">GRADE</text>
+            <text x="64" y="70" text-anchor="middle" font-family="Big Shoulders Display" font-weight="700" font-size="18" fill="#B4472F">SOLD</text>
           </svg>
         </div>
+
+        <div class="table-container">
+          <table class="hifi-table">
+            <thead>
+              <tr>
+                <th>UNIT</th>
+                <th>TYPE</th>
+                <th>GRADE</th>
+                <th>PRICE</th>
+                <th>DESTINATION</th>
+                <th>STATUS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Sansui AU-717</strong></td>
+                <td style="color:var(--ink-secondary);">Integrated amplifier</td>
+                <td><span class="grade-badge grade-a">GRADE A</span></td>
+                <td style="font-family:var(--font-mono); font-weight:600;">₹68,000</td>
+                <td style="font-family:var(--font-mono); color:var(--ink-muted);">📍 Pune</td>
+                <td><span class="status-tag status-sold">SOLD</span></td>
+              </tr>
+              <tr>
+                <td><strong>Pioneer SA-1060</strong></td>
+                <td style="color:var(--ink-secondary);">Integrated amplifier</td>
+                <td><span class="grade-badge grade-b">GRADE B</span></td>
+                <td style="font-family:var(--font-mono); font-weight:600;">₹28,000</td>
+                <td style="font-family:var(--font-mono); color:var(--ink-muted);">📍 Mumbai</td>
+                <td><span class="status-tag status-sold">SOLD</span></td>
+              </tr>
+              <tr>
+                <td><strong>Yamaha NS-1000M</strong></td>
+                <td style="color:var(--ink-secondary);">Speakers</td>
+                <td><span class="grade-badge grade-ap">GRADE A+</span></td>
+                <td style="font-family:var(--font-mono); font-weight:600;">₹1,40,000</td>
+                <td style="font-family:var(--font-mono); color:var(--ink-muted);">📍 Bangalore</td>
+                <td><span class="status-tag status-sold">SOLD</span></td>
+              </tr>
+              <tr>
+                <td><strong>Akai GX-635D</strong></td>
+                <td style="color:var(--ink-secondary);">Reel-to-reel deck</td>
+                <td><span class="grade-badge grade-a">GRADE A</span></td>
+                <td style="font-family:var(--font-mono); font-weight:600;">₹85,000</td>
+                <td style="font-family:var(--font-mono); color:var(--ink-muted);">📍 Delhi</td>
+                <td><span class="status-tag status-sold">SOLD</span></td>
+              </tr>
+              <tr>
+                <td><strong>Marantz 2220B</strong></td>
+                <td style="color:var(--ink-secondary);">Receiver</td>
+                <td><span class="grade-badge grade-b">GRADE B</span></td>
+                <td style="font-family:var(--font-mono); font-weight:600;">₹32,000</td>
+                <td style="font-family:var(--font-mono); color:var(--ink-muted);">📍 Chennai</td>
+                <td><span class="status-tag status-sold">SOLD</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="watermark" style="top:20px; right:-20px; font-size:560px; z-index:0;">A</div>
-  </div>
-
-  <!-- Ruler strip -->
-  <div class="ruler" style="position:relative; height:26px; border-top:1px solid var(--border-main); border-bottom:1px solid var(--border-main);">
-    <span style="position:absolute; left:56px; bottom:9px; font-family:var(--font-mono); font-size:10px; color:var(--ink-muted);">0</span>
-    <span style="position:absolute; left:296px; bottom:9px; font-family:var(--font-mono); font-size:10px; color:var(--ink-muted);">100</span>
-    <span style="position:absolute; left:536px; bottom:9px; font-family:var(--font-mono); font-size:10px; color:var(--ink-muted);">200</span>
-    <span style="position:absolute; left:776px; bottom:9px; font-family:var(--font-mono); font-size:10px; color:var(--ink-muted);">300</span>
-    <span style="position:absolute; left:1016px; bottom:9px; font-family:var(--font-mono); font-size:10px; color:var(--ink-muted);">400</span>
-    <span style="position:absolute; left:1256px; bottom:9px; font-family:var(--font-mono); font-size:10px; color:var(--ink-muted);">500 mm</span>
-  </div>
-
-  <!-- Trust bar -->
-  <div style="display:grid; grid-template-columns: repeat(4, minmax(0,1fr)); border-bottom:1px solid var(--border-main);">
-    <div style="display:flex; flex-direction:column; gap:10px; padding:26px 32px; border-right:1px solid var(--border-main);">
-      <div style="display:flex; align-items:center; gap:12px;">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E6FA3" stroke-width="1.8"><circle cx="10" cy="10" r="6"></circle><line x1="14.5" y1="14.5" x2="20" y2="20"></line></svg>
-        <span style="font-weight:600; font-size:15px; font-family:var(--font-display);">Bench-tested</span>
-      </div>
-      <p style="margin:0; font-size:12.5px; line-height:1.5; color:var(--ink-secondary); padding-left:32px;">Every unit measured and verified before it's listed.</p>
-    </div>
-    <div style="display:flex; flex-direction:column; gap:10px; padding:26px 32px; border-right:1px solid var(--border-main);">
-      <div style="display:flex; align-items:center; gap:12px;">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E6FA3" stroke-width="1.8"><rect x="5" y="3" width="14" height="18" rx="1"></rect><line x1="8" y1="8" x2="16" y2="8"></line><line x1="8" y1="12" x2="16" y2="12"></line><line x1="8" y1="16" x2="12" y2="16"></line></svg>
-        <span style="font-weight:600; font-size:15px; font-family:var(--font-display);">Condition disclosed</span>
-      </div>
-      <p style="margin:0; font-size:12.5px; line-height:1.5; color:var(--ink-secondary); padding-left:32px;">Known faults are documented, never buried in fine print.</p>
-    </div>
-    <div style="display:flex; flex-direction:column; gap:10px; padding:26px 32px; border-right:1px solid var(--border-main);">
-      <div style="display:flex; align-items:center; gap:12px;">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E6FA3" stroke-width="1.8"><rect x="4" y="6" width="16" height="14" rx="1"></rect><path d="M4 10h16"></path><path d="M8 3v4M16 3v4"></path></svg>
-        <span style="font-weight:600; font-size:15px; font-family:var(--font-display);">Secure packaging</span>
-      </div>
-      <p style="margin:0; font-size:12.5px; line-height:1.5; color:var(--ink-secondary); padding-left:32px;">Custom-crated for pan-India shipping, tracked door to door.</p>
-    </div>
-    <div style="display:flex; flex-direction:column; gap:10px; padding:26px 32px;">
-      <div style="display:flex; align-items:center; gap:12px;">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E6FA3" stroke-width="1.8"><path d="M4 18a8 8 0 0 1 16 0"></path><line x1="12" y1="18" x2="15" y2="12"></line><circle cx="12" cy="18" r="1.4" fill="#2E6FA3" stroke="none"></circle></svg>
-        <span style="font-weight:600; font-size:15px; font-family:var(--font-display);">Dedicated support</span>
-      </div>
-      <p style="margin:0; font-size:12.5px; line-height:1.5; color:var(--ink-secondary); padding-left:32px;">A concierge for questions before, during and after the sale.</p>
-    </div>
-  </div>
-
-  <!-- Shop by category -->
-  <div style="padding:72px 56px 64px 56px; display:flex; flex-direction:column; gap:32px;">
-    <h2 style="margin:0; font-family:var(--font-display); font-weight:700; font-size:28px;">Shop by category</h2>
-    <div style="display:grid; grid-template-columns: repeat(4, minmax(0,1fr)); grid-template-rows: repeat(2, 190px); gap:20px;">
-
-      <a href="shop.html?category=Amplifiers" class="card-hover paper" style="grid-column:1/3; grid-row:1; border:1px solid var(--border-main); display:flex; align-items:center; gap:20px; padding:0 28px; color:var(--ink-primary);">
-        <svg width="70" height="52" viewBox="0 0 90 70" fill="none" stroke="#1B1812" stroke-width="1.5"><rect x="6" y="12" width="78" height="46" rx="2"></rect><circle cx="30" cy="35" r="13" stroke="#2E6FA3"></circle><circle cx="60" cy="35" r="13" stroke="#2E6FA3"></circle></svg>
-        <div>
-          <div style="font-family:var(--font-display); font-weight:600; font-size:18px;">Amplifiers</div>
-          <div style="font-family:var(--font-mono); font-size:12px; color:var(--ink-muted); margin-top:4px;">48 items</div>
-        </div>
-      </a>
-
-      <a href="shop.html?category=Speakers" class="card-hover paper" style="grid-column:3; grid-row:1; border:1px solid var(--border-main); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; color:var(--ink-primary);">
-        <svg width="58" height="60" viewBox="0 0 70 90" fill="none" stroke="#1B1812" stroke-width="1.6"><rect x="6" y="6" width="26" height="78" rx="2"></rect><circle cx="19" cy="26" r="8" stroke="#D8952F"></circle><circle cx="19" cy="54" r="5" stroke="#D8952F"></circle><rect x="38" y="6" width="26" height="78" rx="2"></rect><circle cx="51" cy="26" r="8" stroke="#D8952F"></circle><circle cx="51" cy="54" r="5" stroke="#D8952F"></circle></svg>
-        <div style="text-align:center;">
-          <div style="font-family:var(--font-display); font-weight:600; font-size:16px;">Speakers</div>
-          <div style="font-family:var(--font-mono); font-size:12px; color:var(--ink-muted); margin-top:4px;">24 items</div>
-        </div>
-      </a>
-
-      <a href="shop.html?category=Turntables" class="card-hover paper" style="grid-column:4; grid-row:1; border:1px solid var(--border-main); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; color:var(--ink-primary);">
-        <svg width="66" height="58" viewBox="0 0 90 78" fill="none" stroke="#1B1812" stroke-width="1.6"><rect x="6" y="8" width="78" height="62" rx="2"></rect><circle cx="45" cy="40" r="24" stroke="#2E6FA3"></circle><line x1="45" y1="40" x2="62" y2="24"></line><circle cx="64" cy="22" r="3"></circle></svg>
-        <div style="text-align:center;">
-          <div style="font-family:var(--font-display); font-weight:600; font-size:16px;">Turntables</div>
-          <div style="font-family:var(--font-mono); font-size:12px; color:var(--ink-muted); margin-top:4px;">31 items</div>
-        </div>
-      </a>
-
-      <a href="shop.html?category=Receivers" class="card-hover paper" style="grid-column:1; grid-row:2; border:1px solid var(--border-main); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; color:var(--ink-primary);">
-        <svg width="66" height="46" viewBox="0 0 90 62" fill="none" stroke="#1B1812" stroke-width="1.6"><rect x="6" y="6" width="78" height="50" rx="2"></rect><circle cx="26" cy="31" r="11" stroke="#4B7A51"></circle><rect x="50" y="16" width="26" height="10"></rect><rect x="50" y="32" width="26" height="8"></rect></svg>
-        <div style="text-align:center;">
-          <div style="font-family:var(--font-display); font-weight:600; font-size:16px;">Receivers</div>
-          <div style="font-family:var(--font-mono); font-size:12px; color:var(--ink-muted); margin-top:4px;">18 items</div>
-        </div>
-      </a>
-
-      <a href="shop.html?category=Cassette+decks" class="card-hover paper" style="grid-column:2; grid-row:2; border:1px solid var(--border-main); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; color:var(--ink-primary);">
-        <svg width="66" height="42" viewBox="0 0 90 56" fill="none" stroke="#1B1812" stroke-width="1.6"><rect x="6" y="6" width="78" height="44" rx="2"></rect><circle cx="30" cy="28" r="12" stroke="#B4472F"></circle><circle cx="60" cy="28" r="12" stroke="#B4472F"></circle><rect x="40" y="24" width="10" height="8"></rect></svg>
-        <div style="text-align:center;">
-          <div style="font-family:var(--font-display); font-weight:600; font-size:16px;">Cassette decks</div>
-          <div style="font-family:var(--font-mono); font-size:12px; color:var(--ink-muted); margin-top:4px;">9 items</div>
-        </div>
-      </a>
-
-      <a href="shop.html?category=Reel-to-Reel" class="card-hover paper" style="grid-column:3/5; grid-row:2; border:1px solid var(--border-main); display:flex; align-items:center; gap:20px; padding:0 28px; color:var(--ink-primary);">
-        <svg width="56" height="56" viewBox="0 0 64 64" fill="none" stroke="#1B1812" stroke-width="1.6"><circle cx="32" cy="32" r="24"></circle><path d="M32 16v6M32 42v6M16 32h6M42 32h6M20.5 20.5l4.2 4.2M39.3 39.3l4.2 4.2M20.5 43.5l4.2-4.2M39.3 24.7l4.2-4.2" stroke="#D8952F"></path></svg>
-        <div>
-          <div style="font-family:var(--font-display); font-weight:600; font-size:18px;">Reel-to-Reel Decks</div>
-          <div style="font-family:var(--font-mono); font-size:12px; color:var(--ink-muted); margin-top:4px;">12 items</div>
-        </div>
-      </a>
-
-    </div>
-    <a href="shop.html" class="btn btn-outline" style="align-self:center; font-weight:600; font-size:14px; padding:0 28px; height:46px; margin-top:8px;">View all categories</a>
-  </div>
-
-  <!-- Recently added — bento -->
-  <div style="position:relative; padding:16px 56px 72px 56px; display:flex; flex-direction:column; gap:32px; overflow:hidden;">
-    <div class="watermark" style="top:-40px; right:20px; font-size:420px;">A–E</div>
-    <div style="display:flex; align-items:baseline; justify-content:space-between; position:relative; z-index:1;">
-      <h2 style="margin:0; font-family:var(--font-display); font-weight:700; font-size:28px;">Recently added</h2>
-      <a href="shop.html" style="font-family:var(--font-mono); font-size:13px;">View all stock →</a>
-    </div>
-
-    <div style="position:relative; z-index:1; display:grid; grid-template-columns: repeat(4, minmax(0,1fr)); grid-template-rows: 232px 232px; gap:20px;">
-
-      <!-- Featured big card (Wollensak 1580) -->
-      <div class="card-hover paper" style="grid-column:1 / 3; grid-row:1 / 3; border:1px solid var(--border-main); display:flex; flex-direction:column; position:relative;">
-        <div style="position:absolute; top:14px; left:14px; font-family:var(--font-mono); font-size:10px; letter-spacing:0.1em; color:var(--ink-muted); z-index:2;">FEATURED THIS WEEK</div>
-        <button class="heart-btn" aria-label="Save" style="position:absolute; top:14px; right:14px; background:none; border:none; z-index:2;">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1B1812" stroke-width="1.6"><path d="M12 20.5s-7.5-4.7-9.8-9.4C.8 7.7 2.6 4 6.3 4c2 0 3.6 1.1 4.5 2.7C11.7 5.1 13.3 4 15.3 4c3.7 0 5.5 3.7 4.1 7.1C17.1 15.8 12 20.5 12 20.5z"></path></svg>
-        </button>
-        <div style="flex:1; overflow:hidden; position:relative; background:#080A0F; border-bottom:1px solid var(--border-main);">
-          <img src="assets/images/03-wollensak-reel-to-reel-cinematic.png" alt="Wollensak 1580 Stereo Tape Recorder" style="width:100%; height:100%; object-fit:cover; display:block;">
-        </div>
-        <div style="padding:22px; display:flex; flex-direction:column; gap:10px;">
-          <div style="display:flex; justify-content:space-between; align-items:center;">
-            <a href="product.html?id=HFR-0192" style="font-weight:600; font-size:20px; font-family:var(--font-display); color:var(--ink-primary);">Wollensak 1580 Stereo Deck</a>
-            <span class="grade-badge grade-ap">GRADE A+</span>
+  <!-- Trust Rating Band -->
+  <section class="rating-band-wrap">
+    <div class="section-inner">
+      <div class="paper" style="border:1px solid var(--border-main); padding:32px 40px; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;">
+        <div style="display:flex; align-items:center; gap:20px;">
+          <div style="display:flex; gap:3px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#D8952F"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.6 6.8L12 16.9 5.8 20.4l1.6-6.8-5.2-4.6 6.9-.7z"></path></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#D8952F"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.6 6.8L12 16.9 5.8 20.4l1.6-6.8-5.2-4.6 6.9-.7z"></path></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#D8952F"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.6 6.8L12 16.9 5.8 20.4l1.6-6.8-5.2-4.6 6.9-.7z"></path></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#D8952F"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.6 6.8L12 16.9 5.8 20.4l1.6-6.8-5.2-4.6 6.9-.7z"></path></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#D8952F"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.6 6.8L12 16.9 5.8 20.4l1.6-6.8-5.2-4.6 6.9-.7z"></path></svg>
           </div>
-          <p style="margin:0; font-size:13.5px; color:var(--ink-secondary); max-width:420px;">Tube-hybrid tape transport, pinch roller conditioned, playback tested on both channels.</p>
-          <div style="display:flex; align-items:center; justify-content:space-between; margin-top:8px;">
-            <div style="display:flex; flex-direction:column; gap:4px;">
-              <div class="ticket" style="border:1px solid var(--ink-primary); padding:8px 16px 8px 20px; background:var(--bg-paper);">
-                <div class="ticket-notch"></div><div class="ticket-cut"></div>
-                <span style="font-family:var(--font-mono); font-size:18px; font-weight:600;">₹68,000</span>
-              </div>
-              <span style="display:flex; align-items:center; gap:4px; font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); padding-left:20px;">
-                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"></path><circle cx="12" cy="9" r="2.4"></circle></svg>
-                Bangalore
-              </span>
-            </div>
-            <a href="product.html?id=HFR-0192" class="btn btn-outline btn-sm">Inspect Report</a>
+          <div>
+            <div style="font-family:var(--font-display); font-weight:700; font-size:19px;">4.9/5 average rating</div>
+            <div style="font-size:13px; color:var(--ink-secondary); margin-top:2px;">Trusted by audio lovers across India</div>
           </div>
         </div>
-      </div>
-
-      <!-- Item 2: Pioneer SA-8800 -->
-      <div class="card-hover paper" style="grid-column:3; grid-row:1; border:1px solid var(--border-main); display:flex; flex-direction:column; position:relative;">
-        <button class="heart-btn" aria-label="Save" style="position:absolute; top:10px; right:10px; background:none; border:none; z-index:2;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B1812" stroke-width="1.8"><path d="M12 20.5s-7.5-4.7-9.8-9.4C.8 7.7 2.6 4 6.3 4c2 0 3.6 1.1 4.5 2.7C11.7 5.1 13.3 4 15.3 4c3.7 0 5.5 3.7 4.1 7.1C17.1 15.8 12 20.5 12 20.5z"></path></svg>
-        </button>
-        <div style="flex:1; overflow:hidden; position:relative; background:#080A0F; border-bottom:1px solid var(--border-main);">
-          <img src="assets/images/01-tube-amplifiers-cinematic.png" alt="Pioneer SA-8800" style="width:100%; height:100%; object-fit:cover; display:block;">
-        </div>
-        <div style="padding:16px; display:flex; flex-direction:column; gap:6px;">
-          <div style="display:flex; justify-content:space-between; align-items:center;">
-            <a href="product.html?id=HFR-0130" style="font-weight:600; font-size:15px; color:var(--ink-primary);">Pioneer SA-8800</a>
-            <span class="grade-badge grade-b">B</span>
-          </div>
-          <span style="font-family:var(--font-mono); font-size:14px; font-weight:600;">₹38,500</span>
-          <span style="display:flex; align-items:center; gap:4px; font-family:var(--font-mono); font-size:10.5px; color:var(--ink-muted);">
-            <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"></path><circle cx="12" cy="9" r="2.4"></circle></svg>
-            Delhi
-          </span>
-        </div>
-      </div>
-
-      <!-- Item 3: Technics SL-1200MK2 -->
-      <div class="card-hover paper" style="grid-column:4; grid-row:1; border:1px solid var(--border-main); display:flex; flex-direction:column; position:relative;">
-        <button class="heart-btn" aria-label="Save" style="position:absolute; top:10px; right:10px; background:none; border:none; z-index:2;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B1812" stroke-width="1.8"><path d="M12 20.5s-7.5-4.7-9.8-9.4C.8 7.7 2.6 4 6.3 4c2 0 3.6 1.1 4.5 2.7C11.7 5.1 13.3 4 15.3 4c3.7 0 5.5 3.7 4.1 7.1C17.1 15.8 12 20.5 12 20.5z"></path></svg>
-        </button>
-        <div style="flex:1; overflow:hidden; position:relative; background:#080A0F; border-bottom:1px solid var(--border-main);">
-          <img src="assets/images/05-akai-1710w-cinematic.png" alt="Technics SL-1200MK2" style="width:100%; height:100%; object-fit:cover; display:block;">
-        </div>
-        <div style="padding:16px; display:flex; flex-direction:column; gap:6px;">
-          <div style="display:flex; justify-content:space-between; align-items:center;">
-            <a href="product.html?id=HFR-0152" style="font-weight:600; font-size:15px; color:var(--ink-primary);">Technics SL-1200</a>
-            <span class="grade-badge grade-b">B</span>
-          </div>
-          <span style="font-family:var(--font-mono); font-size:14px; font-weight:600;">₹48,000</span>
-          <span style="display:flex; align-items:center; gap:4px; font-family:var(--font-mono); font-size:10.5px; color:var(--ink-muted);">
-            <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"></path><circle cx="12" cy="9" r="2.4"></circle></svg>
-            Mumbai
-          </span>
-        </div>
-      </div>
-
-      <!-- Item 4: Marantz 2270 -->
-      <div class="card-hover paper" style="grid-column:3; grid-row:2; border:1px solid var(--border-main); display:flex; flex-direction:column; position:relative;">
-        <button class="heart-btn" aria-label="Save" style="position:absolute; top:10px; right:10px; background:none; border:none; z-index:2;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B1812" stroke-width="1.8"><path d="M12 20.5s-7.5-4.7-9.8-9.4C.8 7.7 2.6 4 6.3 4c2 0 3.6 1.1 4.5 2.7C11.7 5.1 13.3 4 15.3 4c3.7 0 5.5 3.7 4.1 7.1C17.1 15.8 12 20.5 12 20.5z"></path></svg>
-        </button>
-        <div style="flex:1; overflow:hidden; position:relative; background:#080A0F; border-bottom:1px solid var(--border-main);">
-          <img src="assets/images/02-rear-panel-cinematic.png" alt="Marantz 2270" style="width:100%; height:100%; object-fit:cover; display:block;">
-        </div>
-        <div style="padding:16px; display:flex; flex-direction:column; gap:6px;">
-          <div style="display:flex; justify-content:space-between; align-items:center;">
-            <a href="product.html?id=HFR-0175" style="font-weight:600; font-size:15px; color:var(--ink-primary);">Marantz 2270</a>
-            <span class="grade-badge grade-a">A</span>
-          </div>
-          <span style="font-family:var(--font-mono); font-size:14px; font-weight:600;">₹1,45,000</span>
-          <span style="display:flex; align-items:center; gap:4px; font-family:var(--font-mono); font-size:10.5px; color:var(--ink-muted);">
-            <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"></path><circle cx="12" cy="9" r="2.4"></circle></svg>
-            Pune
-          </span>
-        </div>
-      </div>
-
-      <!-- Item 5: TEAC V-6030S -->
-      <div class="card-hover paper" style="grid-column:4; grid-row:2; border:1px solid var(--border-main); display:flex; flex-direction:column; position:relative;">
-        <button class="heart-btn" aria-label="Save" style="position:absolute; top:10px; right:10px; background:none; border:none; z-index:2;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B1812" stroke-width="1.8"><path d="M12 20.5s-7.5-4.7-9.8-9.4C.8 7.7 2.6 4 6.3 4c2 0 3.6 1.1 4.5 2.7C11.7 5.1 13.3 4 15.3 4c3.7 0 5.5 3.7 4.1 7.1C17.1 15.8 12 20.5 12 20.5z"></path></svg>
-        </button>
-        <div style="flex:1; overflow:hidden; position:relative; background:#080A0F; border-bottom:1px solid var(--border-main);">
-          <img src="assets/images/06-wollensak-right-reel-detail-cinematic.png" alt="TEAC V-6030S" style="width:100%; height:100%; object-fit:cover; display:block;">
-        </div>
-        <div style="padding:16px; display:flex; flex-direction:column; gap:6px;">
-          <div style="display:flex; justify-content:space-between; align-items:center;">
-            <a href="product.html?id=HFR-0125" style="font-weight:600; font-size:15px; color:var(--ink-primary);">TEAC V-6030S</a>
-            <span class="grade-badge grade-a">A</span>
-          </div>
-          <span style="font-family:var(--font-mono); font-size:14px; font-weight:600;">₹26,000</span>
-          <span style="display:flex; align-items:center; gap:4px; font-family:var(--font-mono); font-size:10.5px; color:var(--ink-muted);">
-            <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"></path><circle cx="12" cy="9" r="2.4"></circle></svg>
-            Kolkata
-          </span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Two column CTA band (Sell & Source) -->
-  <div style="padding:0 56px 72px 56px; display:grid; grid-template-columns: 1fr 1fr; gap:24px;">
-    
-    <!-- Sell Box -->
-    <div class="paper" style="border:1px solid var(--border-main); padding:36px; display:flex; flex-direction:column; gap:20px;">
-      <div>
-        <div style="font-family:var(--font-mono); font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent-cobalt);">Sell</div>
-        <h3 style="margin:6px 0 0 0; font-family:var(--font-display); font-weight:700; font-size:24px;">Have HiFi equipment to sell?</h3>
-        <p style="margin:8px 0 0 0; font-size:14px; color:var(--ink-secondary); max-width:420px;">We buy outright. Fill in the details below and get a fair cash buyout offer within 24 hours.</p>
-      </div>
-      <form onsubmit="handleQuickSell(event)" style="display:flex; flex-direction:column; gap:14px;">
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
-          <div class="field-group"><label class="field-label">NAME</label><input type="text" name="name" class="field-input" placeholder="Your name" required></div>
-          <div class="field-group"><label class="field-label">PHONE / WHATSAPP</label><input type="tel" name="phone" class="field-input" placeholder="+91" required></div>
-        </div>
-        <div class="field-group"><label class="field-label">WHAT ARE YOU SELLING?</label><input type="text" name="gear" class="field-input" placeholder="e.g. Sansui AU-717 amplifier" required></div>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; align-items:end;">
-          <div class="field-group"><label class="field-label">CITY</label><input type="text" name="city" class="field-input" placeholder="e.g. Mumbai" required></div>
-          <button type="submit" class="btn btn-primary" style="height:44px;">Submit for review</button>
-        </div>
-      </form>
-    </div>
-
-    <!-- Source Box -->
-    <div class="paper" style="border:1px solid var(--border-main); padding:36px; display:flex; flex-direction:column; gap:20px;">
-      <div>
-        <div style="font-family:var(--font-mono); font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent-amber);">Source</div>
-        <h3 style="margin:6px 0 0 0; font-family:var(--font-display); font-weight:700; font-size:24px;">Looking for something specific?</h3>
-        <p style="margin:8px 0 0 0; font-size:14px; color:var(--ink-secondary); max-width:420px;">Tell us what you're after and your budget. We track open requests against everything coming into our workshop.</p>
-      </div>
-      <form onsubmit="handleQuickSource(event)" style="display:flex; flex-direction:column; gap:14px;">
-        <div class="field-group"><label class="field-label">WHAT ARE YOU LOOKING FOR?</label><input type="text" name="wanted" class="field-input" placeholder="e.g. Thorens TD-160 turntable" required></div>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
-          <div class="field-group"><label class="field-label">BUDGET RANGE</label><input type="text" name="budget" class="field-input" placeholder="e.g. ₹40k - ₹55k" required></div>
-          <div class="field-group"><label class="field-label">PHONE / WHATSAPP</label><input type="tel" name="phone" class="field-input" placeholder="+91" required></div>
-        </div>
-        <button type="submit" class="btn btn-outline" style="align-self:flex-start; padding:0 24px; height:44px; margin-top:2px;">Submit request</button>
-      </form>
-    </div>
-  </div>
-
-  <!-- Recently sold ledger -->
-  <div style="padding:0 56px 56px 56px;">
-    <div class="paper" style="border:1px solid var(--border-main); position:relative;">
-      <div style="padding:16px 24px; border-bottom:1px solid var(--border-main); display:flex; align-items:center; justify-content:space-between;">
-        <span style="font-family:var(--font-mono); font-size:12px; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-muted);">Recently sold — a public log, not a highlight reel</span>
-      </div>
-      <div style="position:absolute; top:-26px; right:20px;">
-        <svg width="64" height="64" viewBox="0 0 128 128">
-          <defs><path id="ringSoldHome" d="M 64,64 m -50,0 a 50,50 0 1,1 100,0 a 50,50 0 1,1 -100,0"></path></defs>
-          <circle cx="64" cy="64" r="58" fill="#FBF9F3" stroke="#1B1812" stroke-width="1.2"></circle>
-          <circle cx="64" cy="64" r="49" fill="none" stroke="#1B1812" stroke-width="1"></circle>
-          <text font-family="IBM Plex Mono" font-size="6.5" letter-spacing="1.6" fill="#1B1812">
-            <textPath href="#ringSoldHome" startOffset="2%">THE HIFI ROOM • VERIFIED SALE •</textPath>
-          </text>
-          <text x="64" y="70" text-anchor="middle" font-family="Big Shoulders Display" font-weight="700" font-size="18" fill="#B4472F">SOLD</text>
-        </svg>
-      </div>
-      <div style="display:grid; grid-template-columns: 2fr 1.4fr 1fr;">
-        <div style="padding:12px 24px; font-family:var(--font-mono); font-size:12px; color:var(--ink-muted); border-bottom:1px solid var(--border-main);">UNIT</div>
-        <div style="padding:12px 24px; font-family:var(--font-mono); font-size:12px; color:var(--ink-muted); border-bottom:1px solid var(--border-main);">TYPE</div>
-        <div style="padding:12px 24px; font-family:var(--font-mono); font-size:12px; color:var(--ink-muted); border-bottom:1px solid var(--border-main);">STATUS</div>
-
-        <div style="padding:12px 24px; font-size:14px; border-bottom:1px solid var(--border-light);">Sansui AU-717</div>
-        <div style="padding:12px 24px; font-family:var(--font-mono); font-size:13px; color:var(--ink-secondary); border-bottom:1px solid var(--border-light);">Integrated amplifier</div>
-        <div style="padding:12px 24px; border-bottom:1px solid var(--border-light);"><span style="display:inline-block; font-family:var(--font-mono); font-size:11px; font-weight:500; letter-spacing:0.08em; color:var(--accent-red); border:1px solid var(--accent-red); padding:2px 8px; transform:rotate(-4deg);">SOLD</span></div>
-
-        <div style="padding:12px 24px; font-size:14px; border-bottom:1px solid var(--border-light);">Pioneer SA-1060</div>
-        <div style="padding:12px 24px; font-family:var(--font-mono); font-size:13px; color:var(--ink-secondary); border-bottom:1px solid var(--border-light);">Integrated amplifier</div>
-        <div style="padding:12px 24px; border-bottom:1px solid var(--border-light);"><span style="display:inline-block; font-family:var(--font-mono); font-size:11px; font-weight:500; letter-spacing:0.08em; color:var(--accent-red); border:1px solid var(--accent-red); padding:2px 8px; transform:rotate(-4deg);">SOLD</span></div>
-
-        <div style="padding:12px 24px; font-size:14px; border-bottom:1px solid var(--border-light);">Yamaha NS-1000M</div>
-        <div style="padding:12px 24px; font-family:var(--font-mono); font-size:13px; color:var(--ink-secondary); border-bottom:1px solid var(--border-light);">Speakers</div>
-        <div style="padding:12px 24px; border-bottom:1px solid var(--border-light);"><span style="display:inline-block; font-family:var(--font-mono); font-size:11px; font-weight:500; letter-spacing:0.08em; color:var(--accent-red); border:1px solid var(--accent-red); padding:2px 8px; transform:rotate(-4deg);">SOLD</span></div>
-
-        <div style="padding:12px 24px; font-size:14px; border-bottom:1px solid var(--border-light);">Akai GX-635D</div>
-        <div style="padding:12px 24px; font-family:var(--font-mono); font-size:13px; color:var(--ink-secondary); border-bottom:1px solid var(--border-light);">Reel-to-reel deck</div>
-        <div style="padding:12px 24px; border-bottom:1px solid var(--border-light);"><span style="display:inline-block; font-family:var(--font-mono); font-size:11px; font-weight:500; letter-spacing:0.08em; color:var(--accent-red); border:1px solid var(--accent-red); padding:2px 8px; transform:rotate(-4deg);">SOLD</span></div>
-
-        <div style="padding:12px 24px; font-size:14px;">Marantz 2220B</div>
-        <div style="padding:12px 24px; font-family:var(--font-mono); font-size:13px; color:var(--ink-secondary);">Receiver</div>
-        <div style="padding:12px 24px;"><span style="display:inline-block; font-family:var(--font-mono); font-size:11px; font-weight:500; letter-spacing:0.08em; color:var(--accent-red); border:1px solid var(--accent-red); padding:2px 8px; transform:rotate(-4deg);">SOLD</span></div>
+        <div style="font-family:var(--font-mono); font-size:13px; color:var(--ink-muted);">Follow the log — <a href="https://wa.me/919711393036" target="_blank">@thehifiroom</a></div>
       </div>
     </div>
-  </div>
-
-  <!-- Trust / aggregate band -->
-  <div style="padding:0 56px 80px 56px;">
-    <div class="paper" style="border:1px solid var(--border-main); padding:36px 44px; display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap;">
-      <div style="display:flex; align-items:center; gap:20px;">
-        <div style="display:flex; gap:3px;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#D8952F"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.6 6.8L12 16.9 5.8 20.4l1.6-6.8-5.2-4.6 6.9-.7z"></path></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#D8952F"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.6 6.8L12 16.9 5.8 20.4l1.6-6.8-5.2-4.6 6.9-.7z"></path></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#D8952F"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.6 6.8L12 16.9 5.8 20.4l1.6-6.8-5.2-4.6 6.9-.7z"></path></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#D8952F"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.6 6.8L12 16.9 5.8 20.4l1.6-6.8-5.2-4.6 6.9-.7z"></path></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#D8952F"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.6 6.8L12 16.9 5.8 20.4l1.6-6.8-5.2-4.6 6.9-.7z"></path></svg>
-        </div>
-        <div>
-          <div style="font-family:var(--font-display); font-weight:700; font-size:19px;">4.9/5 average rating</div>
-          <div style="font-size:13px; color:var(--ink-secondary); margin-top:2px;">Trusted by audio lovers across India</div>
-        </div>
-      </div>
-      <div style="font-family:var(--font-mono); font-size:13px; color:var(--ink-muted);">Follow the log — <a href="https://wa.me/919711393036" target="_blank">@thehifiroom</a></div>
-    </div>
-  </div>
+  </section>
 
   <!-- Footer -->
-  <footer style="border-top:1px solid var(--border-main); padding:48px 56px; display:flex; flex-direction:column; gap:32px; margin-top:auto; background:var(--bg-paper);">
-    <div style="display:grid; grid-template-columns: 1.2fr 1fr 1fr 1fr 1fr; gap:24px;">
-      <div style="display:flex; flex-direction:column; gap:14px;">
-        <div style="display:flex; align-items:center; gap:12px;">
-          <svg width="30" height="30" viewBox="0 0 128 128"><circle cx="64" cy="64" r="58" fill="none" stroke="#1B1812" stroke-width="2"></circle><circle cx="64" cy="64" r="49" fill="none" stroke="#1B1812" stroke-width="1"></circle><text x="64" y="72" text-anchor="middle" font-family="Big Shoulders Display" font-weight="700" font-size="34" fill="#1B1812">H</text></svg>
-          <div style="font-family:var(--font-mono); font-size:14px; letter-spacing:0.14em; font-weight:600;">THE HIFI ROOM</div>
+  <footer class="site-footer">
+    <div class="section-inner">
+      <div class="footer-columns">
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div style="display:flex; align-items:center; gap:10px;">
+            <svg width="28" height="28" viewBox="0 0 128 128"><circle cx="64" cy="64" r="58" fill="none" stroke="#1B1812" stroke-width="2"></circle><circle cx="64" cy="64" r="49" fill="none" stroke="#1B1812" stroke-width="1"></circle><text x="64" y="72" text-anchor="middle" font-family="Big Shoulders Display" font-weight="700" font-size="34" fill="#1B1812">H</text></svg>
+            <div style="font-family:var(--font-mono); font-size:14px; letter-spacing:0.14em; font-weight:600;">THE HIFI ROOM</div>
+          </div>
+          <p style="margin:0; font-size:12.5px; line-height:1.6; color:var(--ink-muted); max-width:220px;">We buy, sell and source vintage hi-fi. Every unit tested, cleaned, and honestly described.</p>
         </div>
-        <p style="margin:0; font-size:12.5px; line-height:1.6; color:var(--ink-muted); max-width:200px;">We buy, sell and source vintage hi-fi. Every price carefully considered and honestly described.</p>
+        <div style="display:flex; flex-direction:column; gap:10px; font-size:13px;">
+          <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); text-transform:uppercase;">Quick links</span>
+          <a href="shop.html" style="color:var(--ink-secondary);">Shop</a>
+          <a href="sell.html" style="color:var(--ink-secondary);">Sell your HiFi</a>
+          <a href="find.html" style="color:var(--ink-secondary);">Find equipment</a>
+          <a href="grading.html" style="color:var(--ink-secondary);">Grading standard</a>
+          <a href="sold.html" style="color:var(--ink-secondary);">Recently sold</a>
+          <a href="about.html" style="color:var(--ink-secondary);">About us</a>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:10px; font-size:13px;">
+          <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); text-transform:uppercase;">Categories</span>
+          <a href="shop.html?category=Amplifiers" style="color:var(--ink-secondary);">Amplifiers</a>
+          <a href="shop.html?category=Speakers" style="color:var(--ink-secondary);">Speakers</a>
+          <a href="shop.html?category=Turntables" style="color:var(--ink-secondary);">Turntables</a>
+          <a href="shop.html?category=Receivers" style="color:var(--ink-secondary);">Receivers</a>
+          <a href="shop.html?category=Cassette+decks" style="color:var(--ink-secondary);">Cassette decks</a>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:10px; font-size:13px;">
+          <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); text-transform:uppercase;">Customer support</span>
+          <a href="about.html" style="color:var(--ink-secondary);">Shipping & delivery</a>
+          <a href="grading.html" style="color:var(--ink-secondary);">Grading rubric</a>
+          <a href="about.html" style="color:var(--ink-secondary);">Workshop testing</a>
+          <a href="admin.html" style="color:var(--accent-cobalt);">Staff Console →</a>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:10px; font-size:13px;">
+          <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); text-transform:uppercase;">Contact us</span>
+          <a href="https://wa.me/919711393036" target="_blank" style="color:var(--accent-green); font-weight:500;">+91 97113 93036 (WhatsApp)</a>
+          <span style="color:var(--ink-secondary);">info@thehifiroom.in</span>
+          <span style="color:var(--ink-secondary);">Bandra West, Mumbai</span>
+          <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted);">We ship across India</span>
+        </div>
       </div>
-      <div style="display:flex; flex-direction:column; gap:10px; font-size:13px;">
-        <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); text-transform:uppercase;">Quick links</span>
-        <a href="shop.html" style="color:var(--ink-secondary);">Shop</a>
-        <a href="sell.html" style="color:var(--ink-secondary);">Sell your HiFi</a>
-        <a href="find.html" style="color:var(--ink-secondary);">Find equipment</a>
-        <a href="grading.html" style="color:var(--ink-secondary);">Grading standard</a>
-        <a href="sold.html" style="color:var(--ink-secondary);">Recently sold</a>
-        <a href="about.html" style="color:var(--ink-secondary);">About us</a>
+      <div style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); border-top:1px solid var(--border-light); padding-top:20px; margin-top:28px;">
+        © 2026 The HiFi Room. All grades defined in the published standard.
       </div>
-      <div style="display:flex; flex-direction:column; gap:10px; font-size:13px;">
-        <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); text-transform:uppercase;">Categories</span>
-        <a href="shop.html?category=Amplifiers" style="color:var(--ink-secondary);">Amplifiers</a>
-        <a href="shop.html?category=Speakers" style="color:var(--ink-secondary);">Speakers</a>
-        <a href="shop.html?category=Turntables" style="color:var(--ink-secondary);">Turntables</a>
-        <a href="shop.html?category=Receivers" style="color:var(--ink-secondary);">Receivers</a>
-        <a href="shop.html?category=Cassette+decks" style="color:var(--ink-secondary);">Cassette decks</a>
-      </div>
-      <div style="display:flex; flex-direction:column; gap:10px; font-size:13px;">
-        <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); text-transform:uppercase;">Customer support</span>
-        <a href="about.html" style="color:var(--ink-secondary);">Shipping & delivery</a>
-        <a href="grading.html" style="color:var(--ink-secondary);">Grading rubric</a>
-        <a href="about.html" style="color:var(--ink-secondary);">Workshop testing</a>
-        <a href="admin.html" style="color:var(--accent-cobalt);">Staff Console →</a>
-      </div>
-      <div style="display:flex; flex-direction:column; gap:10px; font-size:13px;">
-        <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); text-transform:uppercase;">Contact us</span>
-        <a href="https://wa.me/919711393036" target="_blank" style="color:var(--accent-green); font-weight:500;">+91 97113 93036 (WhatsApp)</a>
-        <span style="color:var(--ink-secondary);">info@thehifiroom.in</span>
-        <span style="color:var(--ink-secondary);">Bandra West, Mumbai</span>
-        <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted);">We ship across India</span>
-      </div>
-    </div>
-    <div style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); border-top:1px solid var(--border-light); padding-top:20px;">
-      © 2026 The HiFi Room. All grades defined in the published standard.
     </div>
   </footer>
 
