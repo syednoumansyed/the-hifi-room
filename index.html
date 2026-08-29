@@ -178,6 +178,24 @@
     </div>
   </section>
 
+  <!-- Interactive CRT Oscilloscope Audio Visualizer -->
+  <section style="padding:clamp(40px, 5vw, 64px) 0; border-bottom:1px solid var(--border-main); background:rgba(14,17,22,0.03);">
+    <div class="section-inner" style="display:flex; flex-direction:column; gap:24px;">
+      <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:16px;">
+        <div>
+          <div style="font-family:var(--font-mono); font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--accent-cobalt);">Workshop Audio Visualizer</div>
+          <h2 style="margin:6px 0 0 0; font-family:var(--font-display); font-weight:700; font-size:clamp(26px, 3.5vw, 34px);">Live Dual-Trace Signal Monitor</h2>
+        </div>
+        <p style="margin:0; font-size:14px; color:var(--ink-secondary); max-width:520px; line-height:1.5;">
+          Experience interactive analog audio waveforms in real time. Switch between rotating Lissajous stereo phase, 1kHz reference sine, 12AX7 tube saturation harmonics, and vinyl groove vibrations with authentic phosphor glow.
+        </p>
+      </div>
+
+      <!-- Oscilloscope Widget Container -->
+      <div id="homepage-crt-oscilloscope"></div>
+    </div>
+  </section>
+
   <!-- Shop by Category Section -->
   <section class="category-section-wrap">
     <div class="section-inner" style="display:flex; flex-direction:column; gap:32px;">
@@ -571,7 +589,18 @@
 </div>
 
 <script src="js/app.js"></script>
+<script src="js/oscilloscope.js"></script>
 <script>
+document.addEventListener('DOMContentLoaded', () => {
+  if (typeof CRTOscilloscope !== 'undefined') {
+    new CRTOscilloscope('homepage-crt-oscilloscope', {
+      theme: 'cobalt',
+      mode: 'lissajous',
+      freq: 2.0
+    });
+  }
+});
+
 async function handleQuickSell(e) {
   e.preventDefault();
   const form = e.target;
