@@ -1,0 +1,294 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <style>
+    body { margin: 0; font-family: 'IBM Plex Sans', sans-serif; background: #F3EFE6; color: #1B1812; }
+    a { color: #2E6FA3; text-decoration: none; }
+    a:hover { color: #1B4D73; }
+    .paper { background: #FBF9F3; box-shadow: 0 18px 34px -18px rgba(27,24,18,0.28), 0 1px 0 rgba(27,24,18,0.05); }
+    .nav-link { transition: color 120ms ease; }
+    .nav-link:hover { color: #1B1812 !important; }
+    .specimen:hover { box-shadow: 0 18px 34px -18px rgba(27,24,18,0.34); }
+    .specimen { transition: box-shadow 180ms ease; }
+  
+    /* HiFi Room Responsive Patch */
+    @media (max-width: 900px) {
+      div[style*="grid-template-columns: repeat(4"],
+      div[style*="grid-template-columns: repeat(5"],
+      div[style*="grid-template-columns: 1fr 1fr 1fr"] {
+        grid-template-columns: 1fr 1fr !important;
+      }
+      div[style*="display:flex"][style*="gap:56px"],
+      div[style*="display:flex"][style*="gap:40px"] {
+        flex-direction: column !important;
+        gap: 24px !important;
+      }
+    }
+    @media (max-width: 640px) {
+      div[style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+      }
+      div[style*="padding:88px 56px"],
+      div[style*="padding:72px 56px"],
+      div[style*="padding:64px 56px"],
+      div[style*="padding:56px"] {
+        padding: 24px 16px !important;
+      }
+      h1[style*="font-size:82px"], h1[style*="font-size:52px"], h1[style*="font-size:46px"], h1[style*="font-size:42px"] {
+        font-size: 36px !important;
+      }
+    }
+    
+  </style>
+</helmet>
+
+<div style="width: 100%; max-width: 1440px; margin: 0 auto; min-height: 100vh; box-sizing:border-box; background-color:#F3EFE6; background-image: repeating-linear-gradient(0deg, rgba(27,24,18,0.045) 0px, rgba(27,24,18,0.045) 1px, transparent 1px, transparent 26px), repeating-linear-gradient(90deg, rgba(27,24,18,0.045) 0px, rgba(27,24,18,0.045) 1px, transparent 1px, transparent 26px); color:#1B1812; display:flex; flex-direction:column;">
+
+  <!-- Utility bar -->
+  <div style="display:flex; align-items:center; justify-content:center; gap:28px; padding:9px 56px; background:#EAE4D3; border-bottom:1px solid #C9C2B2; font-family:'IBM Plex Mono', monospace; font-size:10.5px; letter-spacing:0.1em; text-transform:uppercase; color:#6B6558;">
+    <span>100% tested equipment</span>
+    <span style="color:#C9C2B2;">•</span>
+    <span>Pan-India shipping</span>
+    <span style="color:#C9C2B2;">•</span>
+    <span>Secure packaging</span>
+  </div>
+
+  <!-- Main nav -->
+  <div style="display:flex; align-items:center; justify-content:space-between; padding:18px 56px; border-bottom:1px solid #C9C2B2; background:rgba(251,249,243,0.6);">
+    <div style="font-family:'IBM Plex Mono', monospace; font-weight:500; font-size:14px; letter-spacing:0.16em;">THE HIFI ROOM</div>
+    <div style="display:flex; align-items:center; gap:28px; font-family:'IBM Plex Mono', monospace; font-size:11.5px; letter-spacing:0.07em; text-transform:uppercase; color:#4B4B45;">
+      <a class="nav-link" href="../index.html" style="color:#4B4B45;">Home</a>
+      <a class="nav-link" href="../shop.html" style="color:#4B4B45;">Shop</a>
+      <a class="nav-link" href="../sell.html" style="color:#4B4B45;">Sell your HiFi</a>
+      <a class="nav-link" href="../find.html" style="color:#4B4B45;">Find equipment</a>
+      <a class="nav-link" href="../sold.html" style="color:#4B4B45;">Recently sold</a>
+      <a class="nav-link" href="../about.html" style="color:#4B4B45;">About us</a>
+      <a class="nav-link" href="#" style="color:#4B4B45;">Contact</a>
+    </div>
+    <div style="display:flex; align-items:center; gap:18px;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1B1812" stroke-width="1.8"><circle cx="10" cy="10" r="6"></circle><line x1="14.5" y1="14.5" x2="20" y2="20"></line></svg>
+      <div style="width:44px; height:44px; border-radius:50%; border:1.5px solid #1B1812; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1B1812" stroke-width="1.8"><path d="M4 4h16v12H8l-4 4V4z"></path></svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Breadcrumb -->
+  <div style="padding:16px 56px 0 56px; font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:#8A8A82;">Home / The Grading Standard</div>
+
+  <!-- Header -->
+  <div style="padding:28px 56px 40px 56px; display:flex; flex-direction:column; gap:16px; border-bottom:1px solid #C9C2B2; max-width:900px;">
+    <div style="font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#2E6FA3;">The standard</div>
+    <h1 style="margin:0; font-family:'Big Shoulders Display', sans-serif; font-weight:700; font-size:46px; letter-spacing:-0.01em;">How we grade every unit</h1>
+    <p style="margin:0; font-size:15px; line-height:1.7; color:#4B4B45;">Every unit that reaches the shop floor is inspected cosmetically, tested electrically and, where it applies, run mechanically before it's graded. The grade you see on a listing is the same grade defined here — nothing is graded differently for a page that's harder to sell. A "known faults" heading that stays empty is not an oversight; it's the point. If there's nothing to disclose, the section says so.</p>
+  </div>
+
+  <!-- Process -->
+  <div style="padding:56px; border-bottom:1px solid #C9C2B2;">
+    <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#8A8A82; margin-bottom:28px;">How we grade — five steps, every time</div>
+    <div style="position:relative; display:grid; grid-template-columns: repeat(5, 1fr); gap:16px;">
+      <div style="position:absolute; top:22px; left:60px; right:60px; height:0; border-top:1.5px dashed #C9C2B2; z-index:0;"></div>
+
+      <div style="position:relative; z-index:1; display:flex; flex-direction:column; align-items:center; gap:14px; text-align:center;">
+        <div style="width:44px; height:44px; border-radius:50%; background:#FBF9F3; border:1.5px solid #1B1812; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono', monospace; font-weight:500; font-size:14px;">01</div>
+        <div style="font-family:'Big Shoulders Display', sans-serif; font-weight:600; font-size:15px;">Intake inspection</div>
+        <p style="margin:0; font-size:12px; line-height:1.5; color:#4B4B45;">Serial number logged, unit photographed as received, cosmetic pass begins.</p>
+      </div>
+      <div style="position:relative; z-index:1; display:flex; flex-direction:column; align-items:center; gap:14px; text-align:center;">
+        <div style="width:44px; height:44px; border-radius:50%; background:#FBF9F3; border:1.5px solid #1B1812; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono', monospace; font-weight:500; font-size:14px;">02</div>
+        <div style="font-family:'Big Shoulders Display', sans-serif; font-weight:600; font-size:15px;">Bench test (electrical)</div>
+        <p style="margin:0; font-size:12px; line-height:1.5; color:#4B4B45;">Signal, channel balance and noise floor measured against factory spec.</p>
+      </div>
+      <div style="position:relative; z-index:1; display:flex; flex-direction:column; align-items:center; gap:14px; text-align:center;">
+        <div style="width:44px; height:44px; border-radius:50%; background:#FBF9F3; border:1.5px solid #1B1812; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono', monospace; font-weight:500; font-size:14px;">03</div>
+        <div style="font-family:'Big Shoulders Display', sans-serif; font-weight:600; font-size:15px;">Cosmetic assessment</div>
+        <p style="margin:0; font-size:12px; line-height:1.5; color:#4B4B45;">Every mark measured and mapped — nothing rounded up or hidden by angle.</p>
+      </div>
+      <div style="position:relative; z-index:1; display:flex; flex-direction:column; align-items:center; gap:14px; text-align:center;">
+        <div style="width:44px; height:44px; border-radius:50%; background:#FBF9F3; border:1.5px solid #1B1812; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono', monospace; font-weight:500; font-size:14px;">04</div>
+        <div style="font-family:'Big Shoulders Display', sans-serif; font-weight:600; font-size:15px;">Documentation</div>
+        <p style="margin:0; font-size:12px; line-height:1.5; color:#4B4B45;">Grade, score and known faults written up before a price is even discussed.</p>
+      </div>
+      <div style="position:relative; z-index:1; display:flex; flex-direction:column; align-items:center; gap:14px; text-align:center;">
+        <div style="width:44px; height:44px; border-radius:50%; background:#1B1812; border:1.5px solid #1B1812; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono', monospace; font-weight:500; font-size:14px; color:#F9F7F0;">05</div>
+        <div style="font-family:'Big Shoulders Display', sans-serif; font-weight:600; font-size:15px;">Publish</div>
+        <p style="margin:0; font-size:12px; line-height:1.5; color:#4B4B45;">Listed with the full report attached — the grade you see is the one we tested to.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grade specimens -->
+  <div style="padding:56px; display:flex; flex-direction:column; gap:20px;">
+    <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#8A8A82;">The five grades</div>
+
+    <div class="specimen paper" style="border:1px solid #C9C2B2; display:flex; align-items:stretch; gap:0;">
+      <div style="width:150px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border-right:1px solid #C9C2B2;">
+        <svg width="94" height="94" viewBox="0 0 128 128">
+          <defs><path id="gA" d="M 64,64 m -50,0 a 50,50 0 1,1 100,0 a 50,50 0 1,1 -100,0"></path></defs>
+          <circle cx="64" cy="64" r="58" fill="none" stroke="#4B7A51" stroke-width="1.4"></circle>
+          <circle cx="64" cy="64" r="49" fill="none" stroke="#4B7A51" stroke-width="1"></circle>
+          <text font-family="IBM Plex Mono" font-size="6.5" letter-spacing="1.6" fill="#4B7A51"><textPath href="#gA" startOffset="2%">BENCH TESTED • GRADE VERIFIED •</textPath></text>
+          <text x="64" y="76" text-anchor="middle" font-family="Big Shoulders Display" font-weight="700" font-size="40" fill="#4B7A51">A</text>
+        </svg>
+      </div>
+      <div style="flex:1; padding:24px 28px; display:flex; flex-direction:column; gap:12px;">
+        <div>
+          <div style="font-family:'Big Shoulders Display', sans-serif; font-weight:700; font-size:18px;">Mint / near-mint</div>
+          <p style="margin:6px 0 0 0; font-size:13.5px; color:#4B4B45; max-width:640px;">Indistinguishable from new in normal use, functions exactly to factory spec.</p>
+        </div>
+        <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px; padding-top:6px; border-top:1px dashed #E4E1D6;">
+          <div><span style="font-family:'IBM Plex Mono', monospace; font-size:10.5px; letter-spacing:0.06em; text-transform:uppercase; color:#8A8A82;">Cosmetic</span><p style="margin:4px 0 0 0; font-size:12.5px;">No visible marks under normal light.</p></div>
+          <div><span style="font-family:'IBM Plex Mono', monospace; font-size:10.5px; letter-spacing:0.06em; text-transform:uppercase; color:#8A8A82;">Electrical</span><p style="margin:4px 0 0 0; font-size:12.5px;">Within 0.5dB of factory spec, both channels.</p></div>
+          <div><span style="font-family:'IBM Plex Mono', monospace; font-size:10.5px; letter-spacing:0.06em; text-transform:uppercase; color:#8A8A82;">Mechanical</span><p style="margin:4px 0 0 0; font-size:12.5px;">All moving parts smooth, no service needed.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="specimen paper" style="border:1px solid #C9C2B2; display:flex; align-items:stretch; gap:0;">
+      <div style="width:150px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border-right:1px solid #C9C2B2;">
+        <svg width="94" height="94" viewBox="0 0 128 128">
+          <defs><path id="gB" d="M 64,64 m -50,0 a 50,50 0 1,1 100,0 a 50,50 0 1,1 -100,0"></path></defs>
+          <circle cx="64" cy="64" r="58" fill="none" stroke="#2E6FA3" stroke-width="1.4"></circle>
+          <circle cx="64" cy="64" r="49" fill="none" stroke="#2E6FA3" stroke-width="1"></circle>
+          <text font-family="IBM Plex Mono" font-size="6.5" letter-spacing="1.6" fill="#2E6FA3"><textPath href="#gB" startOffset="2%">BENCH TESTED • GRADE VERIFIED •</textPath></text>
+          <text x="64" y="76" text-anchor="middle" font-family="Big Shoulders Display" font-weight="700" font-size="40" fill="#2E6FA3">B</text>
+        </svg>
+      </div>
+      <div style="flex:1; padding:24px 28px; display:flex; flex-direction:column; gap:12px;">
+        <div>
+          <div style="font-family:'Big Shoulders Display', sans-serif; font-weight:700; font-size:18px;">Excellent, light use</div>
+          <p style="margin:6px 0 0 0; font-size:13.5px; color:#4B4B45; max-width:640px;">Minor cosmetic wear consistent with careful use; performs to spec.</p>
+        </div>
+        <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px; padding-top:6px; border-top:1px dashed #E4E1D6;">
+          <div><span style="font-family:'IBM Plex Mono', monospace; font-size:10.5px; letter-spacing:0.06em; text-transform:uppercase; color:#8A8A82;">Cosmetic</span><p style="margin:4px 0 0 0; font-size:12.5px;">Light handling marks, not visible at arm's length.</p></div>
+          <div><span style="font-family:'IBM Plex Mono', monospace; font-size:10.5px; letter-spacing:0.06em; text-transform:uppercase; color:#8A8A82;">Electrical</span><p style="margin:4px 0 0 0; font-size:12.5px;">Within 1dB of factory spec, both channels.</p></div>
+          <div><span style="font-family:'IBM Plex Mono', monospace; font-size:10.5px; letter-spacing:0.06em; text-transform:uppercase; color:#8A8A82;">Mechanical</span><p style="margin:4px 0 0 0; font-size:12.5px;">Serviced within the last 24 months.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="specimen paper" style="border:1px solid #C9C2B2; display:flex; align-items:stretch; gap:0;">
+      <div style="width:150px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border-right:1px solid #C9C2B2;">
+        <svg width="94" height="94" viewBox="0 0 128 128">
+          <defs><path id="gC" d="M 64,64 m -50,0 a 50,50 0 1,1 100,0 a 50,50 0 1,1 -100,0"></path></defs>
+          <circle cx="64" cy="64" r="58" fill="none" stroke="#D8952F" stroke-width="1.4"></circle>
+          <circle cx="64" cy="64" r="49" fill="none" stroke="#D8952F" stroke-width="1"></circle>
+          <text font-family="IBM Plex Mono" font-size="6.5" letter-spacing="1.6" fill="#D8952F"><textPath href="#gC" startOffset="2%">BENCH TESTED • GRADE VERIFIED •</textPath></text>
+          <text x="64" y="76" text-anchor="middle" font-family="Big Shoulders Display" font-weight="700" font-size="40" fill="#D8952F">C</text>
+        </svg>
+      </div>
+      <div style="flex:1; padding:24px 28px; display:flex; flex-direction:column; gap:12px;">
+        <div>
+          <div style="font-family:'Big Shoulders Display', sans-serif; font-weight:700; font-size:18px;">Good, honest wear</div>
+          <p style="margin:6px 0 0 0; font-size:13.5px; color:#4B4B45; max-width:640px;">Visible wear consistent with age; fully functional, faults documented.</p>
+        </div>
+        <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px; padding-top:6px; border-top:1px dashed #E4E1D6;">
+          <div><span style="font-family:'IBM Plex Mono', monospace; font-size:10.5px; letter-spacing:0.06em; text-transform:uppercase; color:#8A8A82;">Cosmetic</span><p style="margin:4px 0 0 0; font-size:12.5px;">Visible marks or fading, noted with photos.</p></div>
+          <div><span style="font-family:'IBM Plex Mono', monospace; font-size:10.5px; letter-spacing:0.06em; text-transform:uppercase; color:#8A8A82;">Electrical</span><p style="margin:4px 0 0 0; font-size:12.5px;">Within 2dB of spec; any channel imbalance disclosed.</p></div>
+          <div><span style="font-family:'IBM Plex Mono', monospace; font-size:10.5px; letter-spacing:0.06em; text-transform:uppercase; color:#8A8A82;">Mechanical</span><p style="margin:4px 0 0 0; font-size:12.5px;">May be due for service; timeline noted on listing.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="specimen paper" style="border:1px solid #C9C2B2; display:flex; align-items:stretch; gap:0;">
+      <div style="width:150px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border-right:1px solid #C9C2B2;">
+        <svg width="94" height="94" viewBox="0 0 128 128">
+          <defs><path id="gD" d="M 64,64 m -50,0 a 50,50 0 1,1 100,0 a 50,50 0 1,1 -100,0"></path></defs>
+          <circle cx="64" cy="64" r="58" fill="none" stroke="#C76B2E" stroke-width="1.4"></circle>
+          <circle cx="64" cy="64" r="49" fill="none" stroke="#C76B2E" stroke-width="1"></circle>
+          <text font-family="IBM Plex Mono" font-size="6.5" letter-spacing="1.6" fill="#C76B2E"><textPath href="#gD" startOffset="2%">BENCH TESTED • GRADE VERIFIED •</textPath></text>
+          <text x="64" y="76" text-anchor="middle" font-family="Big Shoulders Display" font-weight="700" font-size="40" fill="#C76B2E">D</text>
+        </svg>
+      </div>
+      <div style="flex:1; padding:24px 28px; display:flex; flex-direction:column; gap:12px;">
+        <div>
+          <div style="font-family:'Big Shoulders Display', sans-serif; font-weight:700; font-size:18px;">Fair, functional</div>
+          <p style="margin:6px 0 0 0; font-size:13.5px; color:#4B4B45; max-width:640px;">Noticeable wear or a known limitation; still works, priced accordingly.</p>
+        </div>
+        <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px; padding-top:6px; border-top:1px dashed #E4E1D6;">
+          <div><span style="font-family:'IBM Plex Mono', monospace; font-size:10.5px; letter-spacing:0.06em; text-transform:uppercase; color:#8A8A82;">Cosmetic</span><p style="margin:4px 0 0 0; font-size:12.5px;">Noticeable wear — dents, fading or missing trim.</p></div>
+          <div><span style="font-family:'IBM Plex Mono', monospace; font-size:10.5px; letter-spacing:0.06em; text-transform:uppercase; color:#8A8A82;">Electrical</span><p style="margin:4px 0 0 0; font-size:12.5px;">Functional with a documented quirk (hum, drift, etc.).</p></div>
+          <div><span style="font-family:'IBM Plex Mono', monospace; font-size:10.5px; letter-spacing:0.06em; text-transform:uppercase; color:#8A8A82;">Mechanical</span><p style="margin:4px 0 0 0; font-size:12.5px;">Service recommended soon; noted on the listing.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="specimen paper" style="border:1px solid #C9C2B2; display:flex; align-items:stretch; gap:0;">
+      <div style="width:150px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border-right:1px solid #C9C2B2;">
+        <svg width="94" height="94" viewBox="0 0 128 128">
+          <defs><path id="gE" d="M 64,64 m -50,0 a 50,50 0 1,1 100,0 a 50,50 0 1,1 -100,0"></path></defs>
+          <circle cx="64" cy="64" r="58" fill="none" stroke="#B4472F" stroke-width="1.4"></circle>
+          <circle cx="64" cy="64" r="49" fill="none" stroke="#B4472F" stroke-width="1"></circle>
+          <text font-family="IBM Plex Mono" font-size="6.5" letter-spacing="1.6" fill="#B4472F"><textPath href="#gE" startOffset="2%">BENCH TESTED • GRADE VERIFIED •</textPath></text>
+          <text x="64" y="76" text-anchor="middle" font-family="Big Shoulders Display" font-weight="700" font-size="40" fill="#B4472F">E</text>
+        </svg>
+      </div>
+      <div style="flex:1; padding:24px 28px; display:flex; flex-direction:column; gap:12px;">
+        <div>
+          <div style="font-family:'Big Shoulders Display', sans-serif; font-weight:700; font-size:18px;">Project unit</div>
+          <p style="margin:6px 0 0 0; font-size:13.5px; color:#4B4B45; max-width:640px;">Sold as-is for restoration or parts; priced well below working units.</p>
+        </div>
+        <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px; padding-top:6px; border-top:1px dashed #E4E1D6;">
+          <div><span style="font-family:'IBM Plex Mono', monospace; font-size:10.5px; letter-spacing:0.06em; text-transform:uppercase; color:#8A8A82;">Cosmetic</span><p style="margin:4px 0 0 0; font-size:12.5px;">Significant wear; photographed in full, no angle avoided.</p></div>
+          <div><span style="font-family:'IBM Plex Mono', monospace; font-size:10.5px; letter-spacing:0.06em; text-transform:uppercase; color:#8A8A82;">Electrical</span><p style="margin:4px 0 0 0; font-size:12.5px;">May not power on, or a known fault, stated plainly.</p></div>
+          <div><span style="font-family:'IBM Plex Mono', monospace; font-size:10.5px; letter-spacing:0.06em; text-transform:uppercase; color:#8A8A82;">Mechanical</span><p style="margin:4px 0 0 0; font-size:12.5px;">Sold as-is; no service performed before listing.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Closing callout -->
+  <div style="padding:0 56px 64px 56px;">
+    <div class="paper" style="border:1px solid #D8952F; padding:28px 32px; display:flex; align-items:center; gap:20px;">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#D8952F" stroke-width="1.8" style="flex-shrink:0;"><circle cx="12" cy="12" r="9.5"></circle><line x1="12" y1="8" x2="12" y2="13"></line><circle cx="12" cy="16.2" r="0.8" fill="#D8952F" stroke="none"></circle></svg>
+      <p style="margin:0; font-size:14px; line-height:1.6; color:#4B4B45;"><strong style="color:#1B1812;">Why we publish a "known faults" heading even when it's empty:</strong> a section that only ever appears when there's bad news to share isn't honest — it's a warning light. Ours shows on every listing, faults or none, so its absence means something.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div style="border-top:1px solid #C9C2B2; padding:48px 56px; display:flex; flex-direction:column; gap:32px; margin-top:auto;">
+    <div style="display:grid; grid-template-columns: 1.2fr 1fr 1fr 1fr 1fr; gap:24px;">
+      <div style="display:flex; flex-direction:column; gap:14px;">
+        <div style="display:flex; align-items:center; gap:12px;">
+          <svg width="30" height="30" viewBox="0 0 128 128"><circle cx="64" cy="64" r="58" fill="none" stroke="#1B1812" stroke-width="2"></circle><circle cx="64" cy="64" r="49" fill="none" stroke="#1B1812" stroke-width="1"></circle><text x="64" y="72" text-anchor="middle" font-family="Big Shoulders Display" font-weight="700" font-size="34" fill="#1B1812">H</text></svg>
+          <div style="font-family:'IBM Plex Mono', monospace; font-size:14px; letter-spacing:0.14em;">THE HIFI ROOM</div>
+        </div>
+        <p style="margin:0; font-size:12.5px; line-height:1.6; color:#8A8A82; max-width:200px;">We buy, sell and source vintage hi-fi. Every price carefully considered and honestly described.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#4B4B45;">
+        <span style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:#8A8A82; text-transform:uppercase;">Quick links</span>
+        <a href="#">Shop</a><a href="#">Sell your HiFi</a><a href="#">Find equipment</a><a href="#">Recently sold</a><a href="#">About us</a><a href="#">Contact</a>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#4B4B45;">
+        <span style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:#8A8A82; text-transform:uppercase;">Categories</span>
+        <a href="#">Amplifiers</a><a href="#">Speakers</a><a href="#">Turntables</a><a href="#">Receivers</a><a href="#">Cassette decks</a><a href="#">Other equipment</a>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#4B4B45;">
+        <span style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:#8A8A82; text-transform:uppercase;">Customer support</span>
+        <a href="#">Shipping &amp; delivery</a><a href="#">Payment methods</a><a href="#">Return policy</a><a href="#">Terms &amp; conditions</a><a href="#">Privacy policy</a><a href="#">FAQs</a>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#4B4B45;">
+        <span style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:#8A8A82; text-transform:uppercase;">Contact us</span>
+        <a href="#">+91 97113 93036 (WhatsApp)</a>
+        <a href="#">info@thehifiroom.in</a>
+        <span>Bandra West, Mumbai</span>
+        <span style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:#8A8A82;">We ship across India</span>
+      </div>
+    </div>
+    <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:#8A8A82; border-top:1px solid #E4E1D6; padding-top:20px;">© 2026 The Hifi Room. All grades defined in the published standard.</div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

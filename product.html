@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equipment Report — The HiFi Room</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .thumb-btn {
+      width: 100%;
+      height: 84px;
+      border: 1px solid var(--border-main);
+      background: var(--bg-paper);
+      cursor: pointer;
+      overflow: hidden;
+      padding: 0;
+      position: relative;
+      transition: border-color 150ms ease;
+    }
+    .thumb-btn.active, .thumb-btn:hover {
+      border-color: var(--ink-primary);
+    }
+    .thumb-btn img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .chip-req {
+      cursor: pointer;
+      transition: all 140ms ease;
+      font-size: 13px;
+      padding: 8px 14px;
+      border: 1px solid var(--border-main);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--bg-paper);
+    }
+    .chip-req.selected {
+      background: var(--accent-cobalt);
+      color: var(--ink-light);
+      border-color: var(--accent-cobalt);
+    }
+  </style>
+</head>
+<body>
+
+<div class="site-wrapper">
+
+  <!-- Utility Bar -->
+  <div class="utility-bar">
+    <span>Every Unit Tested & Cleaned</span>
+    <span class="utility-dot">•</span>
+    <span>Pan-India Tracked Crated Shipping</span>
+    <span class="utility-dot">•</span>
+    <span>Transparent Condition Notes</span>
+    <span class="utility-dot">•</span>
+    <span>Bandra West Studio, Mumbai</span>
+  </div>
+
+  <!-- Main Nav -->
+  <header class="main-nav">
+    <a href="index.html" class="brand-logo">
+      <svg width="24" height="24" viewBox="0 0 128 128"><circle cx="64" cy="64" r="58" fill="none" stroke="currentColor" stroke-width="6"></circle><circle cx="64" cy="64" r="46" fill="none" stroke="currentColor" stroke-width="3"></circle><text x="64" y="74" text-anchor="middle" font-family="Big Shoulders Display" font-weight="800" font-size="42" fill="currentColor">H</text></svg>
+      <span>THE HIFI ROOM</span>
+    </a>
+
+    <div style="display:flex; align-items:center; gap:20px;">
+      <a href="shop.html" style="font-family:var(--font-mono); font-size:12.5px; color:var(--ink-secondary);">← Back to Collection</a>
+      <a href="admin.html" class="nav-console-pill">
+        <span class="dot"></span>
+        <span>Console</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Product Main Detail Content -->
+  <main id="product-detail-container" style="padding:clamp(32px, 4vw, 56px) clamp(20px, 4vw, 56px); display:flex; flex-direction:column; gap:48px;">
+    
+    <!-- Top Split: Gallery & Overview -->
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:clamp(32px, 4vw, 56px); align-items:flex-start;">
+      
+      <!-- Left Column: Gallery -->
+      <div style="display:flex; flex-direction:column; gap:16px;">
+        <div style="position:relative;">
+          <div class="tape" style="top:-14px; left:40px; width:92px; height:26px; transform:rotate(-8deg);"></div>
+          
+          <div class="paper" style="position:relative; border:1px solid var(--border-main); padding:24px; display:flex; flex-direction:column; align-items:center; justify-content:center; transform:rotate(-1deg);">
+            <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+            
+            <div id="product-exhibit-label" style="position:absolute; top:16px; left:16px; font-family:var(--font-mono); font-size:10.5px; letter-spacing:0.08em; color:var(--ink-light); background:rgba(5,6,10,0.7); padding:3px 8px; z-index:2;">
+              EXHIBIT — ACTUAL SPECIMEN
+            </div>
+
+            <div style="width:100%; height:340px; overflow:hidden; background:#080A0F; position:relative; border:1px solid var(--border-main);">
+              <img id="main-product-img" src="assets/images/08-tube-amplifiers-hero-cinematic.png" alt="Vintage HiFi Detail" style="width:100%; height:100%; object-fit:cover; object-position:center 35%; display:block;">
+            </div>
+
+            <!-- Grade Seal Badge -->
+            <div style="position:absolute; bottom:-28px; right:-20px; z-index:3;">
+              <svg width="96" height="96" viewBox="0 0 128 128" style="transform:rotate(8deg);">
+                <defs><path id="prodSeal" d="M 64,64 m -50,0 a 50,50 0 1,1 100,0 a 50,50 0 1,1 -100,0"></path></defs>
+                <circle cx="64" cy="64" r="58" fill="#FBF9F3" stroke="#1B1812" stroke-width="1.4"></circle>
+                <circle cx="64" cy="64" r="49" fill="none" stroke="#1B1812" stroke-width="1"></circle>
+                <text font-family="IBM Plex Mono" font-size="7" letter-spacing="2" fill="#1B1812">
+                  <textPath href="#prodSeal" startOffset="2%">TESTED & VERIFIED • THE HIFI ROOM •</textPath>
+                </text>
+                <text id="seal-grade-letter" x="64" y="64" text-anchor="middle" font-family="Big Shoulders Display" font-weight="800" font-size="28" fill="#2E6FA3">B</text>
+                <text x="64" y="80" text-anchor="middle" font-family="IBM Plex Mono" font-size="6.5" letter-spacing="1" fill="#8A8A82">GRADE</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Thumbnails Grid -->
+        <div id="product-thumbnails" style="display:grid; grid-template-columns:repeat(4, 1fr); gap:12px; margin-top:8px;">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+
+      <!-- Right Column: Details & Specs -->
+      <div style="display:flex; flex-direction:column; gap:20px;">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span id="product-sku" style="font-family:var(--font-mono); font-size:12px; color:var(--ink-muted);">SKU HFR-0184</span>
+          <span id="product-status-tag" class="status-tag status-available">AVAILABLE</span>
+        </div>
+
+        <h1 id="product-title" style="font-size:clamp(34px, 4.5vw, 48px); margin:0;">
+          McIntosh MC275<br><span style="font-size:0.7em; font-weight:600; color:var(--ink-secondary);">Tube Power Amplifier</span>
+        </h1>
+
+        <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
+          <span id="product-grade-badge" class="grade-badge grade-b">GRADE B</span>
+          <span id="product-condition-score" style="font-family:var(--font-mono); font-size:13px; color:var(--ink-secondary);">Condition Score 8.4/10</span>
+          <span id="product-service-date" style="font-family:var(--font-mono); font-size:13px; color:var(--ink-secondary);">· Checked 11/2024</span>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
+          <div class="ticket" style="border:1px solid var(--ink-primary); padding:10px 20px 10px 24px; background:var(--bg-paper);">
+            <div class="ticket-notch"></div><div class="ticket-cut"></div>
+            <span id="product-price" style="font-family:var(--font-mono); font-size:30px; font-weight:600;">₹2,15,000</span>
+          </div>
+          <span style="font-size:13.5px; color:var(--ink-muted);">Pan-India crated freight included</span>
+        </div>
+
+        <p id="product-description" style="font-size:14.5px; line-height:1.65; color:var(--ink-secondary); margin:0;">
+          A classic MC275 tube power amplifier in solid working order. Retubed with a fresh set of matched Gold Lion output valves in late 2024. Cleaned, bias checked, and test-played continuously for 6 hours with no hum or channel drop.
+        </p>
+
+        <!-- Known Faults & Patina Notice -->
+        <div style="border:1px solid var(--border-main); background:var(--bg-paper); padding:16px 20px; display:flex; flex-direction:column; gap:6px;">
+          <span style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent-red); font-weight:600;">
+            Known Faults & Cosmetic Wear (Sold As-Is)
+          </span>
+          <span id="product-faults" style="font-size:13.5px; color:var(--ink-secondary);">
+            One faint scuff on the top chrome plate, rear-left corner (~1cm). No hum, no channel imbalance. Sold with original chrome cage.
+          </span>
+        </div>
+
+        <!-- Specifications Grid -->
+        <div class="paper" style="border:1px solid var(--border-main);">
+          <div style="display:grid; grid-template-columns:1fr 1.2fr; font-size:13px;">
+            <div style="padding:10px 16px; border-bottom:1px solid var(--border-light); border-right:1px solid var(--border-light); color:var(--ink-muted);">Year of Manufacture</div>
+            <div id="spec-year" style="padding:10px 16px; border-bottom:1px solid var(--border-light); font-family:var(--font-mono);">1993</div>
+            
+            <div style="padding:10px 16px; border-bottom:1px solid var(--border-light); border-right:1px solid var(--border-light); color:var(--ink-muted);">Power Output</div>
+            <div id="spec-power" style="padding:10px 16px; border-bottom:1px solid var(--border-light); font-family:var(--font-mono);">75W × 2 (Stereo), 150W (Mono)</div>
+            
+            <div style="padding:10px 16px; border-bottom:1px solid var(--border-light); border-right:1px solid var(--border-light); color:var(--ink-muted);">Valves / Circuit</div>
+            <div id="spec-valves" style="padding:10px 16px; border-bottom:1px solid var(--border-light); font-family:var(--font-mono);">4x KT88, 3x 12AX7A, 4x 12AT7</div>
+            
+            <div style="padding:10px 16px; border-bottom:1px solid var(--border-light); border-right:1px solid var(--border-light); color:var(--ink-muted);">Inputs / Terminals</div>
+            <div id="spec-inputs" style="padding:10px 16px; border-bottom:1px solid var(--border-light); font-family:var(--font-mono);">4x RCA, 2x Balanced XLR</div>
+
+            <div style="padding:10px 16px; border-right:1px solid var(--border-light); color:var(--ink-muted);">Included Accessories</div>
+            <div id="spec-included" style="padding:10px 16px; font-family:var(--font-mono);">Cage, manual, test notes, power lead</div>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:14px; flex-wrap:wrap; margin-top:6px;">
+          <a href="#offer-section" class="btn btn-primary" style="flex:1;">Make an Offer Below</a>
+          <a id="product-whatsapp-btn" href="https://wa.me/919711393036" target="_blank" class="btn btn-outline">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v12H8l-4 4V4z"></path></svg>
+            Inquire on WhatsApp
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Workshop Testing Checklist Card -->
+    <section class="paper" style="border:1px solid var(--border-main); position:relative; overflow:hidden;">
+      <div style="padding:18px 24px; border-bottom:1px solid var(--border-main); background:#F6F3EA; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+        <span style="font-family:var(--font-mono); font-size:12px; letter-spacing:0.1em; text-transform:uppercase; font-weight:600; color:var(--accent-cobalt);">
+          Workshop Testing Checklist & Inspection Notes
+        </span>
+        <span id="bench-test-date" style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted);">Tested: 14 Nov 2024</span>
+      </div>
+
+      <div style="padding:clamp(20px, 4vw, 32px); display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:24px;">
+        
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div style="font-family:var(--font-mono); font-size:11px; text-transform:uppercase; color:var(--ink-muted);">Functional Verification</div>
+          
+          <div style="display:flex; justify-content:space-between; border-bottom:1px dashed var(--border-light); padding-bottom:6px; font-size:13px;">
+            <span>Power & Mains Safety:</span>
+            <strong id="bench-power" style="font-family:var(--font-mono); color:var(--accent-green);">✓ Pass (Clean start-up)</strong>
+          </div>
+          <div style="display:flex; justify-content:space-between; border-bottom:1px dashed var(--border-light); padding-bottom:6px; font-size:13px;">
+            <span>Stereo Channels & Sound:</span>
+            <strong id="bench-balance" style="font-family:var(--font-mono); color:var(--accent-green);">✓ Pass (L/R balanced)</strong>
+          </div>
+          <div style="display:flex; justify-content:space-between; border-bottom:1px dashed var(--border-light); padding-bottom:6px; font-size:13px;">
+            <span>Inputs & Selector Switches:</span>
+            <strong id="bench-inputs" style="font-family:var(--font-mono); color:var(--accent-green);">✓ Pass (All tested)</strong>
+          </div>
+          <div style="display:flex; justify-content:space-between; border-bottom:1px dashed var(--border-light); padding-bottom:6px; font-size:13px;">
+            <span>Pots & Controls (DeoxIT):</span>
+            <strong id="bench-pots" style="font-family:var(--font-mono); color:var(--accent-green);">✓ Pass (No crackle)</strong>
+          </div>
+          <div style="display:flex; justify-content:space-between; border-bottom:1px dashed var(--border-light); padding-bottom:6px; font-size:13px;">
+            <span>Burn-In Duration:</span>
+            <strong id="bench-burnin" style="font-family:var(--font-mono);">6 hours continuous test</strong>
+          </div>
+        </div>
+
+        <div style="background:var(--bg-paper); border:1px solid var(--border-light); padding:20px; display:flex; flex-direction:column; justify-content:center; gap:8px;">
+          <div style="font-family:var(--font-mono); font-size:11.5px; text-transform:uppercase; color:var(--ink-muted); font-weight:600;">
+            Our Quality Pledge
+          </div>
+          <p style="font-size:13px; color:var(--ink-secondary); line-height:1.6; margin:0;">
+            We don't sell unverified gear. Every device is opened, dusted, checked for electrical safety, cleaned with Caig DeoxIT on all pots and switches, and test-played on real speakers. Any known quirks or cosmetic wear are fully listed above so you buy with 100% confidence.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Offer Worksheet -->
+    <section id="offer-section" class="paper" style="border:1px solid var(--border-main); position:relative;">
+      <div style="padding:18px 24px; border-bottom:1px solid var(--border-main); font-family:var(--font-mono); font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent-cobalt); font-weight:600;">
+        Make an Offer on this Unit
+      </div>
+      
+      <div style="padding:clamp(20px, 4vw, 36px); display:flex; flex-direction:column; gap:24px; max-width:760px;">
+        <div>
+          <h3 style="font-size:24px; margin:0;">Propose your terms</h3>
+          <p style="font-size:14px; color:var(--ink-secondary); margin-top:4px;">
+            We evaluate reasonable offers based on current market availability and servicing costs.
+          </p>
+        </div>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:16px;">
+          <div class="field-group">
+            <label class="field-label">YOUR OFFER AMOUNT (₹)</label>
+            <input type="number" id="offer-amount-input" class="field-input" placeholder="195000" style="font-family:var(--font-mono); font-size:16px; font-weight:600;">
+          </div>
+          <div class="field-group">
+            <label class="field-label">YOUR NAME</label>
+            <input type="text" id="offer-name-input" class="field-input" placeholder="Full name">
+          </div>
+          <div class="field-group">
+            <label class="field-label">PHONE / WHATSAPP</label>
+            <input type="tel" id="offer-phone-input" class="field-input" placeholder="+91">
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">OPTIONAL PREFERENCES</label>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;" id="offer-requirements-chips">
+            <div class="chip-req selected" onclick="this.classList.toggle('selected')">✓ Needs original cage/box</div>
+            <div class="chip-req selected" onclick="this.classList.toggle('selected')">✓ Delivery in Mumbai / Bangalore</div>
+            <div class="chip-req" onclick="this.classList.toggle('selected')">Pickup directly from Bandra workshop</div>
+          </div>
+        </div>
+
+        <button onclick="handleProductOfferSubmit()" class="btn btn-primary" style="align-self:flex-start; min-width:220px;">
+          Submit Offer
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div style="display:flex; flex-direction:column; gap:14px;">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <svg width="28" height="28" viewBox="0 0 128 128"><circle cx="64" cy="64" r="58" fill="none" stroke="currentColor" stroke-width="6"></circle><circle cx="64" cy="64" r="46" fill="none" stroke="currentColor" stroke-width="3"></circle><text x="64" y="74" text-anchor="middle" font-family="Big Shoulders Display" font-weight="800" font-size="42" fill="currentColor">H</text></svg>
+          <span style="font-family:var(--font-mono); font-size:14px; letter-spacing:0.14em; font-weight:600;">THE HIFI ROOM</span>
+        </div>
+        <p style="font-size:13px; color:var(--ink-muted); line-height:1.6; max-width:260px;">
+          We buy, test, clean, and sell pre-owned vintage hi-fi audio equipment in Mumbai and ship across India. Every unit tested, documented, and sold as-is.
+        </p>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:8px; font-size:13px;">
+        <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); text-transform:uppercase; margin-bottom:4px;">Navigation</span>
+        <a href="shop.html" style="color:var(--ink-secondary);">Shop Collection</a>
+        <a href="sell.html" style="color:var(--ink-secondary);">Sell Your HiFi</a>
+        <a href="find.html" style="color:var(--ink-secondary);">Find Equipment</a>
+        <a href="grading.html" style="color:var(--ink-secondary);">Grading Standard</a>
+        <a href="sold.html" style="color:var(--ink-secondary);">Sales Ledger</a>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:8px; font-size:13px;">
+        <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); text-transform:uppercase; margin-bottom:4px;">Studio & Contact</span>
+        <a href="https://wa.me/919711393036" target="_blank" style="color:var(--accent-green); font-weight:500;">+91 97113 93036 (WhatsApp)</a>
+        <span style="color:var(--ink-secondary);">info@thehifiroom.in</span>
+        <span style="color:var(--ink-secondary);">Bandra West, Mumbai 400050</span>
+      </div>
+    </div>
+
+    <div style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); border-top:1px solid var(--border-light); padding-top:20px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+      <span>© 2026 The HiFi Room. Pre-owned vintage audio, tested and documented.</span>
+      <span>Tested & Verified</span>
+    </div>
+  </footer>
+
+</div>
+
+<script src="js/app.js"></script>
+<script>
+let currentProduct = null;
+
+document.addEventListener('DOMContentLoaded', async () => {
+  const params = new URLSearchParams(window.location.search);
+  const productId = params.get('id') || 'HFR-0184';
+
+  const res = await fetchAPI(`/api/products/${productId}`);
+  if (res && res.success) {
+    currentProduct = res.data;
+    renderProductPage(currentProduct);
+  } else {
+    const allRes = await fetchAPI('/api/products');
+    if (allRes && allRes.success && allRes.data.length > 0) {
+      currentProduct = allRes.data[0];
+      renderProductPage(currentProduct);
+    }
+  }
+});
+
+function renderProductPage(p) {
+  document.title = `${p.name} (${p.brand}) — The HiFi Room`;
+
+  document.getElementById('product-sku').textContent = `SKU ${p.sku}`;
+  document.getElementById('product-status-tag').textContent = p.status.toUpperCase();
+  document.getElementById('product-title').innerHTML = `${p.name}<br><span style="font-size:0.65em; font-weight:600; color:var(--ink-secondary);">${p.subtitle}</span>`;
+  document.getElementById('product-exhibit-label').textContent = `EXHIBIT — ${p.name.toUpperCase()}`;
+  document.getElementById('seal-grade-letter').textContent = p.grade;
+  
+  const gradeBadge = document.getElementById('product-grade-badge');
+  gradeBadge.textContent = `GRADE ${p.grade}`;
+  const gradeClass = p.grade === 'A+' ? 'grade-ap' : p.grade === 'A' ? 'grade-a' : p.grade === 'B' ? 'grade-b' : 'grade-c';
+  gradeBadge.className = `grade-badge ${gradeClass}`;
+
+  document.getElementById('product-condition-score').textContent = `Condition Score ${p.conditionScore}`;
+  document.getElementById('product-service-date').textContent = `· Checked ${p.serviceDate}`;
+  document.getElementById('product-price').textContent = `₹${Number(p.price).toLocaleString('en-IN')}`;
+  document.getElementById('product-description').textContent = p.description;
+  document.getElementById('product-faults').textContent = p.knownFaults;
+
+  // Specs
+  document.getElementById('spec-year').textContent = p.year || 'N/A';
+  document.getElementById('spec-power').textContent = p.powerOutput || 'Standard Line';
+  document.getElementById('spec-valves').textContent = p.valves || 'Solid State';
+  document.getElementById('spec-inputs').textContent = p.inputs || 'RCA Line';
+  document.getElementById('spec-included').textContent = p.included || 'Standard accessories';
+
+  // Checklist
+  if (p.testChecklist) {
+    document.getElementById('bench-test-date').textContent = `Tested: ${p.testChecklist.testDate || 'Recent'}`;
+    if (document.getElementById('bench-power')) document.getElementById('bench-power').textContent = `✓ ${p.testChecklist.powerTest || 'Pass'}`;
+    if (document.getElementById('bench-balance')) document.getElementById('bench-balance').textContent = `✓ ${p.testChecklist.channelBalance || 'Pass'}`;
+    if (document.getElementById('bench-inputs')) document.getElementById('bench-inputs').textContent = `✓ ${p.testChecklist.inputsOutputs || 'Pass'}`;
+    if (document.getElementById('bench-pots')) document.getElementById('bench-pots').textContent = `✓ ${p.testChecklist.potsAndSwitches || 'Pass'}`;
+    if (document.getElementById('bench-burnin')) document.getElementById('bench-burnin').textContent = p.testChecklist.burnInDuration || '4 hours playback';
+  }
+
+  // Main Image & Gallery
+  const mainImg = document.getElementById('main-product-img');
+  mainImg.src = p.mainImage;
+
+  const thumbsContainer = document.getElementById('product-thumbnails');
+  const gallery = p.gallery && p.gallery.length > 0 ? p.gallery : [p.mainImage];
+  
+  thumbsContainer.innerHTML = gallery.map((imgSrc, idx) => `
+    <button class="thumb-btn ${idx === 0 ? 'active' : ''}" onclick="setMainImage('${imgSrc}', this)">
+      <img src="${imgSrc}" alt="${p.name} view ${idx + 1}">
+    </button>
+  `).join('');
+
+  // Offer placeholder default
+  const offerInput = document.getElementById('offer-amount-input');
+  if (offerInput) {
+    offerInput.placeholder = Math.round(p.price * 0.9);
+  }
+}
+
+function setMainImage(src, btn) {
+  document.getElementById('main-product-img').src = src;
+  document.querySelectorAll('.thumb-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+function handleProductOfferSubmit() {
+  const offerAmount = document.getElementById('offer-amount-input').value || Math.round(currentProduct.price * 0.9);
+  const name = document.getElementById('offer-name-input').value || 'Prospective Buyer';
+  const phone = document.getElementById('offer-phone-input').value || '';
+
+  if (!phone) {
+    showToast('Please enter your contact phone/WhatsApp number', 'error');
+    return;
+  }
+
+  showToast(`Offer of ₹${Number(offerAmount).toLocaleString('en-IN')} submitted! We will message you on WhatsApp shortly.`, 'success');
+}
+</script>
+</body>
+</html>

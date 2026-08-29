@@ -1,0 +1,261 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <style>
+    body { margin: 0; font-family: 'IBM Plex Sans', sans-serif; background: #F3EFE6; color: #1B1812; }
+    a { color: #2E6FA3; text-decoration: none; }
+    a:hover { color: #1B4D73; }
+    .btn-primary { transition: background 150ms ease, transform 150ms ease; }
+    .btn-primary:hover { background: #245A85; }
+    .btn-outline { transition: background 150ms ease, border-color 150ms ease; }
+    .btn-outline:hover { background: #EAE5D6; border-color: #1B1812; }
+    .paper { background: #FBF9F3; box-shadow: 0 18px 34px -18px rgba(27,24,18,0.28), 0 1px 0 rgba(27,24,18,0.05); }
+    .nav-link { transition: color 120ms ease; }
+    .nav-link:hover { color: #1B1812 !important; }
+    .field-box { background: #FFFFFF; border: 1px solid #C9C2B2; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #1B1812; }
+    .dropzone { transition: background 150ms ease, border-color 150ms ease; }
+    .dropzone:hover { background: #F3EFE6; border-color: #1B1812; }
+    .step-dash { background-image: repeating-linear-gradient(90deg, #9A9382 0px, #9A9382 6px, transparent 6px, transparent 12px); height: 1px; }
+  
+    /* HiFi Room Responsive Patch */
+    @media (max-width: 900px) {
+      div[style*="grid-template-columns: repeat(4"],
+      div[style*="grid-template-columns: repeat(5"],
+      div[style*="grid-template-columns: 1fr 1fr 1fr"] {
+        grid-template-columns: 1fr 1fr !important;
+      }
+      div[style*="display:flex"][style*="gap:56px"],
+      div[style*="display:flex"][style*="gap:40px"] {
+        flex-direction: column !important;
+        gap: 24px !important;
+      }
+    }
+    @media (max-width: 640px) {
+      div[style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+      }
+      div[style*="padding:88px 56px"],
+      div[style*="padding:72px 56px"],
+      div[style*="padding:64px 56px"],
+      div[style*="padding:56px"] {
+        padding: 24px 16px !important;
+      }
+      h1[style*="font-size:82px"], h1[style*="font-size:52px"], h1[style*="font-size:46px"], h1[style*="font-size:42px"] {
+        font-size: 36px !important;
+      }
+    }
+    
+  </style>
+</helmet>
+
+<div style="width: 100%; max-width: 1440px; margin: 0 auto; min-height: 100vh; box-sizing:border-box; background-color:#F3EFE6; background-image: repeating-linear-gradient(0deg, rgba(27,24,18,0.045) 0px, rgba(27,24,18,0.045) 1px, transparent 1px, transparent 26px), repeating-linear-gradient(90deg, rgba(27,24,18,0.045) 0px, rgba(27,24,18,0.045) 1px, transparent 1px, transparent 26px); color:#1B1812; display:flex; flex-direction:column;">
+
+  <!-- Utility bar -->
+  <div style="display:flex; align-items:center; justify-content:center; gap:28px; padding:9px 56px; background:#EAE4D3; border-bottom:1px solid #C9C2B2; font-family:'IBM Plex Mono', monospace; font-size:10.5px; letter-spacing:0.1em; text-transform:uppercase; color:#6B6558;">
+    <span>100% tested equipment</span>
+    <span style="color:#C9C2B2;">•</span>
+    <span>Pan-India shipping</span>
+    <span style="color:#C9C2B2;">•</span>
+    <span>Secure packaging</span>
+  </div>
+
+  <!-- Main nav -->
+  <div style="display:flex; align-items:center; justify-content:space-between; padding:18px 56px; border-bottom:1px solid #C9C2B2; background:rgba(251,249,243,0.6);">
+    <div style="font-family:'IBM Plex Mono', monospace; font-weight:500; font-size:14px; letter-spacing:0.16em;">THE HIFI ROOM</div>
+    <div style="display:flex; align-items:center; gap:28px; font-family:'IBM Plex Mono', monospace; font-size:11.5px; letter-spacing:0.07em; text-transform:uppercase; color:#4B4B45;">
+      <a class="nav-link" href="../index.html" style="color:#4B4B45;">Home</a>
+      <a class="nav-link" href="../shop.html" style="color:#4B4B45;">Shop</a>
+      <a class="nav-link" href="#" style="color:#2E6FA3; font-weight:600; border-bottom:2px solid #2E6FA3; padding-bottom:3px;">Sell your HiFi</a>
+      <a class="nav-link" href="../find.html" style="color:#4B4B45;">Find equipment</a>
+      <a class="nav-link" href="../sold.html" style="color:#4B4B45;">Recently sold</a>
+      <a class="nav-link" href="../about.html" style="color:#4B4B45;">About us</a>
+      <a class="nav-link" href="#" style="color:#4B4B45;">Contact</a>
+    </div>
+    <div style="display:flex; align-items:center; gap:18px;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1B1812" stroke-width="1.8"><circle cx="10" cy="10" r="6"></circle><line x1="14.5" y1="14.5" x2="20" y2="20"></line></svg>
+      <div style="width:44px; height:44px; border-radius:50%; border:1.5px solid #1B1812; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1B1812" stroke-width="1.8"><path d="M4 4h16v12H8l-4 4V4z"></path></svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <div style="padding:64px 56px 40px 56px; display:flex; flex-direction:column; gap:18px; max-width:760px;">
+    <div style="font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#2E6FA3;">Sell to us</div>
+    <h1 style="margin:0; font-family:'Big Shoulders Display', sans-serif; font-weight:700; font-size:52px; line-height:1.03; letter-spacing:-0.02em;">Turn your gear into cash — we buy outright.</h1>
+    <p style="margin:0; font-size:16px; line-height:1.6; color:#4B4B45;">We don't list on your behalf and wait — we evaluate what you have, make an offer, and pay you once it's in our hands. No consignment, no percentage cut, no waiting on a stranger to click "buy."</p>
+  </div>
+
+  <!-- How it works -->
+  <div style="padding:24px 56px 56px 56px;">
+    <div style="position:relative; display:grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap:0;">
+      <div class="step-dash" style="position:absolute; top:26px; left:80px; right:80px; z-index:0;"></div>
+
+      <div style="position:relative; z-index:1; display:flex; flex-direction:column; align-items:center; gap:14px; padding:0 20px; text-align:center;">
+        <div class="paper" style="width:52px; height:52px; border:1.5px solid #1B1812; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono', monospace; font-weight:500; font-size:16px;">01</div>
+        <div style="font-family:'Big Shoulders Display', sans-serif; font-weight:600; font-size:16px;">Tell us about it</div>
+        <p style="margin:0; font-size:12.5px; line-height:1.5; color:#4B4B45;">Brand, model, condition and a few photos — takes about two minutes.</p>
+      </div>
+
+      <div style="position:relative; z-index:1; display:flex; flex-direction:column; align-items:center; gap:14px; padding:0 20px; text-align:center;">
+        <div class="paper" style="width:52px; height:52px; border:1.5px solid #1B1812; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono', monospace; font-weight:500; font-size:16px;">02</div>
+        <div style="font-family:'Big Shoulders Display', sans-serif; font-weight:600; font-size:16px;">We evaluate &amp; offer</div>
+        <p style="margin:0; font-size:12.5px; line-height:1.5; color:#4B4B45;">A real offer within 24 hours, based on comparable sales and condition.</p>
+      </div>
+
+      <div style="position:relative; z-index:1; display:flex; flex-direction:column; align-items:center; gap:14px; padding:0 20px; text-align:center;">
+        <div class="paper" style="width:52px; height:52px; border:1.5px solid #1B1812; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono', monospace; font-weight:500; font-size:16px;">03</div>
+        <div style="font-family:'Big Shoulders Display', sans-serif; font-weight:600; font-size:16px;">Accept &amp; hand it over</div>
+        <p style="margin:0; font-size:12.5px; line-height:1.5; color:#4B4B45;">We collect in Mumbai or arrange pickup — you don't ship a thing.</p>
+      </div>
+
+      <div style="position:relative; z-index:1; display:flex; flex-direction:column; align-items:center; gap:14px; padding:0 20px; text-align:center;">
+        <div class="paper" style="width:52px; height:52px; border:1.5px solid #1B1812; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono', monospace; font-weight:500; font-size:16px;">04</div>
+        <div style="font-family:'Big Shoulders Display', sans-serif; font-weight:600; font-size:16px;">You get paid</div>
+        <p style="margin:0; font-size:12.5px; line-height:1.5; color:#4B4B45;">Same-day transfer once the unit is confirmed and logged.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Intake form -->
+  <div style="padding:8px 56px 56px 56px;">
+    <div class="paper" style="border:1px solid #C9C2B2; padding:44px; display:flex; flex-direction:column; gap:26px; max-width:920px;">
+      <div style="display:flex; align-items:baseline; justify-content:space-between; border-bottom:1px solid #C9C2B2; padding-bottom:16px;">
+        <span style="font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#8A8A82;">Intake sheet</span>
+        <span style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:#8A8A82;">Form 02 — Acquisition</span>
+      </div>
+
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:18px;">
+        <div style="display:flex; flex-direction:column; gap:6px;">
+          <label style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:#8A8A82;">NAME</label>
+          <div class="field-box" style="height:44px; padding:0 14px; display:flex; align-items:center; color:#B7AF9A;">Your full name</div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:6px;">
+          <label style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:#8A8A82;">PHONE</label>
+          <div class="field-box" style="height:44px; padding:0 14px; display:flex; align-items:center; color:#B7AF9A;">+91</div>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:18px;">
+        <div style="display:flex; flex-direction:column; gap:6px;">
+          <label style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:#8A8A82;">EMAIL</label>
+          <div class="field-box" style="height:44px; padding:0 14px; display:flex; align-items:center; color:#B7AF9A;">you@example.com</div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:6px;">
+          <label style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:#8A8A82;">CITY</label>
+          <div class="field-box" style="height:44px; padding:0 14px; display:flex; align-items:center; color:#B7AF9A;">Mumbai</div>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:18px;">
+        <div style="display:flex; flex-direction:column; gap:6px;">
+          <label style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:#8A8A82;">BRAND</label>
+          <div class="field-box" style="height:44px; padding:0 14px; display:flex; align-items:center; color:#B7AF9A;">e.g. Marantz</div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:6px;">
+          <label style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:#8A8A82;">MODEL</label>
+          <div class="field-box" style="height:44px; padding:0 14px; display:flex; align-items:center; color:#B7AF9A;">e.g. 2238B</div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:6px;">
+          <label style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:#8A8A82;">CATEGORY</label>
+          <div class="field-box" style="height:44px; padding:0 14px; display:flex; align-items:center; justify-content:space-between; color:#1B1812;">
+            <span>Amplifiers</span>
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#4B4B45" stroke-width="2.4"><path d="M6 9l6 6 6-6"></path></svg>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:6px;">
+        <label style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:#8A8A82;">CONDITION DESCRIPTION</label>
+        <div class="field-box" style="height:96px; padding:12px 14px; color:#B7AF9A; align-items:flex-start;">Cosmetic condition, known faults, service history — the more detail, the faster the offer.</div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:6px;">
+        <label style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:#8A8A82;">PHOTOS</label>
+        <div class="dropzone" style="border:1.5px dashed #C9C2B2; background:#FFFFFF; padding:32px; display:flex; flex-direction:column; align-items:center; gap:10px; cursor:pointer;">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#4B4B45" stroke-width="1.6"><path d="M12 16V4M12 4l-4.5 4.5M12 4l4.5 4.5"></path><path d="M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"></path></svg>
+          <div style="font-size:13.5px; color:#4B4B45;">Drag photos here or click to browse</div>
+          <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:#8A8A82;">JPG or PNG, up to 12 photos, 20MB each</div>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:18px; align-items:end;">
+        <div style="display:flex; flex-direction:column; gap:6px;">
+          <label style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:#8A8A82;">EXPECTED PRICE (OPTIONAL)</label>
+          <div class="field-box" style="height:44px; padding:0 14px; display:flex; align-items:center; gap:4px; color:#B7AF9A;"><span style="color:#4B4B45;">₹</span>e.g. 25000</div>
+        </div>
+        <button class="btn-primary" style="background:#2E6FA3; color:#F9F7F0; border:none; font-family:'IBM Plex Sans', sans-serif; font-weight:600; font-size:15px; height:48px; cursor:pointer;">Submit for evaluation</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reassurance strip -->
+  <div style="padding:0 56px 72px 56px;">
+    <div style="display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); border:1px solid #C9C2B2;">
+      <div style="display:flex; align-items:center; gap:14px; padding:22px 28px; border-right:1px solid #C9C2B2;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E6FA3" stroke-width="1.8"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>
+        <span style="font-size:13.5px; color:#4B4B45;">We reply within 24 hours</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:14px; padding:22px 28px; border-right:1px solid #C9C2B2;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E6FA3" stroke-width="1.8"><path d="M9 12l2 2 4-4"></path><circle cx="12" cy="12" r="9"></circle></svg>
+        <span style="font-size:13.5px; color:#4B4B45;">No-obligation quote</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:14px; padding:22px 28px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E6FA3" stroke-width="1.8"><path d="M3 11l9-8 9 8"></path><path d="M5 10v10h14V10"></path></svg>
+        <span style="font-size:13.5px; color:#4B4B45;">We collect gear across Mumbai</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div style="border-top:1px solid #C9C2B2; padding:48px 56px; display:flex; flex-direction:column; gap:32px; margin-top:auto;">
+    <div style="display:grid; grid-template-columns: 1.2fr 1fr 1fr 1fr 1fr; gap:24px;">
+      <div style="display:flex; flex-direction:column; gap:14px;">
+        <div style="display:flex; align-items:center; gap:12px;">
+          <svg width="30" height="30" viewBox="0 0 128 128"><circle cx="64" cy="64" r="58" fill="none" stroke="#1B1812" stroke-width="2"></circle><circle cx="64" cy="64" r="49" fill="none" stroke="#1B1812" stroke-width="1"></circle><text x="64" y="72" text-anchor="middle" font-family="Big Shoulders Display" font-weight="700" font-size="34" fill="#1B1812">H</text></svg>
+          <div style="font-family:'IBM Plex Mono', monospace; font-size:14px; letter-spacing:0.14em;">THE HIFI ROOM</div>
+        </div>
+        <p style="margin:0; font-size:12.5px; line-height:1.6; color:#8A8A82; max-width:200px;">We buy, sell and source vintage hi-fi. Every price carefully considered and honestly described.</p>
+        <div style="display:flex; gap:12px; margin-top:4px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4B4B45" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17" cy="7" r="0.8" fill="#4B4B45" stroke="none"></circle></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4B4B45" stroke-width="1.8"><path d="M15 8h2V5h-2a4 4 0 0 0-4 4v2H9v3h2v6h3v-6h2.2l.8-3H14V9c0-.6.4-1 1-1z"></path></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4B4B45" stroke-width="1.8"><path d="M4 4h16v12H8l-4 4V4z"></path></svg>
+        </div>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#4B4B45;">
+        <span style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:#8A8A82; text-transform:uppercase;">Quick links</span>
+        <a href="#">Shop</a><a href="#">Sell your HiFi</a><a href="#">Find equipment</a><a href="#">Recently sold</a><a href="#">About us</a><a href="#">Contact</a>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#4B4B45;">
+        <span style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:#8A8A82; text-transform:uppercase;">Categories</span>
+        <a href="#">Amplifiers</a><a href="#">Speakers</a><a href="#">Turntables</a><a href="#">Receivers</a><a href="#">Cassette decks</a><a href="#">Other equipment</a>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#4B4B45;">
+        <span style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:#8A8A82; text-transform:uppercase;">Customer support</span>
+        <a href="#">Shipping &amp; delivery</a><a href="#">Payment methods</a><a href="#">Return policy</a><a href="#">Terms &amp; conditions</a><a href="#">Privacy policy</a><a href="#">FAQs</a>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#4B4B45;">
+        <span style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:#8A8A82; text-transform:uppercase;">Contact us</span>
+        <a href="#">+91 97113 93036 (WhatsApp)</a>
+        <a href="#">info@thehifiroom.in</a>
+        <span>Bandra West, Mumbai</span>
+        <span style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:#8A8A82;">We ship across India</span>
+      </div>
+    </div>
+    <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:#8A8A82; border-top:1px solid #E4E1D6; padding-top:20px;">© 2026 The Hifi Room. All grades defined in the published standard.</div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

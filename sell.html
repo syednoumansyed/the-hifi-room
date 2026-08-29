@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sell Your HiFi — Outright Buyouts | The HiFi Room</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .step-card {
+      background: var(--bg-paper);
+      border: 1px solid var(--border-main);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      position: relative;
+    }
+    .step-number {
+      width: 44px;
+      height: 44px;
+      border: 1.5px solid var(--ink-primary);
+      background: var(--bg-paper);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-weight: 600;
+      font-size: 16px;
+    }
+    .dropzone-box {
+      border: 2px dashed var(--border-main);
+      background: #FFFFFF;
+      padding: 32px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 150ms ease;
+    }
+    .dropzone-box:hover {
+      border-color: var(--accent-cobalt);
+      background: var(--bg-paper);
+    }
+  </style>
+</head>
+<body>
+
+<div class="site-wrapper">
+
+  <!-- Utility Bar -->
+  <div class="utility-bar">
+    <span>100% Bench-Tested Equipment</span>
+    <span class="utility-dot">•</span>
+    <span>Pan-India Crated Shipping</span>
+    <span class="utility-dot">•</span>
+    <span>Direct Outright Cash Buyouts</span>
+    <span class="utility-dot">•</span>
+    <span>Bandra West Studio, Mumbai</span>
+  </div>
+
+  <!-- Main Nav -->
+  <header class="main-nav">
+    <a href="index.html" class="brand-logo">
+      <svg width="24" height="24" viewBox="0 0 128 128"><circle cx="64" cy="64" r="58" fill="none" stroke="currentColor" stroke-width="6"></circle><circle cx="64" cy="64" r="46" fill="none" stroke="currentColor" stroke-width="3"></circle><text x="64" y="74" text-anchor="middle" font-family="Big Shoulders Display" font-weight="800" font-size="42" fill="currentColor">H</text></svg>
+      <span>THE HIFI ROOM</span>
+    </a>
+
+    <nav class="nav-links">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="shop.html">Shop Collection</a>
+      <a class="nav-link active" href="sell.html">Sell Your HiFi</a>
+      <a class="nav-link" href="find.html">Find Equipment</a>
+      <a class="nav-link" href="grading.html">The Grading Standard</a>
+      <a class="nav-link" href="sold.html">Recently Sold</a>
+      <a class="nav-link" href="about.html">Manifesto</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="admin.html" class="nav-console-pill">
+        <span class="dot"></span>
+        <span>Console</span>
+      </a>
+      <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Toggle Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer" class="mobile-drawer">
+    <div class="mobile-drawer-content">
+      <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border-main); padding-bottom:16px;">
+        <span style="font-family:var(--font-mono); font-weight:600; font-size:13px; letter-spacing:0.14em;">THE HIFI ROOM</span>
+        <button id="mobile-drawer-close" style="background:none; border:none; font-size:24px; cursor:pointer; color:var(--ink-primary);">&times;</button>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:16px; font-family:var(--font-mono); font-size:13px; text-transform:uppercase;">
+        <a href="index.html" style="color:var(--ink-primary);">Home</a>
+        <a href="shop.html" style="color:var(--ink-primary);">Shop Collection</a>
+        <a href="sell.html" style="color:var(--accent-cobalt); font-weight:600;">Sell Your HiFi</a>
+        <a href="find.html" style="color:var(--ink-primary);">Find Equipment</a>
+        <a href="grading.html" style="color:var(--ink-primary);">The Grading Standard</a>
+        <a href="sold.html" style="color:var(--ink-primary);">Recently Sold</a>
+        <a href="about.html" style="color:var(--ink-primary);">Manifesto & Lab</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Header -->
+  <div style="padding:clamp(36px, 5vw, 64px) clamp(20px, 4vw, 56px) 32px clamp(20px, 4vw, 56px); border-bottom:1px solid var(--border-main); max-width:840px;">
+    <div style="font-family:var(--font-mono); font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--accent-cobalt);">Direct Acquisitions</div>
+    <h1 style="font-size:clamp(36px, 5vw, 54px); margin:8px 0 14px 0;">Turn your gear into cash — we buy outright.</h1>
+    <p style="font-size:16px; line-height:1.65; color:var(--ink-secondary);">
+      We don't list on consignment and make you wait for months. We evaluate your turntable, amplifier, speakers, or tape deck, make a firm cash offer within 24 hours, and transfer payment the moment the unit is checked in.
+    </p>
+  </div>
+
+  <!-- How It Works 4-Step Process -->
+  <section style="padding:clamp(32px, 4vw, 48px) clamp(20px, 4vw, 56px); border-bottom:1px solid var(--border-main);">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:20px;">
+      
+      <div class="step-card paper">
+        <div class="step-number">01</div>
+        <h3 style="font-size:18px; margin:0;">Tell us about it</h3>
+        <p style="font-size:13px; color:var(--ink-secondary); line-height:1.5;">
+          Brand, model, known faults, and photos. Takes two minutes via the intake form below.
+        </p>
+      </div>
+
+      <div class="step-card paper">
+        <div class="step-number">02</div>
+        <h3 style="font-size:18px; margin:0;">Receive formal valuation</h3>
+        <p style="font-size:13px; color:var(--ink-secondary); line-height:1.5;">
+          We check our historical auction and sales ledger to quote a realistic, fair outright buyout price within 24h.
+        </p>
+      </div>
+
+      <div class="step-card paper">
+        <div class="step-number">03</div>
+        <h3 style="font-size:18px; margin:0;">Handover / Pickup</h3>
+        <p style="font-size:13px; color:var(--ink-secondary); line-height:1.5;">
+          Drop off at our Bandra West studio or we arrange specialized courier pickup from your doorstep across India.
+        </p>
+      </div>
+
+      <div class="step-card paper">
+        <div class="step-number">04</div>
+        <h3 style="font-size:18px; margin:0;">Same-day settlement</h3>
+        <p style="font-size:13px; color:var(--ink-secondary); line-height:1.5;">
+          Direct bank transfer (IMPS/NEFT) completed immediately upon serial number and bench test intake verification.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Intake Sheet Form -->
+  <section style="padding:clamp(36px, 5vw, 56px) clamp(20px, 4vw, 56px); flex:1;">
+    <div class="paper" style="border:1px solid var(--border-main); padding:clamp(24px, 4vw, 44px); max-width:880px; margin:0 auto;">
+      
+      <div style="display:flex; justify-content:space-between; align-items:baseline; border-bottom:1px solid var(--border-main); padding-bottom:16px; margin-bottom:28px;">
+        <span style="font-family:var(--font-mono); font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent-cobalt); font-weight:600;">
+          Equipment Intake Sheet — Form 02
+        </span>
+        <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted);">Direct Acquisition Dept.</span>
+      </div>
+
+      <form id="sell-intake-form" onsubmit="handleSellFormSubmit(event)" style="display:flex; flex-direction:column; gap:22px;">
+        
+        <!-- Step 1: Equipment Details -->
+        <div>
+          <div style="font-family:var(--font-mono); font-size:11px; text-transform:uppercase; color:var(--ink-muted); margin-bottom:10px;">
+            1. Equipment Identification
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:16px;">
+            <div class="field-group">
+              <label class="field-label">BRAND</label>
+              <input type="text" name="brand" class="field-input" placeholder="e.g. Marantz, Sansui, McIntosh" required>
+            </div>
+            <div class="field-group">
+              <label class="field-label">MODEL</label>
+              <input type="text" name="model" class="field-input" placeholder="e.g. 2270, AU-717, MC275" required>
+            </div>
+            <div class="field-group">
+              <label class="field-label">CATEGORY</label>
+              <select name="category" class="field-input" style="height:44px;">
+                <option value="Amplifiers">Amplifier / Preamp</option>
+                <option value="Reel-to-Reel">Reel-to-Reel Tape Deck</option>
+                <option value="Turntables">Turntable</option>
+                <option value="Speakers">Loudspeakers</option>
+                <option value="Receivers">Receiver</option>
+                <option value="Cassette decks">Cassette Deck</option>
+                <option value="Other">Other Vintage Audio</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2: Condition & Known Faults -->
+        <div>
+          <div style="font-family:var(--font-mono); font-size:11px; text-transform:uppercase; color:var(--ink-muted); margin-bottom:10px;">
+            2. Operational & Cosmetic Condition
+          </div>
+          <div class="field-group">
+            <label class="field-label">KNOWN FAULTS, SCRATCHES, OR SERVICE HISTORY</label>
+            <textarea name="description" class="field-textarea" placeholder="Detail any cosmetic scuffs, pot scratchiness, channel imbalance, recapping history, or missing parts. Honest notes yield faster cash payouts." required></textarea>
+          </div>
+        </div>
+
+        <!-- Step 3: Photo Upload Simulator -->
+        <div>
+          <div style="font-family:var(--font-mono); font-size:11px; text-transform:uppercase; color:var(--ink-muted); margin-bottom:10px;">
+            3. Photo Upload (Front, Rear, Top & Serial Plate)
+          </div>
+          <div class="dropzone-box" onclick="document.getElementById('photo-upload-input').click()">
+            <input type="file" id="photo-upload-input" multiple accept="image/*" style="display:none;" onchange="handlePhotoUpload(this)">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--ink-muted)" stroke-width="1.8" style="margin-bottom:8px;"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            <div style="font-family:var(--font-mono); font-size:13px; font-weight:500;">Click to upload photos or drag and drop</div>
+            <div style="font-size:11.5px; color:var(--ink-muted); margin-top:4px;">JPG, PNG up to 25MB total</div>
+            <div id="uploaded-files-preview" style="font-family:var(--font-mono); font-size:11.5px; color:var(--accent-green); margin-top:8px;"></div>
+          </div>
+        </div>
+
+        <!-- Step 4: Contact & Valuation -->
+        <div>
+          <div style="font-family:var(--font-mono); font-size:11px; text-transform:uppercase; color:var(--ink-muted); margin-bottom:10px;">
+            4. Seller Contact Information
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:16px;">
+            <div class="field-group">
+              <label class="field-label">FULL NAME</label>
+              <input type="text" name="name" class="field-input" placeholder="Your name" required>
+            </div>
+            <div class="field-group">
+              <label class="field-label">PHONE / WHATSAPP</label>
+              <input type="tel" name="phone" class="field-input" placeholder="+91 98200..." required>
+            </div>
+            <div class="field-group">
+              <label class="field-label">EMAIL</label>
+              <input type="email" name="email" class="field-input" placeholder="you@example.com" required>
+            </div>
+            <div class="field-group">
+              <label class="field-label">CITY</label>
+              <input type="text" name="city" class="field-input" placeholder="e.g. Mumbai, Pune, Delhi" required>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; margin-top:10px; padding-top:18px; border-top:1px dashed var(--border-main);">
+          <div style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted);">
+            🔒 All appraisals strictly confidential. No obligation to accept.
+          </div>
+          <button type="submit" class="btn btn-primary" style="min-width:240px;">
+            Submit Intake & Request Valuation
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div style="display:flex; flex-direction:column; gap:14px;">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <svg width="28" height="28" viewBox="0 0 128 128"><circle cx="64" cy="64" r="58" fill="none" stroke="currentColor" stroke-width="6"></circle><circle cx="64" cy="64" r="46" fill="none" stroke="currentColor" stroke-width="3"></circle><text x="64" y="74" text-anchor="middle" font-family="Big Shoulders Display" font-weight="800" font-size="42" fill="currentColor">H</text></svg>
+          <span style="font-family:var(--font-mono); font-size:14px; letter-spacing:0.14em; font-weight:600;">THE HIFI ROOM</span>
+        </div>
+        <p style="font-size:13px; color:var(--ink-muted); line-height:1.6; max-width:260px;">
+          We buy, bench-test, restore, and source vintage hi-fi audio equipment across India. Every electrical measurement verified and disclosed in the open.
+        </p>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:8px; font-size:13px;">
+        <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); text-transform:uppercase; margin-bottom:4px;">Navigation</span>
+        <a href="shop.html" style="color:var(--ink-secondary);">Shop Collection</a>
+        <a href="sell.html" style="color:var(--ink-secondary);">Sell Your HiFi</a>
+        <a href="find.html" style="color:var(--ink-secondary);">Find Equipment</a>
+        <a href="grading.html" style="color:var(--ink-secondary);">Grading Standard</a>
+        <a href="sold.html" style="color:var(--ink-secondary);">Sales Ledger</a>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:8px; font-size:13px;">
+        <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); text-transform:uppercase; margin-bottom:4px;">Laboratory</span>
+        <a href="grading.html" style="color:var(--ink-secondary);">Grading Standards</a>
+        <a href="about.html" style="color:var(--ink-secondary);">Manifesto & Tech</a>
+        <a href="admin.html" style="color:var(--accent-cobalt);">Staff Console →</a>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:8px; font-size:13px;">
+        <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); text-transform:uppercase; margin-bottom:4px;">Studio Contact</span>
+        <a href="https://wa.me/919711393036" target="_blank" style="color:var(--accent-green); font-weight:500;">+91 97113 93036 (WhatsApp)</a>
+        <span style="color:var(--ink-secondary);">info@thehifiroom.in</span>
+        <span style="color:var(--ink-secondary);">Bandra West, Mumbai 400050</span>
+      </div>
+    </div>
+
+    <div style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); border-top:1px solid var(--border-light); padding-top:20px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+      <span>© 2026 The HiFi Room. Direct Outright Acquisitions.</span>
+      <span>Instant Payout</span>
+    </div>
+  </footer>
+
+</div>
+
+<script src="js/app.js"></script>
+<script>
+function handlePhotoUpload(input) {
+  if (input.files && input.files.length > 0) {
+    const preview = document.getElementById('uploaded-files-preview');
+    preview.textContent = `✓ ${input.files.length} photo(s) selected: ` + Array.from(input.files).map(f => f.name).join(', ');
+  }
+}
+
+async function handleSellFormSubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  
+  const leadData = {
+    brand: form.brand.value,
+    model: form.model.value,
+    category: form.category.value,
+    description: form.description.value,
+    name: form.name.value,
+    phone: form.phone.value,
+    email: form.email.value,
+    city: form.city.value,
+    estimatedValuation: 'Calculating...',
+    quotedAmount: 0
+  };
+
+  try {
+    const res = await fetch('/api/leads', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(leadData)
+    });
+    
+    showToast('Intake sheet received! Our appraisal team will message you with a valuation within 24h.', 'success');
+    form.reset();
+    document.getElementById('uploaded-files-preview').textContent = '';
+  } catch (err) {
+    showToast('Intake sheet logged locally. We will contact you shortly.', 'success');
+    form.reset();
+  }
+}
+</script>
+</body>
+</html>

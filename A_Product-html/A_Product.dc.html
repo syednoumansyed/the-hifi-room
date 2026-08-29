@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <style>
+    body { margin: 0; font-family: 'IBM Plex Sans', sans-serif; background: #F3EFE6; color: #1B1812; }
+    a { color: #2E6FA3; text-decoration: none; }
+    a:hover { color: #1B4D73; }
+    .btn-primary { transition: background 150ms ease; }
+    .btn-primary:hover { background: #245A85; }
+    .chip { cursor: pointer; transition: background 150ms ease, color 150ms ease; }
+    .chip-off:hover { background: #EFEAD9; }
+    .thumb { transition: border-color 150ms ease; }
+    .thumb:hover { border-color: #1B1812; }
+    .corner { position: absolute; width: 14px; height: 14px; border-color: #1B1812; }
+    .tl { top: -1px; left: -1px; border-top: 2px solid; border-left: 2px solid; }
+    .tr { top: -1px; right: -1px; border-top: 2px solid; border-right: 2px solid; }
+    .bl { bottom: -1px; left: -1px; border-bottom: 2px solid; border-left: 2px solid; }
+    .br { bottom: -1px; right: -1px; border-bottom: 2px solid; border-right: 2px solid; }
+    .paper { background: #FBF9F3; box-shadow: 0 18px 34px -18px rgba(27,24,18,0.28), 0 1px 0 rgba(27,24,18,0.05); }
+    .tape { position: absolute; background: rgba(216,149,47,0.55); box-shadow: 0 1px 2px rgba(27,24,18,0.15); }
+    .ticket { position: relative; display: inline-flex; align-items: center; }
+    .ticket-notch { position: absolute; left: -9px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; background: #F3EFE6; border-radius: 50%; border: 1px solid #1B1812; }
+    .ticket-cut { position: absolute; left: 6px; top: 5px; bottom: 5px; border-left: 1.5px dashed #B7AF9A; }
+  
+    /* HiFi Room Responsive Patch */
+    @media (max-width: 900px) {
+      div[style*="grid-template-columns: repeat(4"],
+      div[style*="grid-template-columns: repeat(5"],
+      div[style*="grid-template-columns: 1fr 1fr 1fr"] {
+        grid-template-columns: 1fr 1fr !important;
+      }
+      div[style*="display:flex"][style*="gap:56px"],
+      div[style*="display:flex"][style*="gap:40px"] {
+        flex-direction: column !important;
+        gap: 24px !important;
+      }
+    }
+    @media (max-width: 640px) {
+      div[style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+      }
+      div[style*="padding:88px 56px"],
+      div[style*="padding:72px 56px"],
+      div[style*="padding:64px 56px"],
+      div[style*="padding:56px"] {
+        padding: 24px 16px !important;
+      }
+      h1[style*="font-size:82px"], h1[style*="font-size:52px"], h1[style*="font-size:46px"], h1[style*="font-size:42px"] {
+        font-size: 36px !important;
+      }
+    }
+    
+  </style>
+</helmet>
+
+<div style="width: 100%; max-width: 1440px; margin: 0 auto; min-height: 100vh; box-sizing:border-box; background-color:#F3EFE6; background-image: repeating-linear-gradient(0deg, rgba(27,24,18,0.045) 0px, rgba(27,24,18,0.045) 1px, transparent 1px, transparent 26px), repeating-linear-gradient(90deg, rgba(27,24,18,0.045) 0px, rgba(27,24,18,0.045) 1px, transparent 1px, transparent 26px); color:#1B1812; display:flex; flex-direction:column;">
+
+  <div style="display:flex; align-items:center; justify-content:space-between; padding:20px 56px; border-bottom:1px solid #C9C2B2; background:rgba(251,249,243,0.6);">
+    <div style="font-family:'IBM Plex Mono', monospace; font-weight:500; font-size:14px; letter-spacing:0.16em;">THE HIFI ROOM</div>
+    <a href="#" style="font-family:'IBM Plex Mono', monospace; font-size:13px;">← Collection</a>
+  </div>
+
+  <div style="display:flex; gap:56px; padding:64px 56px 56px 56px; align-items:flex-start;">
+
+    <!-- Left: media plate -->
+    <div style="flex:1; display:flex; flex-direction:column; gap:20px;">
+      <div style="position:relative; margin-top:10px;">
+        <div class="tape" style="top:-16px; left:44px; width:92px; height:26px; transform:rotate(-8deg); z-index:2;"></div>
+        <div class="paper" style="position:relative; border:1px solid #C9C2B2; padding:30px; display:flex; flex-direction:column; align-items:center; gap:12px; min-height: 100vh; justify-content:center; transform:rotate(-1.6deg);">
+          <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+          <div style="position:absolute; top:16px; left:16px; z-index:2; font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.08em; color:#F9F7F0; background:rgba(27,24,18,0.55); padding:3px 8px;">EXHIBIT — MCINTOSH MC275</div>
+          <div style="width:300px; height:236px; overflow:hidden; margin:0 -20px -16px 0;">
+            <img src="amp-main.jpg" alt="McIntosh MC275 tube power amplifier, three-quarter view" style="width:100%; height:100%; object-fit:cover; object-position:center 40%; display:block;">
+          </div>
+          <div style="position:absolute; bottom:-32px; right:-28px; z-index:2;">
+            <svg width="104" height="104" viewBox="0 0 128 128" style="transform:rotate(8deg);">
+              <defs><path id="ringB" d="M 64,64 m -50,0 a 50,50 0 1,1 100,0 a 50,50 0 1,1 -100,0"></path></defs>
+              <circle cx="64" cy="64" r="58" fill="#FBF9F3" stroke="#1B1812" stroke-width="1.2"></circle>
+              <circle cx="64" cy="64" r="49" fill="none" stroke="#1B1812" stroke-width="1"></circle>
+              <text font-family="IBM Plex Mono" font-size="7" letter-spacing="2" fill="#1B1812">
+                <textPath href="#ringB" startOffset="2%">BENCH TESTED • THE HIFI ROOM • GRADE VERIFIED •</textPath>
+              </text>
+              <text x="64" y="62" text-anchor="middle" font-family="Big Shoulders Display" font-weight="700" font-size="26" fill="#2E6FA3">B</text>
+              <text x="64" y="78" text-anchor="middle" font-family="IBM Plex Mono" font-size="6.5" letter-spacing="1" fill="#8A8A82">GRADE</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:12px;">
+        <div class="thumb" style="position:relative; height:120px; border:1px solid #C9C2B2; background:#FBF9F3; overflow:hidden;">
+          <div class="corner tl" style="width:8px;height:8px; z-index:2;"></div><div class="corner br" style="width:8px;height:8px; z-index:2;"></div>
+          <img src="amp-hero.jpg" alt="McIntosh MC275 pair, wide angle" style="width:100%; height:100%; object-fit:cover; object-position:center 30%; display:block;">
+        </div>
+        <div class="thumb" style="position:relative; height:120px; border:1px solid #C9C2B2; background:#FBF9F3; overflow:hidden;">
+          <div class="corner tl" style="width:8px;height:8px; z-index:2;"></div><div class="corner br" style="width:8px;height:8px; z-index:2;"></div>
+          <img src="amp-rear.jpg" alt="McIntosh MC275 rear panel, fuse and speaker terminals" style="width:100%; height:100%; object-fit:cover; display:block;">
+          <span style="position:absolute; bottom:4px; left:4px; font-family:'IBM Plex Mono', monospace; font-size:9.5px; letter-spacing:0.06em; text-transform:uppercase; color:#F9F7F0; background:rgba(27,24,18,0.6); padding:2px 6px;">Rear panel</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: details -->
+    <div style="flex:0.9; display:flex; flex-direction:column; gap:20px;">
+      <div style="font-family:'IBM Plex Mono', monospace; font-size:12px; color:#8A8A82;">SKU HFR-0184</div>
+      <h1 style="margin:0; font-family:'Big Shoulders Display', sans-serif; font-weight:700; font-size:38px; line-height:1.08; letter-spacing:-0.01em;">McIntosh MC275<br>Tube Amplifier</h1>
+      <div style="display:flex; align-items:center; gap:14px;">
+        <span style="font-family:'IBM Plex Mono', monospace; font-size:12px; padding:4px 10px; border:1px solid #2E6FA3; color:#2E6FA3;">GRADE B</span>
+        <span style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#4B4B45;">Condition score 8.4/10</span>
+        <span style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#4B4B45;">· Serviced 11/2024</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:14px;">
+        <div class="ticket" style="border:1px solid #1B1812; padding:10px 20px 10px 24px; background:#FBF9F3;">
+          <div class="ticket-notch"></div><div class="ticket-cut"></div>
+          <span style="font-family:'IBM Plex Mono', monospace; font-size:32px; font-weight:500;">₹2,15,000</span>
+        </div>
+        <span style="font-size:13px; color:#8A8A82;">or make an offer below</span>
+      </div>
+      <p style="margin:0; font-size:14px; line-height:1.65; color:#4B4B45;">A dual-mono tube amplifier from the classic MC275 line, retubed with matched output valves in late 2024. Bench-verified for both channels within 0.2dB. Original chrome cage included; unit ships palletized.</p>
+
+      <div style="position:relative; border:1px solid #C9C2B2; background:#FBF9F3; padding:16px 18px; display:flex; flex-direction:column; gap:6px;">
+        <span style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:#B4472F;">Known faults</span>
+        <span style="font-size:13px; color:#4B4B45; position:relative; display:inline;">One faint scuff on the top plate, rear-left corner
+          <span style="position:relative; white-space:nowrap;">(~1cm)<svg width="52" height="26" viewBox="0 0 52 26" style="position:absolute; left:-4px; top:-9px; pointer-events:none;"><path d="M6,13 C5,6 16,3 26,4 C36,5 46,8 45,14 C44,20 32,22 20,21 C10,20 6,17 6,13 Z" fill="none" stroke="#B4472F" stroke-width="1.5" stroke-linecap="round"></path></svg></span>
+          . No hum, no channel imbalance. Nothing else noted.</span>
+      </div>
+
+      <div style="border:1px solid #C9C2B2; background:#FBF9F3;">
+        <div style="display:grid; grid-template-columns:1fr 1fr;">
+          <div style="padding:12px 18px; border-bottom:1px solid #E4E1D6; border-right:1px solid #E4E1D6; font-size:13px; color:#8A8A82;">Year</div>
+          <div style="padding:12px 18px; border-bottom:1px solid #E4E1D6; font-family:'IBM Plex Mono', monospace; font-size:13px;">1993</div>
+          <div style="padding:12px 18px; border-bottom:1px solid #E4E1D6; border-right:1px solid #E4E1D6; font-size:13px; color:#8A8A82;">Power output</div>
+          <div style="padding:12px 18px; border-bottom:1px solid #E4E1D6; font-family:'IBM Plex Mono', monospace; font-size:13px;">75W x 2</div>
+          <div style="padding:12px 18px; border-bottom:1px solid #E4E1D6; border-right:1px solid #E4E1D6; font-size:13px; color:#8A8A82;">Inputs</div>
+          <div style="padding:12px 18px; border-bottom:1px solid #E4E1D6; font-family:'IBM Plex Mono', monospace; font-size:13px;">4x RCA</div>
+          <div style="padding:12px 18px; border-right:1px solid #E4E1D6; font-size:13px; color:#8A8A82;">Included</div>
+          <div style="padding:12px 18px; font-family:'IBM Plex Mono', monospace; font-size:13px;">Cage, manual, test sheet</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Negotiation module -->
+  <div style="padding:20px 56px 56px 56px;">
+    <div class="paper" style="position:relative; border:1px solid #C9C2B2;">
+      <svg width="88" height="34" viewBox="0 0 88 34" style="position:absolute; top:-20px; left:50%; transform:translateX(-50%); z-index:2;">
+        <path d="M8,16 C8,4 30,2 44,2 C58,2 80,4 80,16 L80,26 C80,30 76,32 72,30 L72,20 C72,14 62,12 44,12 C26,12 16,14 16,20 L16,30 C16,32 12,30 8,26 Z" fill="#C9C2B2" stroke="#8A8A82" stroke-width="1"></path>
+      </svg>
+      <div style="padding:16px 28px; border-bottom:1px solid #C9C2B2; font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#2E6FA3;">Offer Worksheet</div>
+      <div style="padding:28px; display:flex; flex-direction:column; gap:22px;">
+
+        <div style="display:flex; gap:24px; align-items:flex-end;">
+          <div style="display:flex; flex-direction:column; gap:6px;">
+            <label style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:#8A8A82;">YOUR OFFER (₹)</label>
+            <div style="width:220px; height:44px; border:1px solid #1B1812; background:#FFFFFF; display:flex; align-items:center; padding:0 14px; font-family:'IBM Plex Mono', monospace; font-size:16px;">1,95,000</div>
+          </div>
+          <div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#8A8A82; padding-bottom:12px;">Listed at ₹2,15,000</div>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <label style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:#8A8A82;">REQUIREMENTS TO ATTACH</label>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <div class="chip" style="background:#2E6FA3; color:#F9F7F0; border:1px solid #2E6FA3; font-size:13px; padding:9px 16px; display:flex; align-items:center; gap:8px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="4,13 9,18 20,6"></polyline></svg>
+              Needs original box
+            </div>
+            <div class="chip" style="background:#2E6FA3; color:#F9F7F0; border:1px solid #2E6FA3; font-size:13px; padding:9px 16px; display:flex; align-items:center; gap:8px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="4,13 9,18 20,6"></polyline></svg>
+              Free delivery (Mumbai)
+            </div>
+            <div class="chip chip-off" style="background:transparent; color:#1B1812; border:1px solid #C9C2B2; font-size:13px; padding:9px 16px;">30-day trial</div>
+            <div class="chip chip-off" style="background:transparent; color:#1B1812; border:1px solid #C9C2B2; font-size:13px; padding:9px 16px;">Pickup only</div>
+          </div>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:6px;">
+          <label style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:#8A8A82;">ANYTHING ELSE THE SELLER SHOULD KNOW?</label>
+          <div style="height:76px; border:1px solid #C9C2B2; background:#FFFFFF; padding:12px 14px; font-size:13px; color:#8A8A82;">Happy to collect in person from the Bandra studio if that helps close faster.</div>
+        </div>
+
+        <button class="btn-primary" style="align-self:flex-start; background:#2E6FA3; color:#F9F7F0; border:none; font-weight:600; font-size:15px; padding:0 30px; height:48px; cursor:pointer;">Submit offer</button>
+      </div>
+
+      <div style="border-top:1px solid #C9C2B2; padding:24px 28px; display:flex; flex-direction:column; gap:14px;">
+        <span style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:#8A8A82;">Offer thread</span>
+
+        <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid #E4E1D6;">
+          <span style="font-size:13px;">You offered <span style="font-family:'IBM Plex Mono', monospace;">₹1,80,000</span></span>
+          <span style="font-family:'IBM Plex Mono', monospace; font-size:12px; color:#8A8A82;">14 Aug, 10:02</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid #E4E1D6;">
+          <span style="font-size:13px;">Seller countered <span style="font-family:'IBM Plex Mono', monospace;">₹2,05,000</span> — tubes are less than 200 hours in</span>
+          <span style="font-family:'IBM Plex Mono', monospace; font-size:12px; color:#8A8A82;">14 Aug, 15:40</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:10px 0; background:#F6EFDF; border:1px dashed #D8952F; padding-left:14px; padding-right:14px;">
+          <span style="font-size:13px; font-weight:600;"><span style="font-family:'IBM Plex Mono', monospace; color:#D8952F; margin-right:6px;">&#9633;</span>You offered <span style="font-family:'IBM Plex Mono', monospace;">₹1,95,000</span> — with free delivery request</span>
+          <span style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:#D8952F; border:1px solid #D8952F; padding:2px 6px;">Awaiting reply</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Similar units -->
+  <div style="padding:0 56px 72px 56px; display:flex; flex-direction:column; gap:24px;">
+    <h3 style="margin:0; font-family:'Big Shoulders Display', sans-serif; font-weight:700; font-size:20px;">Similar units</h3>
+    <div style="display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:20px;">
+      <div class="paper" style="border:1px solid #C9C2B2; display:flex; flex-direction:column;">
+        <div style="height:110px; display:flex; align-items:center; justify-content:center; border-bottom:1px solid #C9C2B2;"><svg width="70" height="60" viewBox="0 0 70 60" fill="none" stroke="#1B1812" stroke-width="1.4"><rect x="4" y="8" width="62" height="44" rx="2"></rect><circle cx="35" cy="30" r="16" stroke="#2E6FA3"></circle></svg></div>
+        <div style="padding:14px; display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:13px;">Sansui AU-717</span>
+          <span style="font-family:'IBM Plex Mono', monospace; font-size:13px;">₹95,000</span>
+        </div>
+      </div>
+      <div class="paper" style="border:1px solid #C9C2B2; display:flex; flex-direction:column;">
+        <div style="height:110px; display:flex; align-items:center; justify-content:center; border-bottom:1px solid #C9C2B2;"><svg width="70" height="60" viewBox="0 0 70 60" fill="none" stroke="#1B1812" stroke-width="1.4"><rect x="4" y="8" width="62" height="44" rx="2"></rect><circle cx="24" cy="30" r="10" stroke="#D8952F"></circle><circle cx="46" cy="30" r="10" stroke="#D8952F"></circle></svg></div>
+        <div style="padding:14px; display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:13px;">Luxman L-505</span>
+          <span style="font-family:'IBM Plex Mono', monospace; font-size:13px;">₹1,10,000</span>
+        </div>
+      </div>
+      <div class="paper" style="border:1px solid #C9C2B2; display:flex; flex-direction:column;">
+        <div style="height:110px; display:flex; align-items:center; justify-content:center; border-bottom:1px solid #C9C2B2;"><svg width="70" height="60" viewBox="0 0 70 60" fill="none" stroke="#1B1812" stroke-width="1.4"><rect x="4" y="8" width="62" height="44" rx="2"></rect><circle cx="35" cy="30" r="16" stroke="#4B7A51"></circle></svg></div>
+        <div style="padding:14px; display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:13px;">NAD 3020</span>
+          <span style="font-family:'IBM Plex Mono', monospace; font-size:13px;">₹18,000</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

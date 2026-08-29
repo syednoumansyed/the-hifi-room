@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us & Workshop — The HiFi Room</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="site-wrapper">
+
+  <!-- Utility Bar -->
+  <div class="utility-bar">
+    <span>Every Unit Tested & Cleaned</span>
+    <span class="utility-dot">•</span>
+    <span>Pan-India Tracked Crated Shipping</span>
+    <span class="utility-dot">•</span>
+    <span>Transparent Condition Notes</span>
+    <span class="utility-dot">•</span>
+    <span>Bandra West Studio, Mumbai</span>
+  </div>
+
+  <!-- Main Nav -->
+  <header class="main-nav">
+    <a href="index.html" class="brand-logo">
+      <svg width="24" height="24" viewBox="0 0 128 128"><circle cx="64" cy="64" r="58" fill="none" stroke="currentColor" stroke-width="6"></circle><circle cx="64" cy="64" r="46" fill="none" stroke="currentColor" stroke-width="3"></circle><text x="64" y="74" text-anchor="middle" font-family="Big Shoulders Display" font-weight="800" font-size="42" fill="currentColor">H</text></svg>
+      <span>THE HIFI ROOM</span>
+    </a>
+
+    <nav class="nav-links">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="shop.html">Shop Collection</a>
+      <a class="nav-link" href="sell.html">Sell Your HiFi</a>
+      <a class="nav-link" href="find.html">Find Equipment</a>
+      <a class="nav-link" href="grading.html">The Grading Standard</a>
+      <a class="nav-link" href="sold.html">Recently Sold</a>
+      <a class="nav-link active" href="about.html">About Us</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="admin.html" class="nav-console-pill">
+        <span class="dot"></span>
+        <span>Console</span>
+      </a>
+      <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Toggle Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer" class="mobile-drawer">
+    <div class="mobile-drawer-content">
+      <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border-main); padding-bottom:16px;">
+        <span style="font-family:var(--font-mono); font-weight:600; font-size:13px; letter-spacing:0.14em;">THE HIFI ROOM</span>
+        <button id="mobile-drawer-close" style="background:none; border:none; font-size:24px; cursor:pointer; color:var(--ink-primary);">&times;</button>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:16px; font-family:var(--font-mono); font-size:13px; text-transform:uppercase;">
+        <a href="index.html" style="color:var(--ink-primary);">Home</a>
+        <a href="shop.html" style="color:var(--ink-primary);">Shop Collection</a>
+        <a href="sell.html" style="color:var(--ink-primary);">Sell Your HiFi</a>
+        <a href="find.html" style="color:var(--ink-primary);">Find Equipment</a>
+        <a href="grading.html" style="color:var(--ink-primary);">The Grading Standard</a>
+        <a href="sold.html" style="color:var(--ink-primary);">Recently Sold</a>
+        <a href="about.html" style="color:var(--accent-cobalt); font-weight:600;">About Us</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Header -->
+  <div style="padding:clamp(36px, 5vw, 64px) clamp(20px, 4vw, 56px) 32px clamp(20px, 4vw, 56px); border-bottom:1px solid var(--border-main); max-width:880px;">
+    <div style="font-family:var(--font-mono); font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--accent-cobalt);">About The HiFi Room</div>
+    <h1 style="font-size:clamp(36px, 5vw, 56px); margin:8px 0 14px 0;">We buy, test, clean, and sell vintage hi-fi.</h1>
+    <p style="font-size:16.5px; line-height:1.7; color:var(--ink-secondary);">
+      Based in Bandra West, Mumbai, we buy pre-owned vintage audio gear, test all functions, clean and service what is needed, document cosmetic condition honestly, and sell gear as-is with pan-India delivery.
+    </p>
+  </div>
+
+  <!-- Main Content -->
+  <main style="padding:clamp(36px, 5vw, 64px) clamp(20px, 4vw, 56px); display:flex; flex-direction:column; gap:48px; flex:1;">
+    
+    <!-- Split 1: What We Do -->
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:40px; align-items:center;">
+      <div>
+        <h2 style="font-size:30px;">Straightforward & Honest</h2>
+        <p style="font-size:14.5px; line-height:1.7; color:var(--ink-secondary); margin-top:12px;">
+          Buying vintage audio can be frustrating when sellers don't disclose faults or describe broken gear as "mint". At The HiFi Room, we keep things simple and honest:
+        </p>
+        <ul style="margin:14px 0 0 20px; font-size:14px; color:var(--ink-secondary); line-height:1.7;">
+          <li><strong>We test every device:</strong> We check power, inputs, phono stages, tone controls, and speaker outputs.</li>
+          <li><strong>We clean and service:</strong> We clean dust, spray Caig DeoxIT on scratchy volume pots and switches, and replace worn belts or burned-out dial lamps.</li>
+          <li><strong>We describe gear as it is:</strong> If a unit has a scratch on the side or a minor quirk, we photograph it and write it in the listing.</li>
+        </ul>
+      </div>
+
+      <div class="paper" style="border:1px solid var(--border-main); padding:16px; overflow:hidden;">
+        <img src="assets/images/02-rear-panel-cinematic.png" alt="Vintage HiFi Amplifier Rear Panel" style="width:100%; height:280px; object-fit:cover; display:block;">
+        <div style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); margin-top:10px; text-align:center;">
+          Workshop testing & inspection bench — Bandra West, Mumbai
+        </div>
+      </div>
+    </div>
+
+    <!-- How We Handle Packing & Shipping -->
+    <div class="paper" style="border:1px solid var(--border-main); padding:clamp(24px, 4vw, 36px);">
+      <div style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent-cobalt); margin-bottom:8px;">
+        Pan-India Delivery
+      </div>
+      <h3 style="font-size:26px; margin:0 0 16px 0;">Safe, Heavy-Duty Packaging</h3>
+      <p style="font-size:14px; color:var(--ink-secondary); line-height:1.65; max-width:760px;">
+        Vintage gear is heavy and delicate. We pack turntables with platters and tonearms secured, tube amplifiers with valves individually wrapped in bubble foam, and heavy receivers in double-walled boxes or reinforced wooden crating with tracking across India.
+      </p>
+    </div>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div style="display:flex; flex-direction:column; gap:14px;">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <svg width="28" height="28" viewBox="0 0 128 128"><circle cx="64" cy="64" r="58" fill="none" stroke="currentColor" stroke-width="6"></circle><circle cx="64" cy="64" r="46" fill="none" stroke="currentColor" stroke-width="3"></circle><text x="64" y="74" text-anchor="middle" font-family="Big Shoulders Display" font-weight="800" font-size="42" fill="currentColor">H</text></svg>
+          <span style="font-family:var(--font-mono); font-size:14px; letter-spacing:0.14em; font-weight:600;">THE HIFI ROOM</span>
+        </div>
+        <p style="font-size:13px; color:var(--ink-muted); line-height:1.6; max-width:260px;">
+          We buy, test, clean, and sell pre-owned vintage hi-fi audio equipment in Mumbai and ship across India. Every unit tested, documented, and sold as-is.
+        </p>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:8px; font-size:13px;">
+        <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); text-transform:uppercase; margin-bottom:4px;">Navigation</span>
+        <a href="shop.html" style="color:var(--ink-secondary);">Shop Collection</a>
+        <a href="sell.html" style="color:var(--ink-secondary);">Sell Your HiFi</a>
+        <a href="find.html" style="color:var(--ink-secondary);">Find Equipment</a>
+        <a href="grading.html" style="color:var(--ink-secondary);">Grading Standard</a>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:8px; font-size:13px;">
+        <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); text-transform:uppercase; margin-bottom:4px;">Studio Contact</span>
+        <a href="https://wa.me/919711393036" target="_blank" style="color:var(--accent-green); font-weight:500;">+91 97113 93036 (WhatsApp)</a>
+        <span style="color:var(--ink-secondary);">info@thehifiroom.in</span>
+        <span style="color:var(--ink-secondary);">Bandra West, Mumbai 400050</span>
+      </div>
+    </div>
+
+    <div style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); border-top:1px solid var(--border-light); padding-top:20px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+      <span>© 2026 The HiFi Room. Pre-owned vintage audio, tested and documented.</span>
+      <span>Bandra West Studio</span>
+    </div>
+  </footer>
+
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Collection — The HiFi Room</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="site-wrapper">
+
+  <!-- Utility Bar -->
+  <div class="utility-bar">
+    <span>Every Unit Tested & Cleaned</span>
+    <span class="utility-dot">•</span>
+    <span>Pan-India Tracked Crated Shipping</span>
+    <span class="utility-dot">•</span>
+    <span>Transparent Condition Notes</span>
+    <span class="utility-dot">•</span>
+    <span>Bandra West Studio, Mumbai</span>
+  </div>
+
+  <!-- Main Nav -->
+  <header class="main-nav">
+    <a href="index.html" class="brand-logo">
+      <svg width="24" height="24" viewBox="0 0 128 128"><circle cx="64" cy="64" r="58" fill="none" stroke="currentColor" stroke-width="6"></circle><circle cx="64" cy="64" r="46" fill="none" stroke="currentColor" stroke-width="3"></circle><text x="64" y="74" text-anchor="middle" font-family="Big Shoulders Display" font-weight="800" font-size="42" fill="currentColor">H</text></svg>
+      <span>THE HIFI ROOM</span>
+    </a>
+
+    <nav class="nav-links">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link active" href="shop.html">Shop Collection</a>
+      <a class="nav-link" href="sell.html">Sell Your HiFi</a>
+      <a class="nav-link" href="find.html">Find Equipment</a>
+      <a class="nav-link" href="grading.html">The Grading Standard</a>
+      <a class="nav-link" href="sold.html">Recently Sold</a>
+      <a class="nav-link" href="about.html">About Us</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="admin.html" class="nav-console-pill">
+        <span class="dot"></span>
+        <span>Console</span>
+      </a>
+      <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Toggle Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer" class="mobile-drawer">
+    <div class="mobile-drawer-content">
+      <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border-main); padding-bottom:16px;">
+        <span style="font-family:var(--font-mono); font-weight:600; font-size:13px; letter-spacing:0.14em;">THE HIFI ROOM</span>
+        <button id="mobile-drawer-close" style="background:none; border:none; font-size:24px; cursor:pointer; color:var(--ink-primary);">&times;</button>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:16px; font-family:var(--font-mono); font-size:13px; text-transform:uppercase;">
+        <a href="index.html" style="color:var(--ink-primary);">Home</a>
+        <a href="shop.html" style="color:var(--accent-cobalt); font-weight:600;">Shop Collection</a>
+        <a href="sell.html" style="color:var(--ink-primary);">Sell Your HiFi</a>
+        <a href="find.html" style="color:var(--ink-primary);">Find Equipment</a>
+        <a href="grading.html" style="color:var(--ink-primary);">The Grading Standard</a>
+        <a href="sold.html" style="color:var(--ink-primary);">Recently Sold</a>
+        <a href="about.html" style="color:var(--ink-primary);">About Us</a>
+        <a href="admin.html" style="color:var(--accent-amber); font-weight:600; border-top:1px dashed var(--border-main); padding-top:14px;">Staff Console →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Header -->
+  <div style="padding:clamp(32px, 4vw, 56px) clamp(20px, 4vw, 56px) 24px clamp(20px, 4vw, 56px); border-bottom:1px solid var(--border-main);">
+    <div style="font-family:var(--font-mono); font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--accent-cobalt);">The Tested Collection</div>
+    <h1 style="font-size:clamp(32px, 4.5vw, 48px); margin:8px 0 12px 0;">142 units. Every one tested, cleaned & documented.</h1>
+    <p style="font-size:15px; color:var(--ink-secondary); max-width:680px; line-height:1.6;">
+      Filter by category, condition grade, or budget. Every single listing discloses exact cosmetic condition, test notes, and known quirks, so Grade A means exactly what it says.
+    </p>
+  </div>
+
+  <!-- Filter / Sort Toolbar -->
+  <div style="padding:20px clamp(20px, 4vw, 56px); border-bottom:1px solid var(--border-main); display:flex; flex-direction:column; gap:16px; background:rgba(251,249,243,0.5);">
+    
+    <!-- Category & Search Bar -->
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+      <div style="display:flex; gap:8px; flex-wrap:wrap;" id="category-chips">
+        <button class="chip active" data-category="All">All Categories</button>
+        <button class="chip" data-category="Amplifiers">Amplifiers</button>
+        <button class="chip" data-category="Reel-to-Reel">Reel-to-Reel</button>
+        <button class="chip" data-category="Turntables">Turntables</button>
+        <button class="chip" data-category="Speakers">Loudspeakers</button>
+        <button class="chip" data-category="Receivers">Receivers</button>
+        <button class="chip" data-category="Cassette decks">Cassette Decks</button>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:12px; min-width:260px; flex:1; max-width:380px;">
+        <div style="position:relative; width:100%;">
+          <input type="text" id="shop-search-input" class="field-input" placeholder="Search brand, model, SKU..." style="padding-left:36px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink-muted)" stroke-width="2" style="position:absolute; left:12px; top:14px;"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.6" y2="16.6"></line></svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grade & Sort Row -->
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; padding-top:10px; border-top:1px dashed var(--border-main);">
+      <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+        <span style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-muted);">Condition Grade:</span>
+        <div style="display:flex; gap:6px;" id="grade-chips">
+          <button class="chip active" data-grade="All" style="padding:4px 10px; font-size:11px;">ALL</button>
+          <button class="chip" data-grade="A+" style="padding:4px 10px; font-size:11px; color:var(--accent-green);">A+</button>
+          <button class="chip" data-grade="A" style="padding:4px 10px; font-size:11px; color:var(--accent-green);">A</button>
+          <button class="chip" data-grade="B" style="padding:4px 10px; font-size:11px; color:var(--accent-cobalt);">B</button>
+          <button class="chip" data-grade="C" style="padding:4px 10px; font-size:11px; color:var(--accent-amber);">C</button>
+        </div>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:12px;">
+        <span style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-muted);">Sort By:</span>
+        <select id="sort-select" style="height:36px; border:1px solid var(--border-main); background:var(--bg-paper); padding:0 12px; font-family:var(--font-mono); font-size:12px; color:var(--ink-primary); cursor:pointer;">
+          <option value="newest">Newest Listed</option>
+          <option value="price-low">Price: Low to High</option>
+          <option value="price-high">Price: High to Low</option>
+          <option value="grade">Highest Grade First</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Grid Section -->
+  <section style="padding:clamp(24px, 4vw, 48px) clamp(20px, 4vw, 56px); flex:1;">
+    <div id="product-count-bar" style="font-family:var(--font-mono); font-size:12px; color:var(--ink-muted); margin-bottom:20px;">
+      Showing all units
+    </div>
+
+    <!-- Live Products Grid -->
+    <div id="products-grid" class="grid-3">
+      <!-- Dynamically populated via JS -->
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div style="display:flex; flex-direction:column; gap:14px;">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <svg width="28" height="28" viewBox="0 0 128 128"><circle cx="64" cy="64" r="58" fill="none" stroke="currentColor" stroke-width="6"></circle><circle cx="64" cy="64" r="46" fill="none" stroke="currentColor" stroke-width="3"></circle><text x="64" y="74" text-anchor="middle" font-family="Big Shoulders Display" font-weight="800" font-size="42" fill="currentColor">H</text></svg>
+          <span style="font-family:var(--font-mono); font-size:14px; letter-spacing:0.14em; font-weight:600;">THE HIFI ROOM</span>
+        </div>
+        <p style="font-size:13px; color:var(--ink-muted); line-height:1.6; max-width:260px;">
+          We buy, test, clean, and sell pre-owned vintage hi-fi audio equipment in Mumbai and ship across India. Every unit tested, documented, and sold as-is.
+        </p>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:8px; font-size:13px;">
+        <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); text-transform:uppercase; margin-bottom:4px;">Navigation</span>
+        <a href="shop.html" style="color:var(--ink-secondary);">Shop Collection</a>
+        <a href="sell.html" style="color:var(--ink-secondary);">Sell Your HiFi</a>
+        <a href="find.html" style="color:var(--ink-secondary);">Find Equipment</a>
+        <a href="grading.html" style="color:var(--ink-secondary);">Grading Standard</a>
+        <a href="sold.html" style="color:var(--ink-secondary);">Sales Ledger</a>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:8px; font-size:13px;">
+        <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); text-transform:uppercase; margin-bottom:4px;">Categories</span>
+        <a href="shop.html?category=Amplifiers" style="color:var(--ink-secondary);">Amplifiers</a>
+        <a href="shop.html?category=Reel-to-Reel" style="color:var(--ink-secondary);">Reel-to-Reel</a>
+        <a href="shop.html?category=Turntables" style="color:var(--ink-secondary);">Turntables</a>
+        <a href="shop.html?category=Speakers" style="color:var(--ink-secondary);">Loudspeakers</a>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:8px; font-size:13px;">
+        <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); text-transform:uppercase; margin-bottom:4px;">Studio & Contact</span>
+        <a href="https://wa.me/919711393036" target="_blank" style="color:var(--accent-green); font-weight:500;">+91 97113 93036 (WhatsApp)</a>
+        <span style="color:var(--ink-secondary);">info@thehifiroom.in</span>
+        <span style="color:var(--ink-secondary);">Bandra West, Mumbai 400050</span>
+      </div>
+    </div>
+
+    <div style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); border-top:1px solid var(--border-light); padding-top:20px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+      <span>© 2026 The HiFi Room. Pre-owned vintage audio, tested and documented.</span>
+      <span>Pan-India Crated Dispatch</span>
+    </div>
+  </footer>
+
+</div>
+
+<script src="js/app.js"></script>
+<script>
+let allProducts = [];
+let activeCategory = 'All';
+let activeGrade = 'All';
+let searchQuery = '';
+let currentSort = 'newest';
+
+document.addEventListener('DOMContentLoaded', async () => {
+  const params = new URLSearchParams(window.location.search);
+  if (params.has('category')) {
+    activeCategory = params.get('category');
+    updateActiveChip('#category-chips', activeCategory);
+  }
+
+  const res = await fetchAPI('/api/products');
+  if (res && res.success) {
+    allProducts = res.data;
+    filterAndRenderProducts();
+  }
+
+  document.querySelectorAll('#category-chips .chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#category-chips .chip').forEach(c => c.classList.remove('active'));
+      btn.classList.add('active');
+      activeCategory = btn.dataset.category;
+      filterAndRenderProducts();
+    });
+  });
+
+  document.querySelectorAll('#grade-chips .chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#grade-chips .chip').forEach(c => c.classList.remove('active'));
+      btn.classList.add('active');
+      activeGrade = btn.dataset.grade;
+      filterAndRenderProducts();
+    });
+  });
+
+  const searchInput = document.getElementById('shop-search-input');
+  searchInput.addEventListener('input', (e) => {
+    searchQuery = e.target.value.toLowerCase();
+    filterAndRenderProducts();
+  });
+
+  const sortSelect = document.getElementById('sort-select');
+  sortSelect.addEventListener('change', (e) => {
+    currentSort = e.target.value;
+    filterAndRenderProducts();
+  });
+});
+
+function updateActiveChip(containerSelector, value) {
+  document.querySelectorAll(`${containerSelector} .chip`).forEach(c => {
+    if (c.dataset.category === value || c.dataset.grade === value) {
+      c.classList.add('active');
+    } else {
+      c.classList.remove('active');
+    }
+  });
+}
+
+function filterAndRenderProducts() {
+  let filtered = [...allProducts];
+
+  if (activeCategory !== 'All') {
+    filtered = filtered.filter(p => p.category.toLowerCase() === activeCategory.toLowerCase());
+  }
+
+  if (activeGrade !== 'All') {
+    filtered = filtered.filter(p => p.grade.toLowerCase() === activeGrade.toLowerCase());
+  }
+
+  if (searchQuery) {
+    filtered = filtered.filter(p => 
+      p.name.toLowerCase().includes(searchQuery) ||
+      p.brand.toLowerCase().includes(searchQuery) ||
+      p.model.toLowerCase().includes(searchQuery) ||
+      p.sku.toLowerCase().includes(searchQuery) ||
+      p.description.toLowerCase().includes(searchQuery)
+    );
+  }
+
+  if (currentSort === 'price-low') {
+    filtered.sort((a,b) => a.price - b.price);
+  } else if (currentSort === 'price-high') {
+    filtered.sort((a,b) => b.price - a.price);
+  } else if (currentSort === 'grade') {
+    filtered.sort((a,b) => a.grade.localeCompare(b.grade));
+  } else {
+    filtered.sort((a,b) => (b.year || '').localeCompare(a.year || ''));
+  }
+
+  const countBar = document.getElementById('product-count-bar');
+  countBar.textContent = `Showing ${filtered.length} of ${allProducts.length} units`;
+
+  const grid = document.getElementById('products-grid');
+  if (filtered.length === 0) {
+    grid.innerHTML = `
+      <div style="grid-column:1 / -1; padding:48px 24px; text-align:center; background:var(--bg-paper); border:1px solid var(--border-main);">
+        <h3 style="font-size:22px;">No equipment matched your filters</h3>
+        <p style="margin-top:6px; font-size:14px; color:var(--ink-muted);">Try clearing filters or submit a sourcing request to have us find this specific gear for you.</p>
+        <a href="find.html" class="btn btn-outline btn-sm" style="margin-top:16px;">Request Sourcing →</a>
+      </div>
+    `;
+    return;
+  }
+
+  grid.innerHTML = filtered.map(p => {
+    const gradeClass = p.grade === 'A+' ? 'grade-ap' : p.grade === 'A' ? 'grade-a' : p.grade === 'B' ? 'grade-b' : 'grade-c';
+    return `
+      <div class="product-card card-hover paper">
+        <div class="product-card-media">
+          <img src="${p.mainImage}" alt="${p.name} - ${p.subtitle}" loading="lazy">
+          <span style="position:absolute; top:10px; left:10px; font-family:var(--font-mono); font-size:10px; color:var(--ink-light); background:rgba(5,6,10,0.7); padding:2px 6px;">
+            ${p.sku}
+          </span>
+          <button class="heart-btn" aria-label="Save Item" style="position:absolute; top:10px; right:10px; background:none; border:none; cursor:pointer;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1B1812" stroke-width="1.8"><path d="M12 20.5s-7.5-4.7-9.8-9.4C.8 7.7 2.6 4 6.3 4c2 0 3.6 1.1 4.5 2.7C11.7 5.1 13.3 4 15.3 4c3.7 0 5.5 3.7 4.1 7.1C17.1 15.8 12 20.5 12 20.5z"></path></svg>
+          </button>
+        </div>
+
+        <div class="product-card-body">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+            <div>
+              <h3 style="font-size:20px; margin:0;"><a href="product.html?id=${p.id}" style="color:var(--ink-primary);">${p.name}</a></h3>
+              <div style="font-family:var(--font-mono); font-size:11.5px; color:var(--ink-muted);">${p.subtitle} · ${p.year}</div>
+            </div>
+            <span class="grade-badge ${gradeClass}">GRADE ${p.grade}</span>
+          </div>
+
+          <p style="font-size:13px; color:var(--ink-secondary); line-height:1.5; margin:6px 0 auto 0; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;">
+            ${p.description}
+          </p>
+
+          <div style="padding-top:10px; border-top:1px dashed var(--border-light); margin-top:8px; display:flex; justify-content:space-between; align-items:center;">
+            <div>
+              <div class="ticket" style="border:1px solid var(--ink-primary); padding:4px 10px 4px 14px; background:var(--bg-paper);">
+                <div class="ticket-notch"></div><div class="ticket-cut"></div>
+                <span style="font-family:var(--font-mono); font-size:16px; font-weight:600;">₹${Number(p.price).toLocaleString('en-IN')}</span>
+              </div>
+              <div style="font-family:var(--font-mono); font-size:10.5px; color:var(--ink-muted); margin-top:2px;">📍 ${p.city}</div>
+            </div>
+
+            <a href="product.html?id=${p.id}" class="btn btn-outline btn-sm">Inspect Report</a>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  initHeartButtons();
+}
+</script>
+</body>
+</html>

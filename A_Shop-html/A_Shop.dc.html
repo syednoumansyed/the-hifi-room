@@ -1,0 +1,358 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <style>
+    body { margin: 0; font-family: 'IBM Plex Sans', sans-serif; background: #F3EFE6; color: #1B1812; }
+    a { color: #2E6FA3; text-decoration: none; }
+    a:hover { color: #1B4D73; }
+    .btn-primary { transition: background 150ms ease; }
+    .btn-primary:hover { background: #245A85; }
+    .btn-outline { transition: background 150ms ease, border-color 150ms ease; }
+    .btn-outline:hover { background: #EAE5D6; border-color: #1B1812; }
+    .card-hover { transition: box-shadow 180ms ease, transform 180ms ease; }
+    .card-hover:hover { transform: translateY(-2px); box-shadow: 0 14px 28px -10px rgba(27,24,18,0.18); }
+    .paper { background: #FBF9F3; box-shadow: 0 18px 34px -18px rgba(27,24,18,0.28), 0 1px 0 rgba(27,24,18,0.05); }
+    .ticket { position: relative; display: inline-flex; align-items: center; }
+    .ticket-notch { position: absolute; left: -9px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; background: #F3EFE6; border-radius: 50%; border: 1px solid #1B1812; }
+    .ticket-cut { position: absolute; left: 6px; top: 5px; bottom: 5px; border-left: 1.5px dashed #B7AF9A; }
+    .heart-btn { transition: transform 120ms ease; cursor: pointer; }
+    .heart-btn:hover { transform: scale(1.1); }
+    .nav-link { transition: color 120ms ease; }
+    .nav-link:hover { color: #1B1812 !important; }
+    .chip { cursor: pointer; transition: background 150ms ease, color 150ms ease, border-color 150ms ease; }
+    .chip-off:hover { background: #EAE5D6; border-color: #1B1812; }
+    .page-btn { cursor: pointer; transition: background 150ms ease, color 150ms ease; }
+    .page-btn:hover { background: #EAE5D6; }
+  
+    /* HiFi Room Responsive Patch */
+    @media (max-width: 900px) {
+      div[style*="grid-template-columns: repeat(4"],
+      div[style*="grid-template-columns: repeat(5"],
+      div[style*="grid-template-columns: 1fr 1fr 1fr"] {
+        grid-template-columns: 1fr 1fr !important;
+      }
+      div[style*="display:flex"][style*="gap:56px"],
+      div[style*="display:flex"][style*="gap:40px"] {
+        flex-direction: column !important;
+        gap: 24px !important;
+      }
+    }
+    @media (max-width: 640px) {
+      div[style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+      }
+      div[style*="padding:88px 56px"],
+      div[style*="padding:72px 56px"],
+      div[style*="padding:64px 56px"],
+      div[style*="padding:56px"] {
+        padding: 24px 16px !important;
+      }
+      h1[style*="font-size:82px"], h1[style*="font-size:52px"], h1[style*="font-size:46px"], h1[style*="font-size:42px"] {
+        font-size: 36px !important;
+      }
+    }
+    
+  </style>
+</helmet>
+
+<div style="width: 100%; max-width: 1440px; margin: 0 auto; min-height: 100vh; box-sizing:border-box; background-color:#F3EFE6; background-image: repeating-linear-gradient(0deg, rgba(27,24,18,0.045) 0px, rgba(27,24,18,0.045) 1px, transparent 1px, transparent 26px), repeating-linear-gradient(90deg, rgba(27,24,18,0.045) 0px, rgba(27,24,18,0.045) 1px, transparent 1px, transparent 26px); color:#1B1812; display:flex; flex-direction:column;">
+
+  <!-- Utility bar -->
+  <div style="display:flex; align-items:center; justify-content:center; gap:28px; padding:9px 56px; background:#EAE4D3; border-bottom:1px solid #C9C2B2; font-family:'IBM Plex Mono', monospace; font-size:10.5px; letter-spacing:0.1em; text-transform:uppercase; color:#6B6558;">
+    <span>100% tested equipment</span>
+    <span style="color:#C9C2B2;">•</span>
+    <span>Pan-India shipping</span>
+    <span style="color:#C9C2B2;">•</span>
+    <span>Secure packaging</span>
+  </div>
+
+  <!-- Main nav -->
+  <div style="display:flex; align-items:center; justify-content:space-between; padding:18px 56px; border-bottom:1px solid #C9C2B2; background:rgba(251,249,243,0.6);">
+    <div style="font-family:'IBM Plex Mono', monospace; font-weight:500; font-size:14px; letter-spacing:0.16em;">THE HIFI ROOM</div>
+    <div style="display:flex; align-items:center; gap:28px; font-family:'IBM Plex Mono', monospace; font-size:11.5px; letter-spacing:0.07em; text-transform:uppercase; color:#4B4B45;">
+      <a class="nav-link" href="../index.html" style="color:#4B4B45;">Home</a>
+      <a class="nav-link" href="#" style="color:#1B1812; font-weight:600; border-bottom:2px solid #2E6FA3; padding-bottom:2px;">Shop</a>
+      <a class="nav-link" href="../sell.html" style="color:#4B4B45;">Sell your HiFi</a>
+      <a class="nav-link" href="../find.html" style="color:#4B4B45;">Find equipment</a>
+      <a class="nav-link" href="../sold.html" style="color:#4B4B45;">Recently sold</a>
+      <a class="nav-link" href="../about.html" style="color:#4B4B45;">About us</a>
+      <a class="nav-link" href="#" style="color:#4B4B45;">Contact</a>
+    </div>
+    <div style="display:flex; align-items:center; gap:18px;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1B1812" stroke-width="1.8"><circle cx="10" cy="10" r="6"></circle><line x1="14.5" y1="14.5" x2="20" y2="20"></line></svg>
+      <div style="width:44px; height:44px; border-radius:50%; border:1.5px solid #1B1812; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1B1812" stroke-width="1.8"><path d="M4 4h16v12H8l-4 4V4z"></path></svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page header -->
+  <div style="padding:56px 56px 32px 56px; display:flex; flex-direction:column; gap:14px; border-bottom:1px solid #C9C2B2;">
+    <div style="font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#2E6FA3;">The collection</div>
+    <h1 style="margin:0; font-family:'Big Shoulders Display', sans-serif; font-weight:700; font-size:42px; letter-spacing:-0.01em;">142 units. Every one bench-tested.</h1>
+    <p style="margin:0; font-size:14.5px; line-height:1.6; color:#4B4B45; max-width:640px;">Filter by category, grade or budget — every listing links back to the same published standard, so a Grade B here means exactly what a Grade B means anywhere else on the site.</p>
+  </div>
+
+  <!-- Filter / sort bar -->
+  <div style="padding:24px 56px; border-bottom:1px solid #C9C2B2; display:flex; flex-direction:column; gap:18px;">
+    <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;">
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <div class="chip" style="background:#1B1812; color:#F9F7F0; border:1px solid #1B1812; font-family:'IBM Plex Mono', monospace; font-size:12px; padding:9px 16px;">Amplifiers</div>
+        <div class="chip chip-off" style="background:transparent; color:#1B1812; border:1px solid #C9C2B2; font-family:'IBM Plex Mono', monospace; font-size:12px; padding:9px 16px;">Speakers</div>
+        <div class="chip chip-off" style="background:transparent; color:#1B1812; border:1px solid #C9C2B2; font-family:'IBM Plex Mono', monospace; font-size:12px; padding:9px 16px;">Turntables</div>
+        <div class="chip chip-off" style="background:transparent; color:#1B1812; border:1px solid #C9C2B2; font-family:'IBM Plex Mono', monospace; font-size:12px; padding:9px 16px;">Receivers</div>
+        <div class="chip chip-off" style="background:transparent; color:#1B1812; border:1px solid #C9C2B2; font-family:'IBM Plex Mono', monospace; font-size:12px; padding:9px 16px;">Cassette decks</div>
+        <div class="chip chip-off" style="background:transparent; color:#1B1812; border:1px solid #C9C2B2; font-family:'IBM Plex Mono', monospace; font-size:12px; padding:9px 16px;">Other equipment</div>
+      </div>
+      <div class="chip" style="display:flex; align-items:center; gap:8px; border:1px solid #C9C2B2; padding:9px 14px; font-family:'IBM Plex Mono', monospace; font-size:12.5px; color:#4B4B45;">
+        Sort: Newest first
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#4B4B45" stroke-width="2.4"><polyline points="6,9 12,15 18,9"></polyline></svg>
+      </div>
+    </div>
+    <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px; padding-top:4px; border-top:1px dashed #C9C2B2;">
+      <div style="display:flex; align-items:center; gap:16px;">
+        <span style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:#8A8A82;">Grade</span>
+        <div style="display:flex; gap:6px;">
+          <div class="chip" style="width:30px; height:30px; display:flex; align-items:center; justify-content:center; border:1.5px solid #4B7A51; color:#4B7A51; background:rgba(75,122,81,0.1); font-family:'IBM Plex Mono', monospace; font-size:12px; font-weight:600;">A</div>
+          <div class="chip" style="width:30px; height:30px; display:flex; align-items:center; justify-content:center; border:1.5px solid #2E6FA3; color:#2E6FA3; background:rgba(46,111,163,0.1); font-family:'IBM Plex Mono', monospace; font-size:12px; font-weight:600;">B</div>
+          <div class="chip chip-off" style="width:30px; height:30px; display:flex; align-items:center; justify-content:center; border:1.5px solid #C9C2B2; color:#8A8A82; font-family:'IBM Plex Mono', monospace; font-size:12px; font-weight:600;">C</div>
+          <div class="chip chip-off" style="width:30px; height:30px; display:flex; align-items:center; justify-content:center; border:1.5px solid #C9C2B2; color:#8A8A82; font-family:'IBM Plex Mono', monospace; font-size:12px; font-weight:600;">D</div>
+          <div class="chip chip-off" style="width:30px; height:30px; display:flex; align-items:center; justify-content:center; border:1.5px solid #C9C2B2; color:#8A8A82; font-family:'IBM Plex Mono', monospace; font-size:12px; font-weight:600;">E</div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:10px;">
+        <span style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:#8A8A82;">Price</span>
+        <div style="width:110px; height:36px; border:1px solid #C9C2B2; background:#FFFFFF; display:flex; align-items:center; padding:0 12px; font-family:'IBM Plex Mono', monospace; font-size:12.5px; color:#4B4B45;">₹15,000</div>
+        <span style="color:#8A8A82;">—</span>
+        <div style="width:110px; height:36px; border:1px solid #C9C2B2; background:#FFFFFF; display:flex; align-items:center; padding:0 12px; font-family:'IBM Plex Mono', monospace; font-size:12.5px; color:#4B4B45;">₹2,50,000</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Result count -->
+  <div style="padding:20px 56px 0 56px; font-family:'IBM Plex Mono', monospace; font-size:12.5px; color:#8A8A82;">Showing 9 of 142 units</div>
+
+  <!-- Catalog grid -->
+  <div style="padding:20px 56px 64px 56px; display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:20px;">
+
+    <div class="card-hover paper" style="border:1px solid #C9C2B2; display:flex; flex-direction:column; position:relative;">
+      <svg class="heart-btn" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B1812" stroke-width="1.8" style="position:absolute; top:12px; right:12px; z-index:1;"><path d="M12 20.5s-7.5-4.7-9.8-9.4C.8 7.7 2.6 4 6.3 4c2 0 3.6 1.1 4.5 2.7C11.7 5.1 13.3 4 15.3 4c3.7 0 5.5 3.7 4.1 7.1C17.1 15.8 12 20.5 12 20.5z"></path></svg>
+      <div style="height:150px; display:flex; align-items:center; justify-content:center; border-bottom:1px solid #C9C2B2;">
+        <svg width="76" height="70" viewBox="0 0 90 78" fill="none" stroke="#1B1812" stroke-width="1.6"><rect x="6" y="8" width="78" height="62" rx="2"></rect><circle cx="45" cy="40" r="24" stroke="#4B7A51"></circle><line x1="45" y1="40" x2="62" y2="24"></line><circle cx="64" cy="22" r="3"></circle></svg>
+      </div>
+      <div style="padding:16px; display:flex; flex-direction:column; gap:8px;">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-weight:600; font-size:14px;">Technics SL-1200GR</span>
+          <span style="font-family:'IBM Plex Mono', monospace; font-size:10px; padding:2px 6px; border:1px solid #4B7A51; color:#4B7A51;">A</span>
+        </div>
+        <span style="font-family:'IBM Plex Mono', monospace; font-size:15px; font-weight:500;">₹52,000</span>
+        <span style="display:flex; align-items:center; gap:4px; font-family:'IBM Plex Mono', monospace; font-size:10.5px; color:#8A8A82;">
+          <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#8A8A82" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"></path><circle cx="12" cy="9" r="2.4"></circle></svg>
+          Mumbai
+        </span>
+      </div>
+    </div>
+
+    <div class="card-hover paper" style="border:1px solid #C9C2B2; display:flex; flex-direction:column; position:relative;">
+      <svg class="heart-btn" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B1812" stroke-width="1.8" style="position:absolute; top:12px; right:12px; z-index:1;"><path d="M12 20.5s-7.5-4.7-9.8-9.4C.8 7.7 2.6 4 6.3 4c2 0 3.6 1.1 4.5 2.7C11.7 5.1 13.3 4 15.3 4c3.7 0 5.5 3.7 4.1 7.1C17.1 15.8 12 20.5 12 20.5z"></path></svg>
+      <div style="height:150px; display:flex; align-items:center; justify-content:center; border-bottom:1px solid #C9C2B2;">
+        <svg width="80" height="56" viewBox="0 0 90 62" fill="none" stroke="#1B1812" stroke-width="1.6"><rect x="6" y="6" width="78" height="50" rx="2"></rect><circle cx="26" cy="31" r="11" stroke="#2E6FA3"></circle><rect x="50" y="16" width="26" height="10"></rect><rect x="50" y="32" width="26" height="8"></rect></svg>
+      </div>
+      <div style="padding:16px; display:flex; flex-direction:column; gap:8px;">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-weight:600; font-size:14px;">NAD 3020</span>
+          <span style="font-family:'IBM Plex Mono', monospace; font-size:10px; padding:2px 6px; border:1px solid #2E6FA3; color:#2E6FA3;">B</span>
+        </div>
+        <span style="font-family:'IBM Plex Mono', monospace; font-size:15px; font-weight:500;">₹18,000</span>
+        <span style="display:flex; align-items:center; gap:4px; font-family:'IBM Plex Mono', monospace; font-size:10.5px; color:#8A8A82;">
+          <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#8A8A82" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"></path><circle cx="12" cy="9" r="2.4"></circle></svg>
+          Pune
+        </span>
+      </div>
+    </div>
+
+    <div class="card-hover paper" style="border:1px solid #C9C2B2; display:flex; flex-direction:column; position:relative;">
+      <svg class="heart-btn" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B1812" stroke-width="1.8" style="position:absolute; top:12px; right:12px; z-index:1;"><path d="M12 20.5s-7.5-4.7-9.8-9.4C.8 7.7 2.6 4 6.3 4c2 0 3.6 1.1 4.5 2.7C11.7 5.1 13.3 4 15.3 4c3.7 0 5.5 3.7 4.1 7.1C17.1 15.8 12 20.5 12 20.5z"></path></svg>
+      <div style="height:150px; display:flex; align-items:center; justify-content:center; border-bottom:1px solid #C9C2B2;">
+        <svg width="64" height="66" viewBox="0 0 70 90" fill="none" stroke="#1B1812" stroke-width="1.6"><rect x="6" y="6" width="26" height="78" rx="2"></rect><circle cx="19" cy="26" r="8" stroke="#4B7A51"></circle><circle cx="19" cy="54" r="5" stroke="#4B7A51"></circle><rect x="38" y="6" width="26" height="78" rx="2"></rect><circle cx="51" cy="26" r="8" stroke="#4B7A51"></circle><circle cx="51" cy="54" r="5" stroke="#4B7A51"></circle></svg>
+      </div>
+      <div style="padding:16px; display:flex; flex-direction:column; gap:8px;">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-weight:600; font-size:14px;">Genelec 8010A</span>
+          <span style="font-family:'IBM Plex Mono', monospace; font-size:10px; padding:2px 6px; border:1px solid #4B7A51; color:#4B7A51;">A</span>
+        </div>
+        <span style="font-family:'IBM Plex Mono', monospace; font-size:15px; font-weight:500;">₹34,000</span>
+        <span style="display:flex; align-items:center; gap:4px; font-family:'IBM Plex Mono', monospace; font-size:10.5px; color:#8A8A82;">
+          <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#8A8A82" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"></path><circle cx="12" cy="9" r="2.4"></circle></svg>
+          Bangalore
+        </span>
+      </div>
+    </div>
+
+    <div class="card-hover paper" style="border:1px solid #C9C2B2; display:flex; flex-direction:column; position:relative;">
+      <svg class="heart-btn" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B1812" stroke-width="1.8" style="position:absolute; top:12px; right:12px; z-index:1;"><path d="M12 20.5s-7.5-4.7-9.8-9.4C.8 7.7 2.6 4 6.3 4c2 0 3.6 1.1 4.5 2.7C11.7 5.1 13.3 4 15.3 4c3.7 0 5.5 3.7 4.1 7.1C17.1 15.8 12 20.5 12 20.5z"></path></svg>
+      <div style="height:150px; display:flex; align-items:center; justify-content:center; border-bottom:1px solid #C9C2B2;">
+        <svg width="80" height="56" viewBox="0 0 90 62" fill="none" stroke="#1B1812" stroke-width="1.6"><rect x="6" y="6" width="78" height="50" rx="2"></rect><circle cx="26" cy="31" r="11" stroke="#2E6FA3"></circle><rect x="50" y="16" width="26" height="10"></rect><rect x="50" y="32" width="26" height="8"></rect></svg>
+      </div>
+      <div style="padding:16px; display:flex; flex-direction:column; gap:8px;">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-weight:600; font-size:14px;">Sansui AU-717</span>
+          <span style="font-family:'IBM Plex Mono', monospace; font-size:10px; padding:2px 6px; border:1px solid #2E6FA3; color:#2E6FA3;">B</span>
+        </div>
+        <span style="font-family:'IBM Plex Mono', monospace; font-size:15px; font-weight:500;">₹95,000</span>
+        <span style="display:flex; align-items:center; gap:4px; font-family:'IBM Plex Mono', monospace; font-size:10.5px; color:#8A8A82;">
+          <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#8A8A82" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"></path><circle cx="12" cy="9" r="2.4"></circle></svg>
+          Delhi
+        </span>
+      </div>
+    </div>
+
+    <div class="card-hover paper" style="border:1px solid #C9C2B2; display:flex; flex-direction:column; position:relative;">
+      <svg class="heart-btn" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B1812" stroke-width="1.8" style="position:absolute; top:12px; right:12px; z-index:1;"><path d="M12 20.5s-7.5-4.7-9.8-9.4C.8 7.7 2.6 4 6.3 4c2 0 3.6 1.1 4.5 2.7C11.7 5.1 13.3 4 15.3 4c3.7 0 5.5 3.7 4.1 7.1C17.1 15.8 12 20.5 12 20.5z"></path></svg>
+      <div style="height:150px; display:flex; align-items:center; justify-content:center; border-bottom:1px solid #C9C2B2;">
+        <svg width="80" height="56" viewBox="0 0 90 62" fill="none" stroke="#1B1812" stroke-width="1.6"><rect x="6" y="6" width="78" height="50" rx="2"></rect><circle cx="26" cy="31" r="11" stroke="#4B7A51"></circle><rect x="50" y="16" width="26" height="10"></rect><rect x="50" y="32" width="26" height="8"></rect></svg>
+      </div>
+      <div style="padding:16px; display:flex; flex-direction:column; gap:8px;">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-weight:600; font-size:14px;">Luxman L-505</span>
+          <span style="font-family:'IBM Plex Mono', monospace; font-size:10px; padding:2px 6px; border:1px solid #4B7A51; color:#4B7A51;">A</span>
+        </div>
+        <span style="font-family:'IBM Plex Mono', monospace; font-size:15px; font-weight:500;">₹1,10,000</span>
+        <span style="display:flex; align-items:center; gap:4px; font-family:'IBM Plex Mono', monospace; font-size:10.5px; color:#8A8A82;">
+          <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#8A8A82" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"></path><circle cx="12" cy="9" r="2.4"></circle></svg>
+          Chennai
+        </span>
+      </div>
+    </div>
+
+    <div class="card-hover paper" style="border:1px solid #C9C2B2; display:flex; flex-direction:column; position:relative;">
+      <svg class="heart-btn" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B1812" stroke-width="1.8" style="position:absolute; top:12px; right:12px; z-index:1;"><path d="M12 20.5s-7.5-4.7-9.8-9.4C.8 7.7 2.6 4 6.3 4c2 0 3.6 1.1 4.5 2.7C11.7 5.1 13.3 4 15.3 4c3.7 0 5.5 3.7 4.1 7.1C17.1 15.8 12 20.5 12 20.5z"></path></svg>
+      <div style="height:150px; overflow:hidden; border-bottom:1px solid #C9C2B2;">
+        <img src="amp-main.jpg" alt="McIntosh MC275 tube power amplifier" style="width:100%; height:100%; object-fit:cover; object-position:center 40%; display:block;">
+      </div>
+      <div style="padding:16px; display:flex; flex-direction:column; gap:8px;">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-weight:600; font-size:14px;">McIntosh MC275</span>
+          <span style="font-family:'IBM Plex Mono', monospace; font-size:10px; padding:2px 6px; border:1px solid #2E6FA3; color:#2E6FA3;">B</span>
+        </div>
+        <span style="font-family:'IBM Plex Mono', monospace; font-size:15px; font-weight:500;">₹2,15,000</span>
+        <span style="display:flex; align-items:center; gap:4px; font-family:'IBM Plex Mono', monospace; font-size:10.5px; color:#8A8A82;">
+          <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#8A8A82" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"></path><circle cx="12" cy="9" r="2.4"></circle></svg>
+          Mumbai
+        </span>
+      </div>
+    </div>
+
+    <div class="card-hover paper" style="border:1px solid #C9C2B2; display:flex; flex-direction:column; position:relative;">
+      <svg class="heart-btn" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B1812" stroke-width="1.8" style="position:absolute; top:12px; right:12px; z-index:1;"><path d="M12 20.5s-7.5-4.7-9.8-9.4C.8 7.7 2.6 4 6.3 4c2 0 3.6 1.1 4.5 2.7C11.7 5.1 13.3 4 15.3 4c3.7 0 5.5 3.7 4.1 7.1C17.1 15.8 12 20.5 12 20.5z"></path></svg>
+      <div style="height:150px; overflow:hidden; border-bottom:1px solid #C9C2B2;">
+        <img src="wollensak-straight.jpg" alt="Wollensak 3M reel-to-reel tape recorder" style="width:100%; height:100%; object-fit:cover; display:block;">
+      </div>
+      <div style="padding:16px; display:flex; flex-direction:column; gap:8px;">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-weight:600; font-size:14px;">Wollensak 3M</span>
+          <span style="font-family:'IBM Plex Mono', monospace; font-size:10px; padding:2px 6px; border:1px solid #D8952F; color:#D8952F;">C</span>
+        </div>
+        <span style="font-family:'IBM Plex Mono', monospace; font-size:15px; font-weight:500;">₹34,500</span>
+        <span style="display:flex; align-items:center; gap:4px; font-family:'IBM Plex Mono', monospace; font-size:10.5px; color:#8A8A82;">
+          <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#8A8A82" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"></path><circle cx="12" cy="9" r="2.4"></circle></svg>
+          Mumbai
+        </span>
+      </div>
+    </div>
+
+    <div class="card-hover paper" style="border:1px solid #C9C2B2; display:flex; flex-direction:column; position:relative;">
+      <svg class="heart-btn" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B1812" stroke-width="1.8" style="position:absolute; top:12px; right:12px; z-index:1;"><path d="M12 20.5s-7.5-4.7-9.8-9.4C.8 7.7 2.6 4 6.3 4c2 0 3.6 1.1 4.5 2.7C11.7 5.1 13.3 4 15.3 4c3.7 0 5.5 3.7 4.1 7.1C17.1 15.8 12 20.5 12 20.5z"></path></svg>
+      <div style="height:150px; overflow:hidden; border-bottom:1px solid #C9C2B2;">
+        <img src="akai-hero.jpg" alt="Akai 1710W reel-to-reel tape recorder" style="width:100%; height:100%; object-fit:cover; display:block;">
+      </div>
+      <div style="padding:16px; display:flex; flex-direction:column; gap:8px;">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-weight:600; font-size:14px;">Akai 1710W</span>
+          <span style="font-family:'IBM Plex Mono', monospace; font-size:10px; padding:2px 6px; border:1px solid #D8952F; color:#D8952F;">C</span>
+        </div>
+        <span style="font-family:'IBM Plex Mono', monospace; font-size:15px; font-weight:500;">₹34,000</span>
+        <span style="display:flex; align-items:center; gap:4px; font-family:'IBM Plex Mono', monospace; font-size:10.5px; color:#8A8A82;">
+          <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#8A8A82" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"></path><circle cx="12" cy="9" r="2.4"></circle></svg>
+          Mumbai
+        </span>
+      </div>
+    </div>
+
+    <div class="card-hover paper" style="border:1px solid #C9C2B2; display:flex; flex-direction:column; position:relative;">
+      <svg class="heart-btn" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B1812" stroke-width="1.8" style="position:absolute; top:12px; right:12px; z-index:1;"><path d="M12 20.5s-7.5-4.7-9.8-9.4C.8 7.7 2.6 4 6.3 4c2 0 3.6 1.1 4.5 2.7C11.7 5.1 13.3 4 15.3 4c3.7 0 5.5 3.7 4.1 7.1C17.1 15.8 12 20.5 12 20.5z"></path></svg>
+      <div style="height:150px; display:flex; align-items:center; justify-content:center; border-bottom:1px solid #C9C2B2;">
+        <svg width="66" height="58" viewBox="0 0 90 78" fill="none" stroke="#1B1812" stroke-width="1.6"><rect x="6" y="8" width="78" height="62" rx="2"></rect><circle cx="45" cy="40" r="24" stroke="#C76B2E"></circle><line x1="45" y1="40" x2="62" y2="24"></line><circle cx="64" cy="22" r="3"></circle></svg>
+      </div>
+      <div style="padding:16px; display:flex; flex-direction:column; gap:8px;">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-weight:600; font-size:14px;">Thorens TD-160</span>
+          <span style="font-family:'IBM Plex Mono', monospace; font-size:10px; padding:2px 6px; border:1px solid #C76B2E; color:#C76B2E;">D</span>
+        </div>
+        <span style="font-family:'IBM Plex Mono', monospace; font-size:15px; font-weight:500;">₹58,000</span>
+        <span style="display:flex; align-items:center; gap:4px; font-family:'IBM Plex Mono', monospace; font-size:10.5px; color:#8A8A82;">
+          <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#8A8A82" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"></path><circle cx="12" cy="9" r="2.4"></circle></svg>
+          Kolkata
+        </span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Pagination -->
+  <div style="padding:0 56px 72px 56px; display:flex; align-items:center; justify-content:center; gap:8px;">
+    <div class="page-btn" style="width:38px; height:38px; display:flex; align-items:center; justify-content:center; border:1px solid #1B1812; background:#1B1812; color:#F9F7F0; font-family:'IBM Plex Mono', monospace; font-size:13px;">1</div>
+    <div class="page-btn" style="width:38px; height:38px; display:flex; align-items:center; justify-content:center; border:1px solid #C9C2B2; font-family:'IBM Plex Mono', monospace; font-size:13px;">2</div>
+    <div class="page-btn" style="width:38px; height:38px; display:flex; align-items:center; justify-content:center; border:1px solid #C9C2B2; font-family:'IBM Plex Mono', monospace; font-size:13px;">3</div>
+    <span style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#8A8A82; padding:0 4px;">…</span>
+    <div class="page-btn" style="width:38px; height:38px; display:flex; align-items:center; justify-content:center; border:1px solid #C9C2B2; font-family:'IBM Plex Mono', monospace; font-size:13px;">12</div>
+    <div class="page-btn" style="display:flex; align-items:center; gap:6px; height:38px; padding:0 16px; border:1px solid #C9C2B2; font-family:'IBM Plex Mono', monospace; font-size:13px;">Next <span>→</span></div>
+  </div>
+
+  <!-- Footer -->
+  <div style="border-top:1px solid #C9C2B2; padding:48px 56px; display:flex; flex-direction:column; gap:32px; margin-top:auto;">
+    <div style="display:grid; grid-template-columns: 1.2fr 1fr 1fr 1fr 1fr; gap:24px;">
+      <div style="display:flex; flex-direction:column; gap:14px;">
+        <div style="display:flex; align-items:center; gap:12px;">
+          <svg width="30" height="30" viewBox="0 0 128 128"><circle cx="64" cy="64" r="58" fill="none" stroke="#1B1812" stroke-width="2"></circle><circle cx="64" cy="64" r="49" fill="none" stroke="#1B1812" stroke-width="1"></circle><text x="64" y="72" text-anchor="middle" font-family="Big Shoulders Display" font-weight="700" font-size="34" fill="#1B1812">H</text></svg>
+          <div style="font-family:'IBM Plex Mono', monospace; font-size:14px; letter-spacing:0.14em;">THE HIFI ROOM</div>
+        </div>
+        <p style="margin:0; font-size:12.5px; line-height:1.6; color:#8A8A82; max-width:200px;">We buy, sell and source vintage hi-fi. Every price carefully considered and honestly described.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#4B4B45;">
+        <span style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:#8A8A82; text-transform:uppercase;">Quick links</span>
+        <a href="#">Shop</a><a href="#">Sell your HiFi</a><a href="#">Find equipment</a><a href="#">Recently sold</a><a href="#">About us</a><a href="#">Contact</a>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#4B4B45;">
+        <span style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:#8A8A82; text-transform:uppercase;">Categories</span>
+        <a href="#">Amplifiers</a><a href="#">Speakers</a><a href="#">Turntables</a><a href="#">Receivers</a><a href="#">Cassette decks</a><a href="#">Other equipment</a>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#4B4B45;">
+        <span style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:#8A8A82; text-transform:uppercase;">Customer support</span>
+        <a href="#">Shipping &amp; delivery</a><a href="#">Payment methods</a><a href="#">Return policy</a><a href="#">Terms &amp; conditions</a><a href="#">Privacy policy</a><a href="#">FAQs</a>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#4B4B45;">
+        <span style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:#8A8A82; text-transform:uppercase;">Contact us</span>
+        <a href="#">+91 97113 93036 (WhatsApp)</a>
+        <a href="#">info@thehifiroom.in</a>
+        <span>Bandra West, Mumbai</span>
+        <span style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:#8A8A82;">We ship across India</span>
+      </div>
+    </div>
+    <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:#8A8A82; border-top:1px solid #E4E1D6; padding-top:20px;">© 2026 The Hifi Room. All grades defined in the published standard.</div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

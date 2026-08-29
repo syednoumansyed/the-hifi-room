@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The HiFi Room — Tested Pre-Owned Hi-Fi Audio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="site-wrapper">
+
+  <!-- Utility Bar -->
+  <div class="utility-bar">
+    <span>Every Unit Tested & Cleaned</span>
+    <span class="utility-dot">•</span>
+    <span>Pan-India Tracked Crated Shipping</span>
+    <span class="utility-dot">•</span>
+    <span>Transparent Condition Notes</span>
+    <span class="utility-dot">•</span>
+    <span>Bandra West Studio, Mumbai</span>
+  </div>
+
+  <!-- Main Nav -->
+  <header class="main-nav">
+    <a href="index.html" class="brand-logo">
+      <svg width="24" height="24" viewBox="0 0 128 128"><circle cx="64" cy="64" r="58" fill="none" stroke="currentColor" stroke-width="6"></circle><circle cx="64" cy="64" r="46" fill="none" stroke="currentColor" stroke-width="3"></circle><text x="64" y="74" text-anchor="middle" font-family="Big Shoulders Display" font-weight="800" font-size="42" fill="currentColor">H</text></svg>
+      <span>THE HIFI ROOM</span>
+    </a>
+
+    <nav class="nav-links">
+      <a class="nav-link active" href="index.html">Home</a>
+      <a class="nav-link" href="shop.html">Shop Collection</a>
+      <a class="nav-link" href="sell.html">Sell Your HiFi</a>
+      <a class="nav-link" href="find.html">Find Equipment</a>
+      <a class="nav-link" href="grading.html">The Grading Standard</a>
+      <a class="nav-link" href="sold.html">Recently Sold</a>
+      <a class="nav-link" href="about.html">About Us</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="admin.html" class="nav-console-pill">
+        <span class="dot"></span>
+        <span>Console</span>
+      </a>
+      <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Toggle Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer" class="mobile-drawer">
+    <div class="mobile-drawer-content">
+      <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border-main); padding-bottom:16px;">
+        <span style="font-family:var(--font-mono); font-weight:600; font-size:13px; letter-spacing:0.14em;">THE HIFI ROOM</span>
+        <button id="mobile-drawer-close" style="background:none; border:none; font-size:24px; cursor:pointer; color:var(--ink-primary);">&times;</button>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:16px; font-family:var(--font-mono); font-size:13px; text-transform:uppercase;">
+        <a href="index.html" style="color:var(--accent-cobalt); font-weight:600;">Home</a>
+        <a href="shop.html" style="color:var(--ink-primary);">Shop Collection</a>
+        <a href="sell.html" style="color:var(--ink-primary);">Sell Your HiFi</a>
+        <a href="find.html" style="color:var(--ink-primary);">Find Equipment</a>
+        <a href="grading.html" style="color:var(--ink-primary);">The Grading Standard</a>
+        <a href="sold.html" style="color:var(--ink-primary);">Recently Sold</a>
+        <a href="about.html" style="color:var(--ink-primary);">About Us & Workshop</a>
+        <a href="admin.html" style="color:var(--accent-amber); font-weight:600; border-top:1px dashed var(--border-main); padding-top:14px;">Staff Console →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <!-- Left Hero Column -->
+    <div class="hero-left">
+      <div class="hero-tag">Pre-Owned Hi-Fi · Tested & Documented</div>
+      <h1 class="hero-title">Every unit tested, cleaned, and on the record.</h1>
+      <p class="hero-subtitle">
+        Browse working turntables, amplifiers, receivers and speakers. Make an offer on your terms, sell gear you no longer play for cash, or tell us what model to find for you. Transparent condition notes, no surprises.
+      </p>
+
+      <div class="hero-actions">
+        <a href="shop.html" class="btn btn-primary">Browse Available Units</a>
+        <a href="sell.html" class="btn btn-outline">Sell Your HiFi for Cash</a>
+      </div>
+
+      <div class="hero-stats">
+        <div>
+          <div class="stat-num" id="hero-stat-units">142</div>
+          <div class="stat-lbl">Units In Stock</div>
+        </div>
+        <div>
+          <div class="stat-num" id="hero-stat-tested">100%</div>
+          <div class="stat-lbl">Tested & Cleaned</div>
+        </div>
+        <div>
+          <div class="stat-num" id="hero-stat-placed">27</div>
+          <div class="stat-lbl">Placed This Month</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Hero Column: Featured Exhibit Card -->
+    <div class="hero-right">
+      <div class="tape" style="top:-14px; right:40px; width:90px; height:24px; transform:rotate(5deg);"></div>
+
+      <div class="exhibit-card paper">
+        <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+
+        <div class="exhibit-header">
+          <span style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.1em; color:var(--ink-muted); text-transform:uppercase;">
+            FEATURED SPECIMEN · SKU HFR-0184
+          </span>
+          <span class="grade-badge grade-b">GRADE B</span>
+        </div>
+
+        <div class="exhibit-image-wrapper">
+          <img src="assets/images/08-tube-amplifiers-hero-cinematic.png" alt="McIntosh MC275 Tube Power Amplifier" class="exhibit-image">
+          <div class="exhibit-badge">BANDRA WORKSHOP CHECKED</div>
+        </div>
+
+        <div class="exhibit-body">
+          <div>
+            <h3 style="font-size:24px; margin:0;"><a href="product.html?id=HFR-0184" style="color:var(--ink-primary);">McIntosh MC275</a></h3>
+            <div style="font-family:var(--font-mono); font-size:12px; color:var(--ink-muted); margin-top:2px;">Tube Power Amplifier · 1993 Reissue · 75W × 2</div>
+          </div>
+
+          <p style="font-size:13.5px; color:var(--ink-secondary); line-height:1.5; margin:0;">
+            Retubed with matched Gold Lion output valves in late 2024. Cleaned inside out, bias checked, and test-played for 6 hours with zero hum. Original chrome cage included.
+          </p>
+
+          <div style="border-top:1px dashed var(--border-light); padding-top:12px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
+            <div>
+              <div class="ticket" style="border:1px solid var(--ink-primary); padding:4px 10px 4px 14px; background:var(--bg-paper);">
+                <div class="ticket-notch"></div><div class="ticket-cut"></div>
+                <span style="font-family:var(--font-mono); font-size:18px; font-weight:600;">₹2,15,000</span>
+              </div>
+              <div style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); margin-top:3px;">📍 Mumbai · Ready for crated dispatch</div>
+            </div>
+
+            <a href="product.html?id=HFR-0184" class="btn btn-outline btn-sm">Inspect Unit Report →</a>
+          </div>
+        </div>
+
+        <!-- Wax Seal Stamp -->
+        <div style="position:absolute; bottom:-20px; right:-20px; z-index:4;">
+          <svg width="84" height="84" viewBox="0 0 128 128" style="transform:rotate(12deg);">
+            <defs><path id="heroSealPath" d="M 64,64 m -50,0 a 50,50 0 1,1 100,0 a 50,50 0 1,1 -100,0"></path></defs>
+            <circle cx="64" cy="64" r="58" fill="#FBF9F3" stroke="#1B1812" stroke-width="1.5"></circle>
+            <circle cx="64" cy="64" r="48" fill="none" stroke="#1B1812" stroke-width="1"></circle>
+            <text font-family="IBM Plex Mono" font-size="7.5" letter-spacing="2" fill="#1B1812">
+              <textPath href="#heroSealPath" startOffset="2%">THE HIFI ROOM • TESTED & VERIFIED •</textPath>
+            </text>
+            <text x="64" y="66" text-anchor="middle" font-family="Big Shoulders Display" font-weight="900" font-size="28" fill="#B4472F">HFR</text>
+            <text x="64" y="80" text-anchor="middle" font-family="IBM Plex Mono" font-size="7" fill="#8A8A82">PASSED</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="trust-bar">
+    <div class="trust-item">
+      <span class="trust-icon">✓</span>
+      <div>
+        <div class="trust-title">Every Unit Tested</div>
+        <div class="trust-desc">All inputs, outputs, controls, and channels checked</div>
+      </div>
+    </div>
+
+    <div class="trust-item">
+      <span class="trust-icon">🧹</span>
+      <div>
+        <div class="trust-title">Cleaned & Serviced</div>
+        <div class="trust-desc">Pots deoxited, belts checked, chassis cleaned</div>
+      </div>
+    </div>
+
+    <div class="trust-item">
+      <span class="trust-icon">📝</span>
+      <div>
+        <div class="trust-title">Honest Disclosures</div>
+        <div class="trust-desc">Every cosmetic mark or quirk clearly documented</div>
+      </div>
+    </div>
+
+    <div class="trust-item">
+      <span class="trust-icon">📦</span>
+      <div>
+        <div class="trust-title">Pan-India Crated Shipping</div>
+        <div class="trust-desc">Custom reinforced packaging for safe delivery</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Category Grid Section -->
+  <section class="section-container">
+    <div class="section-header">
+      <div>
+        <div class="section-tag">Explore by Category</div>
+        <h2 class="section-title">What are you looking to play?</h2>
+      </div>
+      <a href="shop.html" class="btn btn-ghost">View All 142 Listings →</a>
+    </div>
+
+    <div class="grid-6">
+      <a href="shop.html?category=Amplifiers" class="category-card paper card-hover">
+        <span class="cat-icon">🔊</span>
+        <div class="cat-name">Amplifiers</div>
+        <div class="cat-count">48 units</div>
+      </a>
+      <a href="shop.html?category=Turntables" class="category-card paper card-hover">
+        <span class="cat-icon">💿</span>
+        <div class="cat-name">Turntables</div>
+        <div class="cat-count">31 units</div>
+      </a>
+      <a href="shop.html?category=Reel-to-Reel" class="category-card paper card-hover">
+        <span class="cat-icon">📼</span>
+        <div class="cat-name">Reel-to-Reel</div>
+        <div class="cat-count">12 units</div>
+      </a>
+      <a href="shop.html?category=Speakers" class="category-card paper card-hover">
+        <span class="cat-icon">📻</span>
+        <div class="cat-name">Loudspeakers</div>
+        <div class="cat-count">24 units</div>
+      </a>
+      <a href="shop.html?category=Receivers" class="category-card paper card-hover">
+        <span class="cat-icon">📻</span>
+        <div class="cat-name">Receivers</div>
+        <div class="cat-count">18 units</div>
+      </a>
+      <a href="shop.html?category=Cassette+decks" class="category-card paper card-hover">
+        <span class="cat-icon">📼</span>
+        <div class="cat-name">Cassette Decks</div>
+        <div class="cat-count">9 units</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Bento Showcase Section (Featuring Real Cinematic Photos) -->
+  <section class="section-container" style="padding-top:0;">
+    <div class="section-header">
+      <div>
+        <div class="section-tag">Curated Highlights</div>
+        <h2 class="section-title">Tested pre-owned inventory</h2>
+      </div>
+      <div style="font-family:var(--font-mono); font-size:12px; color:var(--ink-muted);">Updated weekly</div>
+    </div>
+
+    <div class="bento-grid">
+      <!-- Item 1: Large Featured Bento -->
+      <div class="bento-card bento-wide paper card-hover">
+        <div class="bento-media">
+          <img src="assets/images/03-wollensak-reel-to-reel-cinematic.png" alt="Wollensak 1580 Precision Stereo Reel to Reel">
+          <span class="grade-badge grade-ap" style="position:absolute; top:12px; right:12px;">GRADE A+</span>
+        </div>
+        <div style="padding:20px; display:flex; flex-direction:column; justify-content:space-between; flex:1;">
+          <div>
+            <div style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted);">SKU HFR-0192 · 1968</div>
+            <h3 style="font-size:22px; margin:4px 0;"><a href="product.html?id=HFR-0192" style="color:var(--ink-primary);">Wollensak 1580 Stereo Tape Recorder</a></h3>
+            <p style="font-size:13.5px; color:var(--ink-secondary); line-height:1.5; margin-top:4px;">
+              Pinch roller cleaned and conditioned, transport lubricated, playback and recording tested on both channels. Includes original aluminum take-up reel.
+            </p>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-top:14px; padding-top:12px; border-top:1px dashed var(--border-light);">
+            <span style="font-family:var(--font-mono); font-size:18px; font-weight:600;">₹68,000</span>
+            <a href="product.html?id=HFR-0192" class="btn btn-outline btn-sm">Inspect Report</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2: Medium Bento (Akai 1710W) -->
+      <div class="bento-card paper card-hover">
+        <div class="bento-media">
+          <img src="assets/images/05-akai-1710w-cinematic.png" alt="Akai 1710W Walnut Tube-Hybrid Reel to Reel">
+          <span class="grade-badge grade-a" style="position:absolute; top:12px; right:12px;">GRADE A</span>
+        </div>
+        <div style="padding:16px; display:flex; flex-direction:column; justify-content:space-between; flex:1;">
+          <div>
+            <div style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted);">SKU HFR-0198 · 1971</div>
+            <h3 style="font-size:19px; margin:4px 0;"><a href="product.html?id=HFR-0198" style="color:var(--ink-primary);">Akai 1710W Walnut</a></h3>
+            <p style="font-size:13px; color:var(--ink-secondary); line-height:1.45; margin-top:2px;">
+              Walnut case tape deck with built-in monitor speakers and dual backlit VU meters. Tested on 230V mains.
+            </p>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-top:12px; padding-top:10px; border-top:1px dashed var(--border-light);">
+            <span style="font-family:var(--font-mono); font-size:16px; font-weight:600;">₹52,000</span>
+            <a href="product.html?id=HFR-0198" class="btn btn-outline btn-sm">Inspect Report</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3: Medium Bento (Marantz 2270) -->
+      <div class="bento-card paper card-hover">
+        <div class="bento-media">
+          <img src="assets/images/01-tube-amplifiers-cinematic.png" alt="Marantz 2270 Stereophonic Receiver">
+          <span class="grade-badge grade-a" style="position:absolute; top:12px; right:12px;">GRADE A</span>
+        </div>
+        <div style="padding:16px; display:flex; flex-direction:column; justify-content:space-between; flex:1;">
+          <div>
+            <div style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted);">SKU HFR-0175 · 1974</div>
+            <h3 style="font-size:19px; margin:4px 0;"><a href="product.html?id=HFR-0175" style="color:var(--ink-primary);">Marantz 2270 Receiver</a></h3>
+            <p style="font-size:13px; color:var(--ink-secondary); line-height:1.45; margin-top:2px;">
+              Cleaned, re-lamped dial lighting, pots deoxited. Includes WC-22 walnut case. Tested with Phono and Aux.
+            </p>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-top:12px; padding-top:10px; border-top:1px dashed var(--border-light);">
+            <span style="font-family:var(--font-mono); font-size:16px; font-weight:600;">₹1,45,000</span>
+            <a href="product.html?id=HFR-0175" class="btn btn-outline btn-sm">Inspect Report</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How We Test, Clean & Prepare Gear -->
+  <section class="section-container" style="background:#0D1117; color:#FBF9F3; border-top:1px solid #1B2B3A; border-bottom:1px solid #1B2B3A; margin:24px 0;">
+    <div style="max-width:1040px; margin:0 auto; display:flex; flex-direction:column; gap:36px;">
+      
+      <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:16px;">
+        <div>
+          <div style="font-family:var(--font-mono); font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent-amber);">Our Testing Protocol</div>
+          <h2 style="font-size:clamp(30px, 4vw, 44px); margin:6px 0 0 0; color:#FBF9F3;">How we test and prepare every single device</h2>
+        </div>
+        <div style="font-family:var(--font-mono); font-size:12px; color:#A5B4C2;">Bandra West Workshop</div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:20px;">
+        
+        <div style="background:#131B24; border:1px solid #243447; padding:20px; display:flex; flex-direction:column; gap:10px;">
+          <div style="font-family:var(--font-mono); font-size:14px; font-weight:600; color:var(--accent-amber);">01. Inspection & Cleaning</div>
+          <p style="font-size:13px; color:#CCD6E0; line-height:1.6; margin:0;">
+            Chassis opened, dust safely removed, fuses and power cables inspected for electrical safety.
+          </p>
+        </div>
+
+        <div style="background:#131B24; border:1px solid #243447; padding:20px; display:flex; flex-direction:column; gap:10px;">
+          <div style="font-family:var(--font-mono); font-size:14px; font-weight:600; color:var(--accent-amber);">02. Pot & Switch DeoxIT</div>
+          <p style="font-size:13px; color:#CCD6E0; line-height:1.6; margin:0;">
+            Scratchy volume dials, tone pots, and input switches cleaned and lubricated so controls turn quietly.
+          </p>
+        </div>
+
+        <div style="background:#131B24; border:1px solid #243447; padding:20px; display:flex; flex-direction:column; gap:10px;">
+          <div style="font-family:var(--font-mono); font-size:14px; font-weight:600; color:var(--accent-amber);">03. All Inputs & Outputs</div>
+          <p style="font-size:13px; color:#CCD6E0; line-height:1.6; margin:0;">
+            Tested with real turntables on Phono inputs, DACs on Aux, tape loops, and left/right speaker outputs A & B.
+          </p>
+        </div>
+
+        <div style="background:#131B24; border:1px solid #243447; padding:20px; display:flex; flex-direction:column; gap:10px;">
+          <div style="font-family:var(--font-mono); font-size:14px; font-weight:600; color:var(--accent-amber);">04. 4-Hour Burn-In Test</div>
+          <p style="font-size:13px; color:#CCD6E0; line-height:1.6; margin:0;">
+            Played continuously with music for 4+ hours to make sure channels don't drop and the unit stays stable.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Two-Column Action Band (Sell / Find) -->
+  <section class="section-container" style="padding-top:16px;">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:24px;">
+      
+      <!-- Card A: Sell Your HiFi -->
+      <div class="paper card-hover" style="border:1px solid var(--border-main); padding:clamp(24px, 4vw, 36px); display:flex; flex-direction:column; justify-content:space-between; position:relative;">
+        <div>
+          <div style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent-cobalt);">Direct Acquisitions</div>
+          <h3 style="font-size:28px; margin:8px 0 10px 0;">Sell your gear for cash</h3>
+          <p style="font-size:14px; color:var(--ink-secondary); line-height:1.6;">
+            Have an amplifier, turntable, or speakers you no longer use? We buy outright—no waiting on consignment. Submit details and get a firm cash offer within 24 hours.
+          </p>
+        </div>
+        <div style="margin-top:20px; display:flex; gap:12px; align-items:center;">
+          <a href="sell.html" class="btn btn-primary">Get Cash Offer →</a>
+          <span style="font-size:12px; color:var(--ink-muted);">Doorstep pickup across India</span>
+        </div>
+      </div>
+
+      <!-- Card B: Sourcing Hunter -->
+      <div class="paper card-hover" style="border:1px solid var(--border-main); padding:clamp(24px, 4vw, 36px); display:flex; flex-direction:column; justify-content:space-between; position:relative;">
+        <div>
+          <div style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent-amber);">Gear Hunter</div>
+          <h3 style="font-size:28px; margin:8px 0 10px 0;">Looking for a specific model?</h3>
+          <p style="font-size:14px; color:var(--ink-secondary); line-height:1.6;">
+            Tell us what turntable, tube amp, or vintage speaker pair you're hunting for. We check estate sales, studios, and collectors weekly and notify you first when a solid unit turns up.
+          </p>
+        </div>
+        <div style="margin-top:20px; display:flex; gap:12px; align-items:center;">
+          <a href="find.html" class="btn btn-outline">Submit Sourcing Request →</a>
+          <span style="font-size:12px; color:var(--ink-muted);">Zero upfront retainer</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Recently Sold Ledger Section -->
+  <section class="section-container">
+    <div class="section-header">
+      <div>
+        <div class="section-tag">Public Sales Record</div>
+        <h2 class="section-title">Recently placed units</h2>
+      </div>
+      <a href="sold.html" class="btn btn-ghost">View Full Sales Ledger →</a>
+    </div>
+
+    <div class="paper" style="border:1px solid var(--border-main);">
+      <div class="table-container">
+        <table class="hifi-table">
+          <thead>
+            <tr>
+              <th>EQUIPMENT UNIT</th>
+              <th>CATEGORY</th>
+              <th>GRADE</th>
+              <th>SETTLED PRICE</th>
+              <th>CITY</th>
+              <th>DATE</th>
+              <th>STATUS</th>
+            </tr>
+          </thead>
+          <tbody id="home-sold-table">
+            <!-- Dynamically populated via JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div style="display:flex; flex-direction:column; gap:14px;">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <svg width="28" height="28" viewBox="0 0 128 128"><circle cx="64" cy="64" r="58" fill="none" stroke="currentColor" stroke-width="6"></circle><circle cx="64" cy="64" r="46" fill="none" stroke="currentColor" stroke-width="3"></circle><text x="64" y="74" text-anchor="middle" font-family="Big Shoulders Display" font-weight="800" font-size="42" fill="currentColor">H</text></svg>
+          <span style="font-family:var(--font-mono); font-size:14px; letter-spacing:0.14em; font-weight:600;">THE HIFI ROOM</span>
+        </div>
+        <p style="font-size:13px; color:var(--ink-muted); line-height:1.6; max-width:260px;">
+          We buy, test, clean, and sell pre-owned vintage hi-fi audio equipment in Mumbai and ship across India. Every unit tested, documented, and sold as-is.
+        </p>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:8px; font-size:13px;">
+        <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); text-transform:uppercase; margin-bottom:4px;">Navigation</span>
+        <a href="shop.html" style="color:var(--ink-secondary);">Shop Collection</a>
+        <a href="sell.html" style="color:var(--ink-secondary);">Sell Your HiFi</a>
+        <a href="find.html" style="color:var(--ink-secondary);">Find Equipment</a>
+        <a href="grading.html" style="color:var(--ink-secondary);">The Grading Standard</a>
+        <a href="sold.html" style="color:var(--ink-secondary);">Sales Ledger</a>
+        <a href="about.html" style="color:var(--ink-secondary);">About Us</a>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:8px; font-size:13px;">
+        <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); text-transform:uppercase; margin-bottom:4px;">Categories</span>
+        <a href="shop.html?category=Amplifiers" style="color:var(--ink-secondary);">Amplifiers</a>
+        <a href="shop.html?category=Reel-to-Reel" style="color:var(--ink-secondary);">Reel-to-Reel</a>
+        <a href="shop.html?category=Turntables" style="color:var(--ink-secondary);">Turntables</a>
+        <a href="shop.html?category=Speakers" style="color:var(--ink-secondary);">Loudspeakers</a>
+        <a href="shop.html?category=Receivers" style="color:var(--ink-secondary);">Receivers</a>
+        <a href="shop.html?category=Cassette+decks" style="color:var(--ink-secondary);">Cassette Decks</a>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:8px; font-size:13px;">
+        <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); text-transform:uppercase; margin-bottom:4px;">Studio & Contact</span>
+        <a href="https://wa.me/919711393036" target="_blank" style="color:var(--accent-green); font-weight:500;">+91 97113 93036 (WhatsApp)</a>
+        <span style="color:var(--ink-secondary);">info@thehifiroom.in</span>
+        <span style="color:var(--ink-secondary);">Bandra West, Mumbai 400050</span>
+        <span style="color:var(--ink-muted); font-size:11.5px;">Mon–Sat, 11:00–19:00 IST (By appointment)</span>
+        <a href="admin.html" style="color:var(--accent-cobalt); font-size:12px; margin-top:4px;">Staff Console Login →</a>
+      </div>
+    </div>
+
+    <div style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); border-top:1px solid var(--border-light); padding-top:20px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+      <span>© 2026 The HiFi Room. Pre-owned vintage audio, tested and documented.</span>
+      <span>Pan-India Crated Shipping</span>
+    </div>
+  </footer>
+
+</div>
+
+<script src="js/app.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+  const salesRes = await fetchAPI('/api/sales');
+  if (salesRes && salesRes.success) {
+    const tbody = document.getElementById('home-sold-table');
+    if (tbody) {
+      tbody.innerHTML = salesRes.data.slice(0, 5).map(s => `
+        <tr>
+          <td><strong>${s.unit}</strong></td>
+          <td style="color:var(--ink-secondary);">${s.type}</td>
+          <td><span class="grade-badge grade-${s.grade.toLowerCase().replace('+', 'p')}">${s.grade}</span></td>
+          <td style="font-family:var(--font-mono); font-weight:600;">₹${Number(s.price).toLocaleString('en-IN')}</td>
+          <td style="font-family:var(--font-mono); color:var(--ink-secondary);">📍 ${s.buyerCity}</td>
+          <td style="font-family:var(--font-mono); font-size:12px; color:var(--ink-muted);">${s.date}</td>
+          <td><span class="status-tag status-sold">SOLD</span></td>
+        </tr>
+      `).join('');
+    }
+  }
+});
+</script>
+</body>
+</html>

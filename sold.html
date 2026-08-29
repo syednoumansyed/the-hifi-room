@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recently Sold Ledger — The HiFi Room</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="site-wrapper">
+
+  <!-- Utility Bar -->
+  <div class="utility-bar">
+    <span>100% Bench-Tested Equipment</span>
+    <span class="utility-dot">•</span>
+    <span>A Public Log, Not a Highlight Reel</span>
+    <span class="utility-dot">•</span>
+    <span>Pan-India Verified Deliveries</span>
+    <span class="utility-dot">•</span>
+    <span>Bandra West Studio, Mumbai</span>
+  </div>
+
+  <!-- Main Nav -->
+  <header class="main-nav">
+    <a href="index.html" class="brand-logo">
+      <svg width="24" height="24" viewBox="0 0 128 128"><circle cx="64" cy="64" r="58" fill="none" stroke="currentColor" stroke-width="6"></circle><circle cx="64" cy="64" r="46" fill="none" stroke="currentColor" stroke-width="3"></circle><text x="64" y="74" text-anchor="middle" font-family="Big Shoulders Display" font-weight="800" font-size="42" fill="currentColor">H</text></svg>
+      <span>THE HIFI ROOM</span>
+    </a>
+
+    <nav class="nav-links">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="shop.html">Shop Collection</a>
+      <a class="nav-link" href="sell.html">Sell Your HiFi</a>
+      <a class="nav-link" href="find.html">Find Equipment</a>
+      <a class="nav-link" href="grading.html">The Grading Standard</a>
+      <a class="nav-link active" href="sold.html">Recently Sold</a>
+      <a class="nav-link" href="about.html">Manifesto</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="admin.html" class="nav-console-pill">
+        <span class="dot"></span>
+        <span>Console</span>
+      </a>
+      <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Toggle Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer" class="mobile-drawer">
+    <div class="mobile-drawer-content">
+      <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border-main); padding-bottom:16px;">
+        <span style="font-family:var(--font-mono); font-weight:600; font-size:13px; letter-spacing:0.14em;">THE HIFI ROOM</span>
+        <button id="mobile-drawer-close" style="background:none; border:none; font-size:24px; cursor:pointer; color:var(--ink-primary);">&times;</button>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:16px; font-family:var(--font-mono); font-size:13px; text-transform:uppercase;">
+        <a href="index.html" style="color:var(--ink-primary);">Home</a>
+        <a href="shop.html" style="color:var(--ink-primary);">Shop Collection</a>
+        <a href="sell.html" style="color:var(--ink-primary);">Sell Your HiFi</a>
+        <a href="find.html" style="color:var(--ink-primary);">Find Equipment</a>
+        <a href="grading.html" style="color:var(--ink-primary);">The Grading Standard</a>
+        <a href="sold.html" style="color:var(--accent-cobalt); font-weight:600;">Recently Sold</a>
+        <a href="about.html" style="color:var(--ink-primary);">Manifesto & Lab</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Header -->
+  <div style="padding:clamp(36px, 5vw, 64px) clamp(20px, 4vw, 56px) 32px clamp(20px, 4vw, 56px); border-bottom:1px solid var(--border-main); max-width:880px;">
+    <div style="font-family:var(--font-mono); font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--accent-red);">Public Transaction Ledger</div>
+    <h1 style="font-size:clamp(36px, 5vw, 54px); margin:8px 0 14px 0;">Recently Sold — A public record, not a highlight reel.</h1>
+    <p style="font-size:16px; line-height:1.65; color:var(--ink-secondary);">
+      We maintain a permanent open ledger of placed equipment, verified settlement prices, and recipient cities. This establishes honest price discovery for the vintage audio community across India.
+    </p>
+  </div>
+
+  <!-- Main Ledger Section -->
+  <section style="padding:clamp(36px, 5vw, 56px) clamp(20px, 4vw, 56px); flex:1;">
+    <div class="paper" style="border:1px solid var(--border-main); position:relative;">
+      
+      <div style="padding:18px 24px; border-bottom:1px solid var(--border-main); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+        <span style="font-family:var(--font-mono); font-size:12px; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-muted);">
+          Verified Placed Units (All Transactions Audited)
+        </span>
+        <div style="position:relative;">
+          <!-- Wax Seal -->
+          <svg width="56" height="56" viewBox="0 0 128 128">
+            <defs><path id="ringSoldArchive" d="M 64,64 m -50,0 a 50,50 0 1,1 100,0 a 50,50 0 1,1 -100,0"></path></defs>
+            <circle cx="64" cy="64" r="58" fill="#FBF9F3" stroke="#1B1812" stroke-width="1.2"></circle>
+            <text font-family="IBM Plex Mono" font-size="6.5" letter-spacing="1.6" fill="#1B1812">
+              <textPath href="#ringSoldArchive" startOffset="2%">THE HIFI ROOM • VERIFIED SALE •</textPath>
+            </text>
+            <text x="64" y="70" text-anchor="middle" font-family="Big Shoulders Display" font-weight="800" font-size="20" fill="#B4472F">SOLD</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <table class="hifi-table">
+          <thead>
+            <tr>
+              <th>EQUIPMENT UNIT</th>
+              <th>CATEGORY</th>
+              <th>CONDITION GRADE</th>
+              <th>PRICE SETTLED</th>
+              <th>DESTINATION CITY</th>
+              <th>TRANSACTION DATE</th>
+              <th>STATUS</th>
+            </tr>
+          </thead>
+          <tbody id="sold-table-body">
+            <!-- Populated dynamically via JS -->
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div style="display:flex; flex-direction:column; gap:14px;">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <svg width="28" height="28" viewBox="0 0 128 128"><circle cx="64" cy="64" r="58" fill="none" stroke="currentColor" stroke-width="6"></circle><circle cx="64" cy="64" r="46" fill="none" stroke="currentColor" stroke-width="3"></circle><text x="64" y="74" text-anchor="middle" font-family="Big Shoulders Display" font-weight="800" font-size="42" fill="currentColor">H</text></svg>
+          <span style="font-family:var(--font-mono); font-size:14px; letter-spacing:0.14em; font-weight:600;">THE HIFI ROOM</span>
+        </div>
+        <p style="font-size:13px; color:var(--ink-muted); line-height:1.6; max-width:260px;">
+          We buy, bench-test, restore, and source vintage hi-fi audio equipment across India. Every electrical measurement verified and disclosed in the open.
+        </p>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:8px; font-size:13px;">
+        <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); text-transform:uppercase; margin-bottom:4px;">Navigation</span>
+        <a href="shop.html" style="color:var(--ink-secondary);">Shop Collection</a>
+        <a href="sell.html" style="color:var(--ink-secondary);">Sell Your HiFi</a>
+        <a href="find.html" style="color:var(--ink-secondary);">Find Equipment</a>
+        <a href="grading.html" style="color:var(--ink-secondary);">Grading Standard</a>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:8px; font-size:13px;">
+        <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); text-transform:uppercase; margin-bottom:4px;">Studio Contact</span>
+        <a href="https://wa.me/919711393036" target="_blank" style="color:var(--accent-green); font-weight:500;">+91 97113 93036 (WhatsApp)</a>
+        <span style="color:var(--ink-secondary);">info@thehifiroom.in</span>
+      </div>
+    </div>
+
+    <div style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); border-top:1px solid var(--border-light); padding-top:20px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+      <span>© 2026 The HiFi Room. Verified Historical Public Ledger.</span>
+      <span>Documented Heritage</span>
+    </div>
+  </footer>
+
+</div>
+
+<script src="js/app.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+  const res = await fetchAPI('/api/sales');
+  const tbody = document.getElementById('sold-table-body');
+  if (res && res.success && tbody) {
+    tbody.innerHTML = res.data.map(s => `
+      <tr>
+        <td><strong>${s.unit}</strong></td>
+        <td style="color:var(--ink-secondary);">${s.type}</td>
+        <td><span class="grade-badge grade-${s.grade.toLowerCase().replace('+', 'p')}">${s.grade}</span></td>
+        <td style="font-family:var(--font-mono); font-weight:600;">₹${Number(s.price).toLocaleString('en-IN')}</td>
+        <td style="font-family:var(--font-mono); color:var(--ink-secondary);">📍 ${s.buyerCity}</td>
+        <td style="font-family:var(--font-mono); font-size:12px; color:var(--ink-muted);">${s.date}</td>
+        <td><span class="status-tag status-sold">SOLD</span></td>
+      </tr>
+    `).join('');
+  }
+});
+</script>
+</body>
+</html>
