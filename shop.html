@@ -342,4 +342,37 @@ function filterAndRenderProducts() {
 }
 </script>
 </body>
+<script type="module">
+import { fadeUp, staggerFadeUp } from './js/motion.js';
+
+// Page header fades in
+fadeUp('main > div:first-child, main > div > h1', { distance: 12 });
+
+// Product grid — cards are rendered dynamically by app.js.
+// Use MutationObserver to animate them once they appear.
+const grid = document.getElementById('products-grid');
+if (grid) {
+  let animated = false;
+  const observer = new MutationObserver(() => {
+    const cards = grid.querySelectorAll('.product-card');
+    if (cards.length && !animated) {
+      animated = true;
+      observer.disconnect();
+      import('https://cdn.jsdelivr.net/npm/motion@11.11.9/+esm').then(({ animate, stagger }) => {
+        const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        animate(
+          cards,
+          { opacity: [0, 1], transform: ['translateY(14px)', 'translateY(0)'] },
+          {
+            duration: reduced ? 0.01 : 0.35,
+            easing: [0.22, 1, 0.36, 1],
+            delay: stagger(reduced ? 0 : 0.06),
+          }
+        );
+      });
+    }
+  });
+  observer.observe(grid, { childList: true });
+}
+</script>
 </html>

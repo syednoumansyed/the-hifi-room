@@ -203,5 +203,19 @@
 
 <script src="js/app.js"></script>
 <script src="js/admin.js"></script>
+<script type="module">
+import { countUp, staggerFadeUp, fadeUp } from './js/motion.js';
+
+// Stat cards stagger in on load — communicates "dashboard is ready"
+staggerFadeUp('.console-main', '.stat-card', {
+  staggerDelay: 0.07, distance: 10, threshold: 0,
+});
+
+// Count up stat numbers — communicates live data state
+countUp('.stat-number');
+
+// Panels fade in slightly after stats
+fadeUp('.console-main > div:last-child', { delay: 0.18, distance: 12 });
+</script>
 </body>
 </html>

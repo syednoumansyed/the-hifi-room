@@ -174,5 +174,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 </script>
+<script type="module">
+import { fadeUp, staggerFadeUp } from './js/motion.js';
+
+fadeUp('main h1, main > div > h1', { distance: 16 });
+fadeUp('main > div > p', { distance: 10, duration: 0.4 });
+staggerFadeUp('main', '.paper', { staggerDelay: 0.08, distance: 12, threshold: 0.08 });
+</script>
 </body>
 </html>

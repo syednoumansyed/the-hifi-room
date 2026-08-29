@@ -619,5 +619,27 @@ async function handleQuickSource(e) {
   }
 }
 </script>
+<script type="module">
+import { heroEntrance, navEntrance, fadeUp, staggerFadeUp } from './js/motion.js';
+
+heroEntrance();
+navEntrance();
+
+staggerFadeUp('.category-section-wrap', '.category-grid > a, .category-grid > div', {
+  staggerDelay: 0.06, distance: 12,
+});
+
+staggerFadeUp('.bento-section-wrap', '.bento-grid > div', {
+  staggerDelay: 0.07,
+});
+
+staggerFadeUp('.trust-bar-wrap', '.trust-col', {
+  staggerDelay: 0.09, distance: 10,
+});
+
+fadeUp('.bento-section-wrap h2', { distance: 10 });
+fadeUp('.category-section-wrap h2', { distance: 10 });
+fadeUp('.cta-band-wrap', { distance: 16, threshold: 0.05 });
+</script>
 </body>
 </html>
