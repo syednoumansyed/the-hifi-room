@@ -240,18 +240,7 @@
       </div>
     </section>
 
-    <!-- Specimen Audio Signal Visualizer (CRT Oscilloscope) -->
-    <section style="display:flex; flex-direction:column; gap:16px;">
-      <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:12px;">
-        <span style="font-family:var(--font-mono); font-size:12px; letter-spacing:0.1em; text-transform:uppercase; font-weight:600; color:var(--accent-cobalt);">
-          Specimen Signal Monitor • Dual-Trace CRT
-        </span>
-        <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink-muted);">
-          Interactive Harmonic & Phase Trace
-        </span>
-      </div>
-      <div id="product-crt-oscilloscope"></div>
-    </section>
+
 
     <!-- Offer Worksheet -->
     <section id="offer-section" class="paper" style="border:1px solid var(--border-main); position:relative;">
@@ -339,7 +328,6 @@
 </div>
 
 <script src="js/app.js"></script>
-<script src="js/oscilloscope.js"></script>
 <script>
 let currentProduct = null;
 
@@ -352,15 +340,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     currentProduct = res.data;
     renderProductPage(currentProduct);
   }
-
-  if (typeof CRTOscilloscope !== 'undefined') {
-    new CRTOscilloscope('product-crt-oscilloscope', {
-      theme: 'green',
-      mode: 'tube',
-      freq: 1.8
-    });
-  }
 });
+
 
 function renderProductPage(p) {
   document.title = `${p.name} (${p.brand}) — The HiFi Room`;

@@ -117,6 +117,14 @@
       </p>
     </div>
 
+    <!-- Ambient bench signal trace — atmosphere only, not interactive -->
+    <div style="display:flex; flex-direction:column; gap:10px;">
+      <div id="about-bench-trace" style="height:100px; width:100%;"></div>
+      <div style="font-family:var(--font-mono); font-size:10px; color:var(--ink-muted); letter-spacing:0.12em; text-transform:uppercase;">
+        Both channels clear — signal trace logged at bench
+      </div>
+    </div>
+
     </div>
 </main>
 
@@ -158,5 +166,13 @@
 </div>
 
 <script src="js/app.js"></script>
+<script src="js/oscilloscope.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  if (typeof CRTOscilloscope !== 'undefined') {
+    new CRTOscilloscope('about-bench-trace', { theme: 'cobalt' });
+  }
+});
+</script>
 </body>
 </html>
